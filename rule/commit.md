@@ -65,10 +65,26 @@ feat: Add new user registration feature
 - Send confirmation email
 ```
 
+### Footer (Opsional):
+
+- Digunakan untuk informasi tambahan, seperti referensi issue atau pull request.
+
+#### Contoh Commit Message:
+
+```bash
+    feat: Add new user registration feature - Allow users to sign up with email and password
+
+    - Allow users to sign up with email and password
+    - Validate user input
+    - Send confirmation email
+
+    Fixes #123
+```
+
 ## Penggunaan:
 
 Sebelum commit, jalankan perintah berikut:
 
-```Bash
+```bash
 npx commitlint
 ```
