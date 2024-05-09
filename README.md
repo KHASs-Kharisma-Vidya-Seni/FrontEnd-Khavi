@@ -4,6 +4,6 @@
 
 > Bisa berubah bisa menambah
 
-## Rule
+## Rules
 
 - Peraturan commit message bisa dilihat [disini](https://github.com/KHASs-Kharisma-Vidya-Seni/FrontEnd-Khavi/blob/main/rule/commit.md)
