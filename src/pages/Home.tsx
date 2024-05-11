@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <AnimationPage>
-      <div className="">
+      <div className="text-3xl">
         <ul className="space-y-3 py-2">
           {data.map((item, index: number) => (
             <motion.li
