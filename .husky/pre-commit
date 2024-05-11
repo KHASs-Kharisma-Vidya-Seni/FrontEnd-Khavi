@@ -1,4 +1,10 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+# Check if the commit message contains "git cz"
+if ! grep -q "git cz" "$1"; then
+    echo "Error: Please use 'git cz' to commit."
+fi
+
+# If the commit message contains "git cz", proceed with the commit
 npx lint-staged
