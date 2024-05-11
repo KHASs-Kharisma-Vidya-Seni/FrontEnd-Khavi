@@ -14,4 +14,30 @@ Panduan format pesan komit dapat dilihat [disini](https://github.com/KHASs-Khari
 
 ### 2 Cara Insall Tools Commit
 
-[disini](https://github.com/KHASs-Kharisma-Vidya-Seni/commit)
+Pertama yaitu install package :
+
+```bash
+ npm install -g commitizen
+```
+
+Kedua
+
+```bash
+commitizen init cz-conventional-changelog --yarn --dev --exact
+```
+
+### 3. Penggunaan
+
+Paling penting adalah `git cz` untuk commit pesan
+
+Pertama
+
+```bash
+git add .
+```
+
+Kedua
+
+```bash
+git cz
+```
