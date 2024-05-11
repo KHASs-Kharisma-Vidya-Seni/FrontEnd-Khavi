@@ -83,8 +83,4 @@ feat: Add new user registration feature
 
 ## Penggunaan:
 
-Sebelum commit, jalankan perintah berikut:
-
-```bash
-npx commitlint
-```
+[Disini Install](https://github.com/KHASs-Kharisma-Vidya-Seni/commit)
