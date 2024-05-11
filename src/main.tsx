@@ -12,11 +12,12 @@ import {
 import Root from "./Root.tsx";
 import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
+import NotFoundPage from "./pages/NotFoundPage.tsx";
 
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Root />} errorElement={<h1>Error</h1>}>
+    <Route path="/" element={<Root />} errorElement={<NotFoundPage />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
     </Route>
