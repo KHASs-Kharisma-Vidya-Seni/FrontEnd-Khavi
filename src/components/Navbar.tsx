@@ -4,7 +4,7 @@ export default function Navbar() {
   const navlists = [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
-    { name: "Profil", link: "/profile/user-info" },
+    { name: "Profil", link: "/profile" },
   ];
   return (
     <nav className="py-6">
@@ -14,7 +14,9 @@ export default function Navbar() {
             <NavLink
               to={navlist.link}
               className={({ isActive }) => {
-                return isActive ? "text-xl text-red-500" : "text-xl text-black";
+                return isActive
+                  ? "text-xl text-blue-600"
+                  : "text-xl text-black";
               }}>
               {navlist.name}
             </NavLink>

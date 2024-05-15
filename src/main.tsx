@@ -13,6 +13,10 @@ import Root from "./Root.tsx";
 import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
+import ProfileRoot from "./pages/ProfileRoot.tsx";
+import ProfileBookmark from "./pages/Profile-bookmark.tsx";
+import ProfileUserInfo from "./pages/Profile-userInfo.tsx";
+import ProfileSetting from "./pages/Profile-setting.tsx";
 
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview
 const router = createBrowserRouter(
@@ -20,6 +24,16 @@ const router = createBrowserRouter(
     <Route path="/" element={<Root />} errorElement={<NotFoundPage />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
+      {/* <Route
+        path="profile"
+        element={<Navigate to="/profile/user-info" replace />}
+  /> */}
+      <Route path="/profile" element={<ProfileRoot />}>
+        <Route path="/profile" element={<ProfileUserInfo />} />
+        <Route path="/profile/user-info" element={<ProfileUserInfo />} />
+        <Route path="/profile/bookmark" element={<ProfileBookmark />} />
+        <Route path="/profile/settings" element={<ProfileSetting />} />
+      </Route>
     </Route>
   )
 );

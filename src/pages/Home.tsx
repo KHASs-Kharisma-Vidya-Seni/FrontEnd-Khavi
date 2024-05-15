@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import AnimationPage from "../components/AnimationPage";
 import { motion } from "framer-motion";
+import Transition from "@/components/transition";
 
 const data = [
   { name: "React + Vite", link: "https://tailwindcss.com/" },
@@ -34,8 +34,8 @@ export default function Home() {
   };
 
   return (
-    <AnimationPage>
-      <div className="text-3xl">
+    <Transition>
+      <div className="text-xl">
         <ul className="space-y-3 py-2">
           {data.map((item, index: number) => (
             <motion.li
@@ -71,6 +71,6 @@ export default function Home() {
           ))}
         </ul>
       </div>
-    </AnimationPage>
+    </Transition>
   );
 }
