@@ -1,6 +1,6 @@
 import { Eye } from "lucide-react";
-import backgroundImage from "D:/IL/FrontEnd-Khavi/src/assets/img/loginbg.png";
-import ImageRight from "D:/IL/FrontEnd-Khavi/src/assets/img/rightlogin.png";
+import backgroundImage from "D:/IL/FrontEnd-Khavi/src/assets/img/bg-login-15052024.png";
+import ImageRight from "D:/IL/FrontEnd-Khavi/src/assets/img/right-img-login-15052024.png";
 
 export default function Login() {
   return (
@@ -30,7 +30,7 @@ export default function Login() {
               </h4>
             </div>
             <form action="">
-              <div className="mb-6">
+              <div className="mb-2">
                 <label
                   htmlFor=""
                   className="mb-2 block text-xl font-normal text-[#2E323A]">
@@ -42,7 +42,7 @@ export default function Login() {
                   className="h-12 w-full rounded border-2 border-[#D9D9D9] px-4 text-lg text-[#2E323A]"
                 />
               </div>
-              <div className="mb-6">
+              <div className="mb-2">
                 <label
                   htmlFor=""
                   className="mb-2 block text-xl font-normal text-[#2E323A]">
@@ -59,7 +59,7 @@ export default function Login() {
                   </span>
                 </div>
               </div>
-              <div className="mb-6 flex items-center justify-between">
+              <div className="mb-2 flex items-center justify-between">
                 <div>
                   <input
                     type="checkbox"
