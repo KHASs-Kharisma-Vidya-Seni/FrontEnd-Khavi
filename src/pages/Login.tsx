@@ -1,6 +1,6 @@
 import { Eye } from "lucide-react";
-import backgroundImage from "D:/IL/FrontEnd-Khavi/src/assets/img/bg-login-15052024.png";
-import ImageRight from "D:/IL/FrontEnd-Khavi/src/assets/img/right-img-login-15052024.png";
+import backgroundImage from "../assets/img/bg-login-15052024.png";
+import ImageRight from "../assets/img/right-img-login-15052024.png";
 
 export default function Login() {
   return (

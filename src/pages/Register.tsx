@@ -1,6 +1,6 @@
 import { Eye } from "lucide-react";
-import backgroundRegister from "D:/IL/FrontEnd-Khavi/src/assets/img/BackgroundRegister.png";
-import RightRegister from "D:/IL/FrontEnd-Khavi/src/assets/img/rightregister.png";
+import backgroundRegister from "../assets/img/BackgroundRegister.png";
+import RightRegister from "../assets/img/rightregister.png";
 
 export default function Register() {
   return (
