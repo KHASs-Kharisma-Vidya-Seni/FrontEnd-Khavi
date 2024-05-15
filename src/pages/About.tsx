@@ -1,4 +1,4 @@
-import AnimationPage from "../components/AnimationPage";
+import AnimationPage from "@/components/AnimationPage";
 
 export default function About() {
   return (
