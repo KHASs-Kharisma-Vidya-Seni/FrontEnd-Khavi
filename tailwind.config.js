@@ -22,7 +22,8 @@ module.exports = {
         },
       },
       colors: {
-        headingArticle: "#F5F8F8",
+        "heading-article": "#F5F8F8",
+        "background-khavi": "#F4F4F4",
         shark: {
           50: "#f6f7f9",
           100: "#edeef1",
@@ -62,7 +63,6 @@ module.exports = {
           900: "#593a2a",
           950: "#331e15",
         },
-
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

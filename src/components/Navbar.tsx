@@ -5,6 +5,7 @@ export default function Navbar() {
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
     { name: "Profil", link: "/profile" },
+    { name: "Article", link: "/article" },
   ];
   return (
     <nav className="py-6">
