@@ -8,7 +8,7 @@ export default function Navbar() {
     { name: "Article", link: "/article" },
   ];
   return (
-    <nav className="py-6">
+    <nav className="container py-6">
       <ul className="flex space-x-4">
         {navlists.map((navlist, index) => (
           <li key={index}>
