@@ -2,3 +2,7 @@
 export function convertToKebabCase(text: string) {
   return text?.toLowerCase().replace(/ /g, "-");
 }
+
+export function TextLowerCase(text: string) {
+  return text?.toLowerCase();
+}
