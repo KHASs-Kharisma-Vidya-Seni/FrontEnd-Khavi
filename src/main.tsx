@@ -21,6 +21,7 @@ import ProfileBookmark from "./pages/Profile-bookmark.tsx";
 import ProfileUserInfo from "./pages/Profile-userInfo.tsx";
 import ProfileSetting from "./pages/Profile-setting.tsx";
 import Article from "./pages/Article.tsx";
+
 import Error from "./pages/Error.tsx";
 
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview
@@ -28,7 +29,6 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />} errorElement={<Error />}>
       <Route index element={<Home />} />
-
       <Route path="/tentang" element={<About />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
