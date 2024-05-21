@@ -16,10 +16,11 @@ module.exports = {
         padding: {
           DEFAULT: "1rem",
           sm: "2rem",
-          md: "4rem",
+          md: "3rem",
           lg: "5rem",
-          xl: "6rem",
+          xl: "8rem",
         },
+        center: true,
       },
       colors: {
         "heading-article": "#F5F8F8",

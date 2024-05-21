@@ -9,7 +9,7 @@ export default function Article() {
     {
       id: 1,
       imageSrc: "/images/arikel-1.png",
-      title: "Rahasia Merawat Rambut Gimbal agar Tetap Sehat",
+      title: "Rahasia Merawat Rambut Gimbal agar Sehat",
       description:
         "Metode efektif untuk merawat rambut gimbal agar tetap sehat dan terlihat menawan. Dari pemilihan produk perawatan yang tepat hingga teknik pencucian dan pemeliharaan sehari-hari",
       tags: ["Treatment", "Hair"],
