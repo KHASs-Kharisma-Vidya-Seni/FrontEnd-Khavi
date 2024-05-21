@@ -24,17 +24,6 @@ export default function About() {
             perawatan rambut yang mudah diikuti.
           </p>
         </div>
-        {/* <div
-          // style={{
-          //   backgroundImage:
-          //     "linear-gradient(76deg, rgba(15,14,14,1) 0%, rgba(0,0,0,0.2862394957983193) 70%), url(./images/about-s1.jpg)",
-          //   backgroundSize: "cover",
-          //   backgroundPosition: "center",
-          //   height: "50%",
-          // }}
-          id="image"
-          className="custom-image absolute left-0 top-20 -z-10 w-full"
-        /> */}
       </div>
       <div id="parent">
         <div id="text" className="mt-10 py-12 text-center text-2xl font-bold">
