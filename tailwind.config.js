@@ -17,6 +17,10 @@ export default {
           lg: "5rem",
           xl: "6rem",
         },
+        center: true,
+      },
+      lineHeight: {
+        description: "160%",
       },
     },
   },

@@ -7,7 +7,7 @@ export default function Navbar() {
     { name: "Profil", link: "/profile/user-info" },
   ];
   return (
-    <nav className="py-6">
+    <nav className="container z-50 py-6 md:container">
       <ul className="flex space-x-4">
         {navlists.map((navlist, index) => (
           <li key={index}>

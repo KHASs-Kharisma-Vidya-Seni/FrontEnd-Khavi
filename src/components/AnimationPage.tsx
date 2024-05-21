@@ -14,7 +14,8 @@ export default function AnimationPage({
       animate={{
         y: 0,
         opacity: 1,
-      }}>
+      }}
+      className="container">
       {children}
     </motion.div>
   );
