@@ -75,7 +75,7 @@ export const ArticleCard = ({
   tags: string[];
 }) => {
   return (
-    <article className="relative w-full max-w-[380px] overflow-hidden rounded-md shadow-lg">
+    <article className="relative w-full max-w-full overflow-hidden rounded-md shadow-lg">
       <figure className="h-52 w-full">
         <img src={imageSrc} alt="" className="h-full w-full object-cover" />
       </figure>
