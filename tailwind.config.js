@@ -20,6 +20,7 @@ module.exports = {
           lg: "5rem",
           xl: "6rem",
         },
+        center: true,
       },
       colors: {
         "heading-article": "#F5F8F8",
