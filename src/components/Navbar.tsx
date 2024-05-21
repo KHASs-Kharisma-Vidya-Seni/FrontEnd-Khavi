@@ -10,7 +10,6 @@ export default function Navbar() {
     { name: "Article", link: "/article" },
     { name: "Forum", link: "/forum" },
     { name: "Tentang", link: "/tentang" },
-    { name: "Forum", link: "/forum" },
     { name: "Artikel", link: "/artikel" },
   ];
   return (

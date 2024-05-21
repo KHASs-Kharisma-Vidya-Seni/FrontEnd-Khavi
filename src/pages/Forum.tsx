@@ -44,8 +44,8 @@ export default function Forum() {
   ];
 
   return (
-    <div className="container sm:container ">
-      <div className="w-62 absolute left-24 top-[4.75rem] space-y-3.5 ">
+    <div className="container pt-8 sm:container">
+      <div className="w-62 absolute left-24 top-[8rem] space-y-3.5 ">
         <div className="relative w-full rounded-[0.625rem] bg-shark-900 p-5">
           <input
             type="text"
