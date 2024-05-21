@@ -8,9 +8,10 @@ export default function Navbar() {
     { name: "Tentang", link: "/tentang" },
     { name: "Forum", link: "/forum" },
     { name: "Artikel", link: "/artikel" },
+    { name: "Profile", link: "/profile" },
   ];
   return (
-    <nav className="container flex h-24 items-center justify-between bg-shark-900 py-6">
+    <nav className="flex h-24 items-center justify-between bg-shark-900 px-24 py-6">
       <figure className="flex ">
         <img src="/images/khavi-logo.png" alt="khavi-logo" className="w-28" />
       </figure>
