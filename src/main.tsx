@@ -36,8 +36,6 @@ const router = createBrowserRouter(
       <Route path="/register" element={<Register />} />
       <Route path="/forum" element={<Forum />} />
       <Route path="/tentang" element={<About />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
 
       <Route path="/profile" element={<ProfileRoot />}>
         <Route path="/profile" element={<ProfileUserInfo />} />
