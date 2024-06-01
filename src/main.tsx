@@ -22,7 +22,7 @@ import ProfileBookmark from "./pages/Profile-bookmark.tsx";
 import ProfileUserInfo from "./pages/Profile-userInfo.tsx";
 import ProfileSetting from "./pages/Profile-setting.tsx";
 import Article from "./pages/Article.tsx";
-import Face_scanner from "./pages/Face-scanner.tsx";
+import FaceScanner from "./pages/FaceScanner.tsx";
 
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview
 const router = createBrowserRouter(
@@ -43,7 +43,7 @@ const router = createBrowserRouter(
 
       <Route path="/article" element={<Article />} />
 
-      <Route path="/face-scanner" element={<Face_scanner />} />
+      <Route path="/face-scanner" element={<FaceScanner />} />
 
       <Route path="*" element={<NotFoundPage />} />
     </Route>
