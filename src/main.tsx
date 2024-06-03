@@ -11,26 +11,29 @@ import {
 
 import Root from "./Root.tsx";
 import Login from "./pages/Login.tsx";
+
 // import NotFoundPage from "./pages/NotFoundPage.tsx";
+import NotFound from "./pages/NotFound.tsx";
+
 import Register from "./pages/Register.tsx";
 import Home from "./pages/Home.tsx";
 import About from "./pages/About.tsx";
 
-import NotFoundPage from "./pages/NotFoundPage.tsx";
 import ProfileRoot from "./pages/ProfileRoot.tsx";
 import ProfileBookmark from "./pages/Profile-bookmark.tsx";
 import ProfileUserInfo from "./pages/Profile-userInfo.tsx";
 import ProfileSetting from "./pages/Profile-setting.tsx";
 import Article from "./pages/Article.tsx";
 import FaceScanner from "./pages/FaceScanner.tsx";
+import Error from "./pages/Error.tsx";
+
 
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Root />} errorElement={<NotFoundPage />}>
+    <Route path="/" element={<Root />} errorElement={<Error />}>
       <Route index element={<Home />} />
-
-      <Route path="/about" element={<About />} />
+      <Route path="/tentang" element={<About />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
@@ -41,11 +44,12 @@ const router = createBrowserRouter(
         <Route path="/profile/settings" element={<ProfileSetting />} />
       </Route>
 
-      <Route path="/article" element={<Article />} />
+      <Route path="/artikel" element={<Article />} />
+
 
       <Route path="/face-scanner" element={<FaceScanner />} />
-
       <Route path="*" element={<NotFoundPage />} />
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );

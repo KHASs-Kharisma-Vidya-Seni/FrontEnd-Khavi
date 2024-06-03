@@ -1,3 +1,4 @@
+import Container from "@/components/Container";
 import {
   ArticleCard,
   ArticleTags,
@@ -76,7 +77,7 @@ export default function Article() {
   ];
 
   return (
-    <section className="w-full pb-48">
+    <Container className="w-full pb-48">
       <div id="1">
         <div className="relative rounded-lg border border-laser-500">
           <div className="p-5">
@@ -113,12 +114,12 @@ export default function Article() {
         <div className="mb-4 flex gap-4">
           <ArticleTags />
         </div>
-        <div className="flex flex-wrap gap-5">
+        <div className="grid grid-cols-3 gap-5">
           {dataArticle.map(article => (
             <ArticleCard {...article} key={article.id} />
           ))}
         </div>
       </div>
-    </section>
+    </Container>
   );
 }
