@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import AnimationPage from "@/components/AnimationPage";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar as fasStar } from "@fortawesome/free-solid-svg-icons";
-import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
+import { Star as StarIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
 const HairStyleItem: React.FC<{
@@ -101,26 +99,25 @@ const FaceScanner: React.FC = () => {
     active: boolean;
     handleClick: (index: number) => void;
   }> = ({ index, active, handleClick }) => (
-    <FontAwesomeIcon
-      icon={active ? fasStar : farStar}
+    <div
       className="cursor-pointer"
       onClick={() => handleClick(index)}
-      color={active ? "#FFC107" : "#e6e6e6"}
-      style={{ fontSize: "24px", marginRight: "5px" }}
-    />
+      style={{ marginRight: "5px" }}>
+      <StarIcon color={active ? "#FFC107" : "#e6e6e6"} size={30} />
+    </div>
   );
 
   const StarRating: React.FC<{
     rating: number;
     setRating: React.Dispatch<React.SetStateAction<number>>;
   }> = ({ rating, setRating }) => (
-    <div className="stars">
+    <div className="stars flex flex-row">
       {[...Array(5)].map((_, index) => (
         <Star
           key={index}
-          index={index + 1}
+          index={index + 0}
           active={index < rating}
-          handleClick={index => setRating(index)}
+          handleClick={index => setRating(index + 1)}
         />
       ))}
     </div>
