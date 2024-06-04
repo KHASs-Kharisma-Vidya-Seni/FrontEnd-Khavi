@@ -13,12 +13,17 @@ export default function AnimationPage({
       }}
       animate={{
         y: 0,
-
         opacity: 1,
       }}
-      transition={{
-        delay: 0.2,
+      exit={{
+        y: -100,
+        opacity: 0,
       }}
+      transition={{
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      layout
       className="h-full w-full">
       {children}
     </motion.div>

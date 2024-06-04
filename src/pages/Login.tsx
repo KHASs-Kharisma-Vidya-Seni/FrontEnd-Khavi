@@ -1,6 +1,7 @@
 import { Eye } from "lucide-react";
 import backgroundImage from "../assets/img/bg-login-15052024.png";
 import ImageRight from "../assets/img/right-img-login-15052024.png";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
@@ -81,14 +82,16 @@ export default function Login() {
                 <button className="mb-2 h-12 w-full rounded-[0.625rem] bg-[#2E323A] text-base font-semibold text-white">
                   Sign In
                 </button>
-                <button className="flex h-[2.75rem] w-full items-center justify-center rounded-[0.625rem] border-2 text-base font-semibold text-[#2E323A]">
-                  <img
-                    src="src/assets/img/Google.png"
-                    alt=""
-                    className="mr-2 h-6"
-                  />
-                  <span>Sign In With Google</span>
-                </button>
+                <Link to="/profile">
+                  <button className="flex h-[2.75rem] w-full items-center justify-center rounded-[0.625rem] border-2 text-base font-semibold text-[#2E323A]">
+                    <img
+                      src="src/assets/img/Google.png"
+                      alt=""
+                      className="mr-2 h-6"
+                    />
+                    <span>Sign In With Google</span>
+                  </button>
+                </Link>
               </div>
               <div className="text-center">
                 <p className="text-base font-normal">

@@ -2,82 +2,82 @@ import { cn } from "@/lib/utils";
 
 export default function About() {
   return (
-    <section className="">
-      <div
-        style={{
-          backgroundImage:
-            "linear-gradient(76deg, rgba(15,14,14,1) 0%, rgba(0,0,0,0.2862394957983193) 70%), url(./images/about-s1.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "50%",
-          width: "100%",
-        }}
-        className="flex h-full w-full flex-col items-center justify-center overflow-hidden">
+      <section className="pb-20 ">
         <div
-          id="text"
-          className="container h-full w-full justify-end self-center py-16 text-white">
-          <h1 className="text-5xl font-bold text-[#F4F4F4]">Tentang Kami</h1>
-          <p className="text-base text-[#F4F4F4]  lg:text-lg">
-            Selamat datang di KHASs, platform terdepan untuk rekomendasi gaya
-            rambut dan panduan perawatan rambut! Kami berdedikasi untuk membantu
-            Anda menemukan gaya rambut yang sempurna dan memberikan tips
-            perawatan rambut yang mudah diikuti.
-          </p>
+          style={{
+            backgroundImage:
+              "linear-gradient(76deg, rgba(15,14,14,1) 0%, rgba(0,0,0,0.2862394957983193) 70%), url(/images/about-s1.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: "100%",
+            width: "100%",
+          }}
+          className="flex h-full w-full flex-col items-center justify-center overflow-hidden">
+          <div
+            id="text"
+            className="container h-full w-full justify-end self-center py-16 text-white">
+            <h1 className="text-5xl font-bold text-[#F4F4F4]">Tentang Kami</h1>
+            <p className="mt-2 text-base  text-wild-sand-300 lg:w-3/6  lg:text-xl lg:leading-relaxed">
+              Selamat datang di KHASs, platform terdepan untuk rekomendasi gaya
+              rambut dan panduan perawatan rambut! Kami berdedikasi untuk
+              membantu Anda menemukan gaya rambut yang sempurna dan memberikan
+              tips perawatan rambut yang mudah diikuti.
+            </p>
+          </div>
         </div>
-      </div>
-      <div id="parent">
-        <div id="text" className="mt-10 py-12 text-center text-2xl font-bold">
-          <h1 className="text-5xl font-bold text-[#2E323A] lg:text-4xl">
-            Tiga Pilar KHASs
-          </h1>
+        <div id="parent">
+          <div id="text" className="mt-10 py-12 text-center text-2xl font-bold">
+            <h1 className="text-5xl font-bold text-[#2E323A] lg:text-4xl">
+              Tiga Pilar KHASs
+            </h1>
+          </div>
+          <div
+            id="image"
+            className="flex flex-col items-center  justify-center gap-10  md:flex-row lg:gap-20">
+            <PilarCard
+              title="Kreatif"
+              description="Mencerminkan kepribadian yang unik"
+              image="\images\about-s2-1.png"
+            />
+            <PilarCard
+              title="Kreatif"
+              description="Mencerminkan kepribadian yang unik"
+              image="\images\about-s2-2.png"
+            />
+            <PilarCard
+              title="Kreatif"
+              description="Mencerminkan kepribadian yang unik"
+              image="\images\about-s2-3.png"
+            />
+          </div>
         </div>
-        <div
-          id="image"
-          className="flex flex-col items-center  justify-center gap-10  md:flex-row lg:gap-20">
-          <PilarCard
-            title="Kreatif"
-            description="Mencerminkan kepribadian yang unik"
-            image="\images\about-s2-1.png"
-          />
-          <PilarCard
-            title="Kreatif"
-            description="Mencerminkan kepribadian yang unik"
-            image="\images\about-s2-2.png"
-          />
-          <PilarCard
-            title="Kreatif"
-            description="Mencerminkan kepribadian yang unik"
-            image="\images\about-s2-3.png"
-          />
-        </div>
-      </div>
 
-      <CardAbout />
+        <CardAbout />
 
-      <CardBaru
-        title="Jalan KHASs"
-        subtitle="Apa yang Kami Lakukan"
-        description="Tujuan utama kami adalah memberikan inspirasi gaya rambut yang sesuai dengan berbagai bentuk wajah, jenis rambut, dan tren terkini, sehingga pengguna dapat menemukan tampilan yang paling cocok dan menarik."
-        image="/images/about-s4.png"
-        isOdd={true}
-      />
+        <CardBaru
+          title="Jalan KHASs"
+          subtitle="Apa yang Kami Lakukan"
+          description="Tujuan utama kami adalah memberikan inspirasi gaya rambut yang sesuai dengan berbagai bentuk wajah, jenis rambut, dan tren terkini, sehingga pengguna dapat menemukan tampilan yang paling cocok dan menarik."
+          image="/images/about-s4.png"
+          isOdd={true}
+        />
 
-      <CardBaru
-        title="Metode Kami"
-        subtitle="Bagaimana Kami Melakukannya "
-        description="Untuk mencapai tujuan, kami melakukan riset tren gaya rambut dan perawatannya. Kami menyajikan konten berkualitas tinggi seperti artikel dari sumber yang terpercaya, membangun komunitas interaktif di situs kami."
-        image="/images/about-s5.png"
-        isOdd={false}
-      />
+        <CardBaru
+          title="Metode Kami"
+          subtitle="Bagaimana Kami Melakukannya "
+          description="Untuk mencapai tujuan, kami melakukan riset tren gaya rambut dan perawatannya. Kami menyajikan konten berkualitas tinggi seperti artikel dari sumber yang terpercaya, membangun komunitas interaktif di situs kami."
+          image="/images/about-s5.png"
+          isOdd={false}
+        />
 
-      <CardBaru
-        title="Misi Kami"
-        subtitle="Mengapa Kami Melakukannya"
-        description="kami percaya bahwa gaya rambut adalah bagian penting dari identitas dan ekspresi diri seseorang. Kami ingin membantu orang merasa percaya diri dan bahagia dengan penampilan mereka melalui gaya rambut yang sesuai dan perawatan yang tepat."
-        image="/images/about-s6.png"
-        isOdd={true}
-      />
-    </section>
+        <CardBaru
+          title="Misi Kami"
+          subtitle="Mengapa Kami Melakukannya"
+          description="kami percaya bahwa gaya rambut adalah bagian penting dari identitas dan ekspresi diri seseorang. Kami ingin membantu orang merasa percaya diri dan bahagia dengan penampilan mereka melalui gaya rambut yang sesuai dan perawatan yang tepat."
+          image="/images/about-s6.png"
+          isOdd={true}
+        />
+      </section>
   );
 }
 
