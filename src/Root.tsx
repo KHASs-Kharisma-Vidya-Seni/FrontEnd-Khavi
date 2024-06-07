@@ -5,8 +5,7 @@ import { AnimatePresence } from "framer-motion";
 
 const Root = () => {
   const location = useLocation();
-  const isAuthPage =
-    location.pathname === "/login" || location.pathname === "/register";
+  const isAuthPage = location.pathname === "/login" || location.pathname === "/register";
 
   const isProfile = matchPath("/profile/*", location.pathname);
 
