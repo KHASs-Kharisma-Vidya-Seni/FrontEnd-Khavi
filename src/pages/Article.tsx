@@ -78,7 +78,7 @@ export default function Article() {
 
   return (
     <Container className="w-full pb-48">
-      <div id="1">
+      {/* <div id="1">
         <div className="relative rounded-lg border border-laser-500">
           <div className="p-5">
             <figure className="relative">
@@ -97,13 +97,16 @@ export default function Article() {
             <img src="./icon/btn-article-now.png" alt="" className="mt-4" />
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div id="2" className="h-full w-full py-8">
         <div id="heading" className="pb-4">
           <h1 className="text-4xl font-bold ">Trending</h1>
         </div>
-        <div id="trending-main" className="flex h-[441px] w-full">
+        <div
+          id="trending-main"
+          className="flex flex-col lg:flex-row h-[441px] w-full"
+        >
           {dataTrending.map((trending, id) => (
             <TrendingCard {...trending} key={id} />
           ))}
@@ -114,8 +117,8 @@ export default function Article() {
         <div className="mb-4 flex gap-4">
           <ArticleTags />
         </div>
-        <div className="grid grid-cols-3 gap-5">
-          {dataArticle.map(article => (
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-5">
+          {dataArticle.map((article) => (
             <ArticleCard {...article} key={article.id} />
           ))}
         </div>

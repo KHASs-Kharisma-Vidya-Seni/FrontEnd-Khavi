@@ -1,6 +1,7 @@
 import { Eye } from "lucide-react";
 import backgroundRegister from "../assets/img/BackgroundRegister.png";
 import RightRegister from "../assets/img/rightregister.png";
+import { Link } from "react-router-dom";
 
 export default function Register() {
   return (
@@ -93,14 +94,16 @@ export default function Register() {
                 <button className="mb-2 h-12 w-full rounded-[0.625rem] bg-[#2E323A] text-base font-semibold text-white">
                   Sign Up
                 </button>
-                <button className="flex h-[2.75rem] w-full items-center justify-center rounded-[0.625rem] border-2 text-base font-semibold text-[#2E323A]">
-                  <img
-                    src="src/assets/img/Google.png"
-                    alt=""
-                    className="mr-2 h-6"
-                  />
-                  <span>Sign Up With Google</span>
-                </button>
+                <Link to="/profile">
+                  <button className="flex h-[2.75rem] w-full items-center justify-center rounded-[0.625rem] border-2 text-base font-semibold text-[#2E323A]">
+                    <img
+                      src="src/assets/img/Google.png"
+                      alt=""
+                      className="mr-2 h-6"
+                    />
+                    <span>Sign Up With Google</span>
+                  </button>
+                </Link>
               </div>
               <div className="mb-[2rem] text-center">
                 <p className="text-base font-normal">

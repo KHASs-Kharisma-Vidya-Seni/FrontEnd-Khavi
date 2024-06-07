@@ -4,8 +4,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 
 export default function ProfileUserInfo() {
-  // const { nameMenu } = useParams();
-  // border border-t-sky-100 h-svh
   return (
     <AnimationPage>
       <div className="flex flex-col gap-y-10">
@@ -81,7 +79,9 @@ const Form = () => {
         </div>
       </section>
       <div className="py-6">
-        <Button>Update</Button>
+        <Button variant="update" size="xl">
+          Update
+        </Button>
       </div>
     </form>
   );

@@ -1,31 +1,72 @@
+import { motion } from "framer-motion";
+
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <div id="landing" className="relative">
         <div id="1" className="flex overflow-hidden">
-          <div className="container relative left-0 z-20 w-full py-10 2xl:absolute 2xl:py-16">
+          <motion.div
+            initial={{
+              y: 50,
+              opacity: 0,
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="container relative left-0 z-20 w-full py-10 2xl:absolute 2xl:py-16">
             <h1 className="w-full text-5xl font-extrabold md:z-10 lg:text-8xl">
               Temukan <span className="text-[#CDB16E]">Gaya</span>
             </h1>
             <h1 className="ml-0 text-5xl font-extrabold text-[#CDB16E] md:ml-52 lg:ml-72 lg:text-8xl">
               Rambutmu
             </h1>
-          </div>
-          <figure className="-z-10 ml-auto hidden h-screen w-9/12 2xl:flex">
+          </motion.div>
+          <motion.figure
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              duration: 1.5,
+              delay: 0.5,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="-z-10 ml-auto hidden h-screen w-9/12 2xl:flex">
             <img
               src="images/landing-page.png"
               alt=""
               className="h-full w-full object-cover"
             />
-          </figure>
+          </motion.figure>
         </div>
 
         <div id="2" className="h-full overflow-hidden">
           <div className="w-ful flex h-full flex-col items-center justify-center 2xl:flex-row">
-            <div
+            <motion.div
+              initial={{
+                y: 50,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+                delay: 1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               style={{
                 backgroundImage:
-                  "linear-gradient(0deg, rgba(15,14,14,1) 0%, rgba(0,0,0,0.2862394957983193) 95%), url('/images/landing-1.png')",
+                  "linear-gradient(0deg, rgba(15,14,14,1) 0%, rgba(0,0,0,0.2862394957983193) 95%), url('/images/landing-1.jpg')",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
@@ -99,7 +140,7 @@ export default function Home() {
 
       {/* Artikel Part */}
       <div className="h-full w-full bg-[#2E323A]">
-        <div className="px-0 lg:px-36">
+        <div className="px-0">
           <div className="container flex flex-col items-center gap-1 pb-6 pt-20">
             <h1 className="text-5xl font-extrabold text-[#F4F4F4]">Artikel</h1>
             <p className="w-full text-center text-xl leading-relaxed text-[#B8B8C4] lg:w-5/6 lg:text-2xl">
@@ -150,7 +191,7 @@ export default function Home() {
 
       {/* Face Scanner Part */}
       <div className="container pt-20">
-        <div className="px-0 lg:px-36">
+        <div className="px-0 xl:px-36">
           <div className="flex flex-col items-center">
             <h1 className="text-5xl font-extrabold text-[#CDB16E]">
               <span className="text-[#2E323A]">Face </span>Scanner
@@ -191,7 +232,7 @@ export default function Home() {
 
       {/* Review Part */}
       <div id="review" className="container  pt-20 lg:container">
-        <div className="justify-cente flex flex-col items-center px-0 lg:px-36">
+        <div className="justify-cente flex flex-col items-center px-0 xl:px-36">
           <div className="flex flex-col items-center justify-center gap-3 text-[#2E323A]">
             <h1 className="text-5xl font-extrabold">Review</h1>
             <p className="text-center text-2xl ">

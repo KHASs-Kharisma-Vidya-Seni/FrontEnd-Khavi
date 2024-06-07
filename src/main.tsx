@@ -9,7 +9,6 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
-import Root from "./Root.tsx";
 import Login from "./pages/Login.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Register from "./pages/Register.tsx";
@@ -23,8 +22,13 @@ import ProfileSetting from "./pages/Profile-setting.tsx";
 import Article from "./pages/Article.tsx";
 
 import Error from "./pages/Error.tsx";
+import Root from "./Root.tsx";
+import Forum from "./pages/Forum.tsx";
+import FaceScanner from "./pages/FaceScanner.tsx";
 
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview
+
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />} errorElement={<Error />}>
@@ -41,6 +45,9 @@ const router = createBrowserRouter(
       </Route>
 
       <Route path="/artikel" element={<Article />} />
+      <Route path="/forum" element={<Forum />} />
+
+      <Route path="/face-scanner" element={<FaceScanner />} />
 
       <Route path="*" element={<NotFound />} />
     </Route>

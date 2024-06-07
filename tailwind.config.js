@@ -22,6 +22,9 @@ module.exports = {
         },
         center: true,
       },
+      backdropBlur: {
+        '10px': '10px',
+      },
       colors: {
         "heading-article": "#F5F8F8",
         "background-khavi": "#F4F4F4",
