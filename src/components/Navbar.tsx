@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Link, NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Button } from "./ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { MenuIcon } from "lucide-react";
@@ -16,7 +17,7 @@ interface NavItem {
 export default function Navbar() {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
   const isScrolled = useScrollPosition();
-  
+
   const navLinks: NavItem[] = [
     { name: "Home", link: "/" },
     { name: "Tentang", link: "/tentang" },
@@ -27,7 +28,7 @@ export default function Navbar() {
   ];
 
   const bgNavBlur =
-    "transition-all ease-in-out duration-300 bg-black bg-opacity-50 backdrop-blur-[10px] w-4/5";
+    "transition-all ease-in-out duration-300 bg-black bg-opacity-50 backdrop-blur-[10px] w-4/5 rounded-lg ";
 
   const AnimateNav = ({ children }: { children: ReactNode }) => {
     return (
@@ -49,25 +50,25 @@ export default function Navbar() {
       </motion.div>
     );
   };
-
+  //max-w-[1200px]
   return (
-    <AnimateNav>
-      <div className="py-2 relative flex justify-center w-full h-24 mx-auto z-50">
-        <nav
-          className={cn(
-            "max-w-[1200px] w-full mx-auto rounded-lg px-5 transition-all transition-backdrop ease duration-300 ease-in fixed flex h-24 items-center justify-between bg-shark-900 py-6 shadow-md",
-            isScrolled && bgNavBlur
-          )}
-        >
-          <figure className="flex">
-            <Link to="/">
-              <img src="/images/khavi-logo.png" alt="khavi-logo" className="w-28" />
-            </Link>
-          </figure>
-          {isDesktop ? <DesktopView navLinks={navLinks} /> : <MobileView navLinks={navLinks} />}
-        </nav>
-      </div>
-    </AnimateNav>
+    <div
+      className={cn("relative flex justify-center w-full h-24 mx-auto z-50", isScrolled && "py-2")}
+    >
+      <nav
+        className={cn(
+          "w-full mx-auto px-5 transition-all transition-backdrop ease duration-300 ease-in fixed flex h-24 items-center justify-between bg-shark-900 py-6 shadow-md",
+          isScrolled && bgNavBlur
+        )}
+      >
+        <figure className="flex">
+          <HashLink to="/#home">
+            <img src="/images/khavi-logo.png" alt="khavi-logo" className="w-28" />
+          </HashLink>
+        </figure>
+        {isDesktop ? <DesktopView navLinks={navLinks} /> : <MobileView navLinks={navLinks} />}
+      </nav>
+    </div>
   );
 }
 

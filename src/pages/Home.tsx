@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div>
-      <div id="landing" className="relative">
+    <section>
+      <div id="home" className="relative">
         <div id="1" className="flex overflow-hidden">
           <motion.div
             initial={{
@@ -19,7 +19,8 @@ export default function Home() {
               delay: 0.5,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="container relative left-0 z-20 w-full py-10 2xl:absolute 2xl:py-16">
+            className="container relative left-0 z-20 w-full py-10 2xl:absolute 2xl:py-16"
+          >
             <h1 className="w-full text-5xl font-extrabold md:z-10 lg:text-8xl">
               Temukan <span className="text-[#CDB16E]">Gaya</span>
             </h1>
@@ -39,12 +40,9 @@ export default function Home() {
               delay: 0.5,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="-z-10 ml-auto hidden h-screen w-9/12 2xl:flex">
-            <img
-              src="images/landing-page.png"
-              alt=""
-              className="h-full w-full object-cover"
-            />
+            className="-z-10 ml-auto hidden h-screen w-9/12 2xl:flex"
+          >
+            <img src="images/landing-page.png" alt="" className="h-full w-full object-cover" />
           </motion.figure>
         </div>
 
@@ -88,13 +86,11 @@ export default function Home() {
                   Bingung Menentukan Gaya Rambut?
                 </h1>
                 <p className="w-full text-left text-lg text-[#F4F4F4]">
-                  Selamat datang di{" "}
-                  <span className="text-[#CDB16E]">KHASs</span>, tempat di mana
-                  gaya rambut yang sempurna dan perawatan rambut yang tepat
-                  menjadi kenyataan. Kami hadir dengan misi untuk memberikan
-                  inspirasi, edukasi, dan panduan praktis agar Anda dapat
-                  menemukan gaya rambut dan merawatnya dengan baik. Temukan
-                  rahasia cantiknya rambut Anda bersama kami!
+                  Selamat datang di <span className="text-[#CDB16E]">KHASs</span>, tempat di mana
+                  gaya rambut yang sempurna dan perawatan rambut yang tepat menjadi kenyataan. Kami
+                  hadir dengan misi untuk memberikan inspirasi, edukasi, dan panduan praktis agar
+                  Anda dapat menemukan gaya rambut dan merawatnya dengan baik. Temukan rahasia
+                  cantiknya rambut Anda bersama kami!
                 </p>
               </div>
             </div>
@@ -107,8 +103,7 @@ export default function Home() {
         <div className="px-0 2xl:px-40">
           <div className="flex w-full items-center justify-center">
             <h1 className="text-center text-5xl font-extrabold text-[#2E323A] ">
-              <span className="text-[#CDB16E]">Menata Rambut</span> of
-              Hairstyling
+              <span className="text-[#CDB16E]">Menata Rambut</span> of Hairstyling
             </h1>
           </div>
 
@@ -124,14 +119,12 @@ export default function Home() {
 
             <div className="w-full lg:w-3/6">
               <p className="text-justify  text-xl leading-relaxed text-[#2E323A] sm:text-lg lg:text-xl xl:text-2xl">
-                Gaya rambut tidak hanya berpengaruh pada penampilan, tetapi juga
-                pada kepercayaan diri dan ekspresi diri. Dengan gaya rambut yang
-                tepat, seseorang bisa merasa lebih percaya diri dan
-                mengekspresikan kepribadian mereka dengan lebih baik. Selain
-                itu, penampilan yang terawat juga dapat memengaruhi bagaimana
-                orang lain memandang seseorang, terutama dalam konteks
-                profesional. Jadi, gaya rambut memiliki manfaat yang signifikan
-                dalam meningkatkan kepercayaan diri dan kesan sosial.
+                Gaya rambut tidak hanya berpengaruh pada penampilan, tetapi juga pada kepercayaan
+                diri dan ekspresi diri. Dengan gaya rambut yang tepat, seseorang bisa merasa lebih
+                percaya diri dan mengekspresikan kepribadian mereka dengan lebih baik. Selain itu,
+                penampilan yang terawat juga dapat memengaruhi bagaimana orang lain memandang
+                seseorang, terutama dalam konteks profesional. Jadi, gaya rambut memiliki manfaat
+                yang signifikan dalam meningkatkan kepercayaan diri dan kesan sosial.
               </p>
             </div>
           </div>
@@ -144,9 +137,8 @@ export default function Home() {
           <div className="container flex flex-col items-center gap-1 pb-6 pt-20">
             <h1 className="text-5xl font-extrabold text-[#F4F4F4]">Artikel</h1>
             <p className="w-full text-center text-xl leading-relaxed text-[#B8B8C4] lg:w-5/6 lg:text-2xl">
-              Jelajahi artikel ini untuk mendapatkan wawasan mendalam tentang
-              teknologi face scanner dan temukan informasi menarik terkait tips
-              dan trik perawatan rambut.
+              Jelajahi artikel ini untuk mendapatkan wawasan mendalam tentang teknologi face scanner
+              dan temukan informasi menarik terkait tips dan trik perawatan rambut.
             </p>
           </div>
 
@@ -157,10 +149,9 @@ export default function Home() {
                   <span className="text-[#CDB16E]">Eksplor</span> Artikel
                 </h1>
                 <p className="leading-description text-xl text-gray-500">
-                  Bergabunglah dalam perjalanan ini untuk menemukan tren terbaru
-                  dalam dunia hairstyle, serta mendapatkan saran praktis yang
-                  dapat Anda terapkan sehari-hari. Jelajahi artikel ini sekarang
-                  !!
+                  Bergabunglah dalam perjalanan ini untuk menemukan tren terbaru dalam dunia
+                  hairstyle, serta mendapatkan saran praktis yang dapat Anda terapkan sehari-hari.
+                  Jelajahi artikel ini sekarang !!
                 </p>
                 {/* Button */}
               </div>
@@ -176,15 +167,14 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center">
-          <h1 className="pt-16 text-4xl font-bold text-white">
-            Coba Fitur Kami
-          </h1>
+          <h1 className="pt-16 text-4xl font-bold text-white">Coba Fitur Kami</h1>
           <div className="py-8">
             <div
               style={{
                 clipPath: "polygon(51% 100%, 0 0, 100% 0)",
               }}
-              className="h-10 w-16 animate-bounce bg-gray-50"></div>
+              className="h-10 w-16 animate-bounce bg-gray-50"
+            ></div>
           </div>
         </div>
       </div>
@@ -197,9 +187,8 @@ export default function Home() {
               <span className="text-[#2E323A]">Face </span>Scanner
             </h1>
             <p className="mb-12 mt-3 w-full text-center text-xl leading-relaxed text-[#2E323A] md:text-2xl lg:w-11/12">
-              Sebuah teknologi canggih yang memungkinkan pemindaian dan analisis
-              cepat bentuk wajah seseorang menghasilkan informasi tentang
-              proporsi wajah dan gaya rambut
+              Sebuah teknologi canggih yang memungkinkan pemindaian dan analisis cepat bentuk wajah
+              seseorang menghasilkan informasi tentang proporsi wajah dan gaya rambut
             </p>
           </div>
 
@@ -217,9 +206,8 @@ export default function Home() {
                 Temukan gaya rambut yang sesuai!
               </h1>
               <p className="mb-4 w-full text-center text-lg font-normal text-[#808080] md:w-4/6 md:text-2xl lg:w-5/6">
-                Temukan gaya rambut ideal Anda dengan teknologi scan wajah!
-                Rekomendasi personal dan visualisasi instan untuk penampilan
-                sempurna!
+                Temukan gaya rambut ideal Anda dengan teknologi scan wajah! Rekomendasi personal dan
+                visualisasi instan untuk penampilan sempurna!
               </p>
 
               <button className="rounded-md bg-[#CDB16E] px-10 py-1 text-2xl text-gray-900">
@@ -236,8 +224,7 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center gap-3 text-[#2E323A]">
             <h1 className="text-5xl font-extrabold">Review</h1>
             <p className="text-center text-2xl ">
-              Ini adalah pendapat dari seseorang yang telah merasakan manfaat
-              dari situs web ini.
+              Ini adalah pendapat dari seseorang yang telah merasakan manfaat dari situs web ini.
             </p>
           </div>
           <div className="mx-auto my-10 w-full rounded-[3.125rem] bg-[#2E323A] px-[3.75rem] py-[1.88rem] drop-shadow-md ">
@@ -245,9 +232,7 @@ export default function Home() {
               <div className="flex gap-4">
                 <img src="/images/profile-review-1.png" alt="" />
                 <div className="my-auto">
-                  <h1 className="text-2xl font-bold text-[#F4F4F4]">
-                    Laura Hofmann
-                  </h1>
+                  <h1 className="text-2xl font-bold text-[#F4F4F4]">Laura Hofmann</h1>
                 </div>
               </div>
               {/* <div className="my-auto ">
@@ -262,11 +247,10 @@ export default function Home() {
             </div>
             <div className="mt-4">
               <p className="font-normal leading-loose text-[#CAC5C5] lg:text-xl">
-                "Situs ini memberikan pemindaian wajah yang cepat dan akurat
-                dengan antarmuka pengguna yang mudah digunakan. Saya sangat puas
-                Deng hasilnya, terutama dalam analisis proporsi wajah dan
-                rekomendasi gaya rambut. Sangat direkomendasikan bagi siapa pun
-                yang ingin memahami aspek visual wajah mereka dengan lebih baik"
+                "Situs ini memberikan pemindaian wajah yang cepat dan akurat dengan antarmuka
+                pengguna yang mudah digunakan. Saya sangat puas Deng hasilnya, terutama dalam
+                analisis proporsi wajah dan rekomendasi gaya rambut. Sangat direkomendasikan bagi
+                siapa pun yang ingin memahami aspek visual wajah mereka dengan lebih baik"
               </p>
               {/* <p className="pt-[0.88rem] text-[0.875rem] text-black text-opacity-60">
                 12 Orang Menyukai Ini
@@ -289,6 +273,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -28,7 +28,6 @@ import FaceScanner from "./pages/FaceScanner.tsx";
 
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview
 
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />} errorElement={<Error />}>
