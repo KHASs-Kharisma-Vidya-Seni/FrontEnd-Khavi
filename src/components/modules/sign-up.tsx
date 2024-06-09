@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Toaster, toast } from 'sonner';
@@ -38,6 +38,9 @@ export default function SignUp() {
     formState: { isSubmitting },
   } = form;
 
+
+  const navigate = useNavigate()
+
   // 2. Define a submit handler.
   const onSubmit: SubmitHandler<FormSchemaValue> = async data => {
     try {
@@ -57,6 +60,10 @@ export default function SignUp() {
       });
 
       reset();
+
+      setTimeout(() => {
+        navigate(`/verify-email/${newUserReq.data.newUserReg[0].uid as ResponseData}`);
+      }, 2000);
     } catch (error: any) {
       const errorMessage = error?.response?.data?.error || 'An error occurred. Please try again.';
       toast.error(errorMessage);

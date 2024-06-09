@@ -11,9 +11,8 @@ import { useEffect } from 'react';
 export default function ProfileRoot() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { mutate } = useSWRConfig();
 
-  const { currentUser } = useAuth();
+  const { currentUser, logout } = useAuth();
 
   useEffect(() => {
     if (!currentUser || currentUser === null) {
@@ -21,19 +20,6 @@ export default function ProfileRoot() {
     }
   }, [currentUser, navigate]);
 
-  const handleLogout = async () => {
-    try {
-      toast.promise((makeRequest.get('/auth/logout'), mutate('/auth/logout', undefined, false)), {
-        success: 'Logout Succes.....',
-      });
-
-      setTimeout(() => {
-        navigate('/');
-      }, 2000);
-    } catch (error) {
-      console.error('Logout failed:', error);
-    }
-  };
 
   return (
     <div>
@@ -59,7 +45,7 @@ export default function ProfileRoot() {
               ))}
             </ul>
             <div id="auth" className="py-20">
-              <Button onClick={handleLogout} variant="logout">
+              <Button onClick={logout} variant="logout">
                 Logout
               </Button>
             </div>

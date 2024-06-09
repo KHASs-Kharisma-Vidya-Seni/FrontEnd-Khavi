@@ -15,17 +15,53 @@ interface LoginInputs {
   password: string;
 }
 
+// let cachedData: Record<string, any> = {};
+
+// const fetcher = async (url: string) => {
+//   try {
+//     if (cachedData[url]) {
+//       return cachedData[url];
+//     } else {
+//       const res = await axios.get(url, { withCredentials: true });
+//       cachedData[url] = res.data;
+//       return res.data;
+//     }
+//   } catch (error) {
+//     throw error;
+//   }
+// };
+
+let isUnauthorized = false;
+
 const fetcher = async (url: string) => {
   try {
+    if (isUnauthorized) {
+      // Jika sudah terjadi kesalahan 401 sebelumnya, langsung kembalikan null tanpa melakukan permintaan baru.
+      return null;
+    }
+
     const res = await axios.get(url, { withCredentials: true });
     return res.data;
-  } catch (error) {
+  } catch (error: any) {
+    if (error.response && error.response.status === 401) {
+      // Jika terjadi kesalahan 401 (Unauthorized), set isUnauthorized menjadi true.
+      console.error('Unauthorized access detected. Request stopped.');
+      isUnauthorized = true;
+    }
     throw error;
   }
 };
 
 export const useAuth = () => {
-  const { data: currentUser, error, mutate } = useSWR<User | null>('http://localhost:3000/current-user', fetcher);
+  const {
+    data: currentUser,
+    error,
+    mutate,
+  } = useSWR<User | null>('http://localhost:3000/current-user', fetcher, {
+    revalidateOnMount: true, // Lakukan revalidasi saat komponen dimount
+    revalidateOnFocus: true, // Lakukan revalidasi saat komponen mendapat fokus
+    errorRetryCount: 3, // Jumlah percobaan ulang jika terjadi kesalahan
+  });
 
   useEffect(() => {
     if (error) {
@@ -39,11 +75,25 @@ export const useAuth = () => {
     // localStorage.setItem('user', JSON.stringify(res.data));
     mutate(res.data, false);
 
+    isUnauthorized = false;
+
     return res;
+  };
+
+  const logout = async () => {
+    try {
+      await axios.get('http://localhost:3000/api/auth/logout', { withCredentials: true });
+      mutate(null, false);
+      isUnauthorized = true;
+    } catch (error) {
+      console.error('Error logging out:', error);
+      throw error;
+    }
   };
 
   return {
     currentUser,
     login,
+    logout
   };
 };
