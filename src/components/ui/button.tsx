@@ -16,15 +16,17 @@ const buttonVariants = cva(
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         "outline-white":
           "border border-white bg-transparent text-wild-sand-50 hover:bg-white hover:text-black",
-        login:
-          "bg-shark-50 text-shark-900 hover:bg-shark-500",
+        login: "bg-shark-50 text-shark-900 hover:bg-shark-500",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         logout: "bg-red-400 text-white hover:bg-red-500 transition-alls",
         update: "bg-shark-900 text-white hover:bg-shark-950",
-        post: "bg-shark-900 hover:bg-shark-800 border-[1px] border-white text-white",
+        post: "bg-shark-900 hover:bg-shark-800 border border-white text-white",
+        auth: "mb-2 h-12 w-full rounded-lg bg-shark-900 text-base font-semibold text-white transition duration-300 transform hover:bg-gray-800 hover:shadow-md",
+        "auth-google":
+          "flex h-11 w-full items-center justify-center rounded-lg border-2 text-base font-semibold text-shark-900 transition duration-300 transform bg-gray-100 hover:bg-gray-200",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -32,7 +34,7 @@ const buttonVariants = cva(
         lg: "h-11 rounded-md px-8",
         xl: "py-2 px-10",
         icon: "h-10 w-10",
-        post: " w-20 h-2.5 px-[1.1rem] py-[1.1rem] rounded-[0.625rem]",
+        post: " w-20 h-2.5 px-[1.1rem] py-[1.1rem] rounded-lg",
       },
     },
     defaultVariants: {
