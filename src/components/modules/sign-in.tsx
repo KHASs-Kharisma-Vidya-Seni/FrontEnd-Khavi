@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Toaster, toast } from 'sonner';
@@ -36,12 +36,13 @@ export default function SigIn() {
     formState: { isSubmitting },
   } = form;
 
-  const { login } = useAuth()
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
   // Define a submit handler.
   const onSubmit: SubmitHandler<FormSchemaValue> = async data => {
     try {
-      const userlogin = await login(data)
+      const userlogin = await login(data);
 
       const promise = () =>
         new Promise<{ data: ResponseData }>(resolve => setTimeout(() => resolve({ data: userlogin.data }), 2000));
@@ -55,6 +56,10 @@ export default function SigIn() {
       });
 
       reset();
+
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
     } catch (error: any) {
       const errorMessage = error?.response?.data?.error || 'An error occurred. Please try again.';
       toast.error(errorMessage);

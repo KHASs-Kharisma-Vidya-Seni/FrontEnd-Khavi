@@ -1,13 +1,10 @@
 import AnimationPage from '@/components/AnimationPage';
-import maxPhoto from '../assets/people.jpg';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/use-auth';
 
 export default function ProfileUserInfo() {
   const { currentUser } = useAuth();
-
-  console.log(currentUser);
 
   return (
     <AnimationPage>
@@ -23,9 +20,7 @@ export default function ProfileUserInfo() {
             <p className="text-gray-400">Pekalongan, Indonesia</p>
           </div>
         </div>
-        <div>
-          {/* <Form /> */}
-        </div>
+        <div>{/* <Form /> */}</div>
       </div>
     </AnimationPage>
   );
