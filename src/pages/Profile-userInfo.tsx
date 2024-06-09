@@ -1,36 +1,36 @@
-import AnimationPage from "@/components/AnimationPage";
-import maxPhoto from "../assets/people.jpg";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import AnimationPage from '@/components/AnimationPage';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { useAuth } from '@/hooks/use-auth';
 
 export default function ProfileUserInfo() {
+  const { currentUser } = useAuth();
+
   return (
     <AnimationPage>
       <div className="flex flex-col gap-y-10">
         <div className="flex items-center gap-6">
           <Avatar>
-            <AvatarImage className="object-cover" src={maxPhoto} />
+            <AvatarImage className="object-cover" src={currentUser?.photoURL} />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
 
           <div>
-            <h1 className="text-2xl font-bold">Sara Tencredi</h1>
+            <h1 className="text-2xl font-bold">{currentUser?.username}</h1>
             <p className="text-gray-400">Pekalongan, Indonesia</p>
           </div>
         </div>
-        <div>
-          <Form />
-        </div>
+        <div>{/* <Form /> */}</div>
       </div>
     </AnimationPage>
   );
 }
 
-const FormField = ({
-  label,
-  value,
+const FormFields = ({
+  label = '',
+  value = '',
   id,
-  type,
+  type = 'text',
 }: {
   label: string;
   value: string;
@@ -55,27 +55,12 @@ const Form = () => {
     <form>
       <section className="grid grid-cols-2 gap-10">
         <div className="space-y-5">
-          <FormField
-            label="Username"
-            value="Sara Tencredi"
-            id="username"
-            type="text"
-          />
-          <FormField
-            label="Email"
-            value="saracredi@gmail.com"
-            id="email"
-            type="text"
-          />
+          <FormFields label="Username" value="Sara Tencredi" id="username" type="text" />
+          <FormFields label="Email" value="saracredi@gmail.com" id="email" type="text" />
         </div>
         <div className="space-y-5">
-          <FormField
-            label="Lokasi"
-            value="Pekalongan, Indonesia"
-            id="location"
-            type="text"
-          />
-          <FormField label="Foto Profil" id="photo" type="file" value={""} />
+          <FormFields label="Lokasi" value="Pekalongan, Indonesia" id="location" type="text" />
+          <FormFields label="Foto Profil" id="photo" type="file" value={''} />
         </div>
       </section>
       <div className="py-6">

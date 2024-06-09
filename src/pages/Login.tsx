@@ -2,15 +2,16 @@ import { Eye } from "lucide-react";
 import backgroundImage from "../assets/img/bg-login-15052024.png";
 import ImageRight from "../assets/img/right-img-login-15052024.png";
 import { Link } from "react-router-dom";
+import SigIn from "@/components/modules/sign-in";
 
 export default function Login() {
   return (
-    <div className="relative h-screen bg-[#AFAFAF] p-0 font-serif sm:px-[7.5rem] sm:py-[2rem]">
-      <div
+    <div className="relative h-screen bg-[#AFAFAF] p-0 font-serif">
+      {/* <div
         className="absolute inset-0 bg-cover bg-center blur-[10px] grayscale filter"
         style={{
           backgroundImage: `url(${backgroundImage})`,
-        }}></div>
+        }}></div> */}
       <div className="absolute inset-0 opacity-50"></div>
       <div className="relative z-10 flex h-full w-full bg-[#D4D3D3]">
         <div className="relative hidden h-full w-2/4 items-center justify-center lg:flex">
@@ -21,7 +22,7 @@ export default function Login() {
             }}></div>
         </div>
         <div className="flex h-full w-full items-center justify-center bg-white p-[3rem] lg:w-2/4">
-          <div className="mx-auto w-full max-w-md lg:w-auto">
+          <div className="mx-auto w-full max-w-md">
             <div className="mb-8 text-center">
               <h1 className="mb-[0.5rem] text-5xl font-bold text-[#2E323A]">
                 Sign In
@@ -30,7 +31,7 @@ export default function Login() {
                 Welcome, please enter your account
               </h4>
             </div>
-            <form action="">
+            {/* <form action="">
               <div className="mb-2">
                 <label
                   htmlFor=""
@@ -101,7 +102,8 @@ export default function Login() {
                   </span>
                 </p>
               </div>
-            </form>
+            </form> */}
+            <SigIn />
           </div>
         </div>
       </div>

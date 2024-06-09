@@ -6,3 +6,5 @@ export function convertToKebabCase(text: string) {
 export function TextLowerCase(text: string) {
   return text?.toLowerCase();
 }
+
+export const BASE_URL_API = import.meta.env.BASE_URL_API;

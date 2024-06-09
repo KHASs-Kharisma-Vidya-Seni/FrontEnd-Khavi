@@ -1,13 +1,13 @@
-import { cn } from "@/lib/utils";
-import { Link, NavLink } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
-import { Button } from "./ui/button";
-import { useMediaQuery } from "@/hooks/use-media-query";
-import { MenuIcon } from "lucide-react";
-import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
-import { motion } from "framer-motion";
-import { useScrollPosition } from "@/hooks/use-scroll-position";
-import { ReactNode } from "react";
+import { cn } from '@/lib/utils';
+import { Link, NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import { Button } from './ui/button';
+import { useMediaQuery } from '@/hooks/use-media-query';
+import { MenuIcon } from 'lucide-react';
+import { Drawer, DrawerContent, DrawerTrigger } from './ui/drawer';
+import { useScrollPosition } from '@/hooks/use-scroll-position';
+import { User, useAuth } from '@/hooks/use-auth';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
 interface NavItem {
   name: string;
@@ -15,49 +15,28 @@ interface NavItem {
 }
 
 export default function Navbar() {
-  const isDesktop = useMediaQuery("(min-width: 1024px)");
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
   const isScrolled = useScrollPosition();
 
+  const { currentUser } = useAuth();
+
   const navLinks: NavItem[] = [
-    { name: "Home", link: "/" },
-    { name: "Tentang", link: "/tentang" },
-    { name: "Forum", link: "/forum" },
-    { name: "Artikel", link: "/artikel" },
-    { name: "Profile", link: "/profile" },
-    { name: "Analis", link: "/face-scanner" },
+    { name: 'Home', link: '/' },
+    { name: 'Tentang', link: '/tentang' },
+    { name: 'Forum', link: '/forum' },
+    { name: 'Artikel', link: '/artikel' },
+    // { name: 'Profile', link: '/profile' },
+    { name: 'Analis', link: '/face-scanner' },
   ];
 
   const bgNavBlur =
-    "transition-all ease-in-out duration-300 bg-black bg-opacity-50 backdrop-blur-[10px] w-4/5 rounded-lg ";
+    'transition-all ease-in-out duration-300 bg-black bg-opacity-50 backdrop-blur-[10px] w-4/5 rounded-lg px-8';
 
-  const AnimateNav = ({ children }: { children: ReactNode }) => {
-    return (
-      <motion.div
-        initial={{
-          y: -100,
-          opacity: 0,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          duration: 0.5,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-      >
-        {children}
-      </motion.div>
-    );
-  };
-  //max-w-[1200px]
   return (
-    <div
-      className={cn("relative flex justify-center w-full h-24 mx-auto z-50", isScrolled && "py-2")}
-    >
+    <div className={cn('relative flex justify-center w-full h-24 mx-auto z-50', isScrolled && 'py-2')}>
       <nav
         className={cn(
-          "w-full mx-auto px-5 transition-all transition-backdrop ease duration-300 ease-in fixed flex h-24 items-center justify-between bg-shark-900 py-6 shadow-md",
+          'w-full mx-auto px-4 lg:px-20 transition-all transition-backdrop ease duration-300 ease-in fixed flex h-24 items-center justify-between bg-shark-900 py-6 shadow-md',
           isScrolled && bgNavBlur
         )}
       >
@@ -66,26 +45,33 @@ export default function Navbar() {
             <img src="/images/khavi-logo.png" alt="khavi-logo" className="w-28" />
           </HashLink>
         </figure>
-        {isDesktop ? <DesktopView navLinks={navLinks} /> : <MobileView navLinks={navLinks} />}
+        {isDesktop ? (
+          <DesktopView currentUser={currentUser || undefined} navLinks={navLinks} />
+        ) : (
+          <MobileView currentUser={currentUser || undefined} navLinks={navLinks} />
+        )}
       </nav>
     </div>
   );
 }
 
+interface CurrentUserWithOut extends Omit<User, 'id' | 'email' | 'created_at'> {}
+
 interface ViewProps {
   navLinks: NavItem[];
+  currentUser?: CurrentUserWithOut;
 }
 
-function DesktopView({ navLinks }: ViewProps) {
+function DesktopView({ navLinks, currentUser }: ViewProps) {
   return (
     <>
       <NavLinks navLinks={navLinks} />
-      <AuthButtons />
+      {currentUser ? <AvatarProfile {...currentUser} /> : <AuthButtons />}
     </>
   );
 }
 
-function MobileView({ navLinks }: ViewProps) {
+function MobileView({ navLinks, currentUser }: ViewProps) {
   return (
     <Drawer direction="right">
       <DrawerTrigger>
@@ -94,7 +80,7 @@ function MobileView({ navLinks }: ViewProps) {
       <DrawerContent>
         <div className="px-6 py-8">
           <NavLinks navLinks={navLinks} />
-          <AuthButtons />
+          {currentUser ? <AvatarProfile {...currentUser} /> : <AuthButtons />}
         </div>
       </DrawerContent>
     </Drawer>
@@ -134,5 +120,18 @@ function AuthButtons() {
         <Link to="/register">Daftar</Link>
       </Button>
     </div>
+  );
+}
+
+function AvatarProfile(currentUser: CurrentUserWithOut) {
+  return (
+    <figure className="relative">
+      <Link to="/profile">
+        <Avatar className="h-10 w-10 flex justify-center items-center before:absolute before:opacity-0 before:hover:opacity-35 before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:rounded-full before:transition-all">
+          <AvatarImage className="object-cover" src={currentUser?.photoURL} />
+          <AvatarFallback>{currentUser?.username}</AvatarFallback>
+        </Avatar>
+      </Link>
+    </figure>
   );
 }

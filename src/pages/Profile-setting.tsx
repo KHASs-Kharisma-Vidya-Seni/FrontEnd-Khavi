@@ -1,5 +1,5 @@
-import AnimationPage from "@/components/AnimationPage";
-import { Button } from "@/components/ui/button";
+import AnimationPage from '@/components/AnimationPage';
+import { Button } from '@/components/ui/button';
 
 export default function ProfileSetting() {
   return (
@@ -15,8 +15,7 @@ function DeleteAccount() {
       <h1 className="text-3xl font-bold">Hapus Akun</h1>
       <div className="w-3/6 text-center">
         <p className="text-gray-500">
-          Apakah Anda yakin ingin menghapus akun Anda? Menghapus akun Anda akan
-          menghapus semua konten di dalamnya.
+          Apakah Anda yakin ingin menghapus akun Anda? Menghapus akun Anda akan menghapus semua konten di dalamnya.
         </p>
       </div>
       <Button variant="logout">Hapus Akun</Button>
