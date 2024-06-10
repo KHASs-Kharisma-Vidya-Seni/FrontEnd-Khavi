@@ -22,7 +22,7 @@ const loginSchema = z.object({
 
 type FormSchemaValue = z.infer<typeof loginSchema>;
 
-export default function SigIn() {
+export default function SignIn() {
   const form = useForm<FormSchemaValue>({
     resolver: zodResolver(loginSchema),
     defaultValues: {

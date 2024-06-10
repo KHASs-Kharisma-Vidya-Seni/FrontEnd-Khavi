@@ -125,13 +125,16 @@ function AuthButtons() {
 
 function AvatarProfile(currentUser: CurrentUserWithOut) {
   return (
-    <figure className="relative">
-      <Link to="/profile">
-        <Avatar className="h-10 w-10 flex justify-center items-center before:absolute before:opacity-0 before:hover:opacity-35 before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:rounded-full before:transition-all">
-          <AvatarImage className="object-cover" src={currentUser?.photoURL} />
-          <AvatarFallback>{currentUser?.username}</AvatarFallback>
-        </Avatar>
-      </Link>
-    </figure>
+    <Link to="/profile">
+      <div className="flex justify-normal lg:justify-center items-center gap-x-4">
+        <figure className="relative">
+          <Avatar className="h-10 w-10 flex justify-center items-center before:absolute before:opacity-0 before:hover:opacity-35 before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:rounded-full before:transition-all">
+            <AvatarImage className="object-cover" src={currentUser?.photoURL} />
+            <AvatarFallback>{currentUser?.username}</AvatarFallback>
+          </Avatar>
+        </figure>
+        <p className="text-white hover:text-gray-400">{currentUser?.username}</p>
+      </div>
+    </Link>
   );
 }

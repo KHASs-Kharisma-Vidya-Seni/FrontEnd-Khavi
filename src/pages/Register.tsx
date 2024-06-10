@@ -1,42 +1,38 @@
-import { Eye } from "lucide-react";
-import backgroundRegister from "../assets/img/BackgroundRegister.png";
-import RightRegister from "../assets/img/rightregister.png";
-import { Link } from "react-router-dom";
-import SignUp from "@/components/modules/sign-up";
+// import { Eye } from 'lucide-react';
+// import backgroundRegister from '../assets/img/BackgroundRegister.png';
+
+import { Link } from 'react-router-dom';
+
+
+import RightRegister from '../assets/img/rightregister.png';
+import SignUp from '@/components/modules/sign-up';
+import { FormAnimate, HideAnimate, ImageAnimate } from '@/components/anim/login-animate';
+import { HeadingForm } from '@/components/modules/form-modules';
 
 export default function Register() {
-  // sm:px-[7.5rem] sm:py-[2rem]  p-0
   return (
-    <div className="relative h-screen bg-[#AFAFAF] p-0 font-serif ">
-      {/* <div
-        className="absolute inset-0 bg-cover bg-center blur-[10px] grayscale filter"
-        style={{
-          backgroundImage: `url(${backgroundRegister})`,
-        }}
-      ></div> */}
+    <div className="relative h-screen p-0 font-serif overflow-hidden">
       <div className="absolute inset-0 opacity-50"></div>
-      <div className="relative z-10 flex h-full w-full bg-[#D4D3D3] ">
-        <div className="relative hidden h-full w-2/4 items-center justify-center lg:flex">
-          <div
-            className="absolute inset-0 bg-cover bg-center grayscale filter"
-            style={{
-              backgroundImage: `url(${RightRegister})`,
-            }}
-          ></div>
+      <div className="relative z-10 flex h-full w-full">
+        <div className="relative py-10 pl-10 h-full overflow-hidden w-3/6 items-center justify-center hidden lg:flex">
+          <figure className="w-full h-full overflow-hidden rounded-3xl">
+            <ImageAnimate style={{ objectPosition: '20% 30%' }}>
+              <img
+                className="w-full h-full overflow-hidden object-cover grayscale filter"
+                src={RightRegister}
+                alt="photo-cowok"
+                style={{}}
+              />
+            </ImageAnimate>
+            <HideAnimate />
+          </figure>
         </div>
-        <div className="flex h-full w-full items-center justify-center bg-white p-[3rem] lg:w-2/4">
+        <FormAnimate className="flex h-full w-full items-center justify-center bg-white p-[3rem] lg:w-2/4">
           <div className="mx-auto w-full max-w-md">
-            <div className="mb-8 text-center">
-              <h1 className="mb-[0.5rem] mt-[2rem] text-5xl font-bold text-[#2E323A]">
-                Sign Up
-              </h1>
-              <h4 className="text-xl font-medium text-[#2E323A]">
-                Welcome, please create a new account
-              </h4>
-            </div>
+            <HeadingForm title="Sign Up" subtitle="Welcome, please create a new account" />
             <SignUp />
           </div>
-        </div>
+        </FormAnimate>
       </div>
     </div>
   );
@@ -75,7 +71,6 @@ const Down = () => {
           </button>
         </Link>
       </div>
-     
     </div>
   );
 };

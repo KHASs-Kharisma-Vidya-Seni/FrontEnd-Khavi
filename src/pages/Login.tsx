@@ -1,37 +1,42 @@
-import { Eye } from "lucide-react";
-import backgroundImage from "../assets/img/bg-login-15052024.png";
-import ImageRight from "../assets/img/right-img-login-15052024.png";
-import { Link } from "react-router-dom";
-import SigIn from "@/components/modules/sign-in";
+// import { Eye } from 'lucide-react';
+// import backgroundImage from '../assets/img/bg-login-15052024.png';
+
+import { FormAnimate, HideAnimate, ImageAnimate } from '@/components/anim/login-animate';
+import ImageRight from '../assets/img/right-img-login-15052024.png';
+import SignIn from '@/components/modules/sign-in';
+import { HeadingForm } from '@/components/modules/form-modules';
 
 export default function Login() {
   return (
-    <div className="relative h-screen bg-[#AFAFAF] p-0 font-serif">
-      {/* <div
-        className="absolute inset-0 bg-cover bg-center blur-[10px] grayscale filter"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-        }}></div> */}
+    <div className="relative h-screen p-0 font-serif overflow-hidden">
       <div className="absolute inset-0 opacity-50"></div>
-      <div className="relative z-10 flex h-full w-full bg-[#D4D3D3]">
-        <div className="relative hidden h-full w-2/4 items-center justify-center lg:flex">
-          <div
-            className="absolute inset-0 bg-cover bg-center grayscale filter"
-            style={{
-              backgroundImage: `url(${ImageRight})`,
-            }}></div>
+      <div className="relative z-10 flex h-full w-full ">
+        <div className="relative py-10 pl-10 h-full hidden overflow-hidden w-3/6 items-center justify-center lg:flex">
+          <figure className="w-full h-full overflow-hidden rounded-3xl">
+            <ImageAnimate>
+              <img
+                className="w-full h-full overflow-hidden object-cover grayscale filter "
+                src={ImageRight}
+                alt="photo-cewek"
+                style={{ objectPosition: 'top center' }}
+              />
+            </ImageAnimate>
+            <HideAnimate />
+          </figure>
         </div>
-        <div className="flex h-full w-full items-center justify-center bg-white p-[3rem] lg:w-2/4">
+        <FormAnimate className="flex h-full w-full items-center justify-center bg-white p-[3rem] lg:w-3/6">
           <div className="mx-auto w-full max-w-md">
-            <div className="mb-8 text-center">
-              <h1 className="mb-[0.5rem] text-5xl font-bold text-[#2E323A]">
-                Sign In
-              </h1>
-              <h4 className="text-xl font-medium text-[#2E323A]">
-                Welcome, please enter your account
-              </h4>
-            </div>
-            {/* <form action="">
+            <HeadingForm title="Sign In" subtitle="Welcome, please enter your account" />
+            <SignIn />
+          </div>
+        </FormAnimate>
+      </div>
+    </div>
+  );
+}
+
+{
+  /* <form action="">
               <div className="mb-2">
                 <label
                   htmlFor=""
@@ -102,11 +107,5 @@ export default function Login() {
                   </span>
                 </p>
               </div>
-            </form> */}
-            <SigIn />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+            </form> */
 }
