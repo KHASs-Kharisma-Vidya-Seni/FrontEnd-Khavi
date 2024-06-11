@@ -21,6 +21,7 @@ import Root from "./Root.tsx";
 import Forum from "./pages/Forum.tsx";
 import FaceScanner from "./pages/FaceScanner.tsx";
 import VerifyEmailStatus from "./pages/VerifyEmail.tsx";
+import ProtectedRoute from "./layout/RouteGuards.tsx";
 
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview
 const router = createBrowserRouter([
@@ -40,7 +41,11 @@ const router = createBrowserRouter([
       { path: "/register", element: <Register /> },
       {
         path: "/profile",
-        element: <ProfileRoot />,
+        element: (
+          <ProtectedRoute>
+            <ProfileRoot />
+          </ProtectedRoute>
+        ),
         children: [
           {
             index: true,

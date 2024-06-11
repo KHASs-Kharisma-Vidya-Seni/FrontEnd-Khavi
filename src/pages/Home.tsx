@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <section>
-      <div id="home" className="relative">
+      <div id="home" className="relative scroll-smooth">
         <div id="1" className="flex overflow-hidden">
           <motion.div
             initial={{
