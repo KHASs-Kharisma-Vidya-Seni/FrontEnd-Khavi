@@ -44,8 +44,8 @@ export default function Forum() {
   ];
 
   return (
-    <div style={{ paddingBottom: "30px" }} className="flex gap-2 container pt-8 sm:container">
-      <div className="w-62 static left-24 top-[8rem] space-y-3.5 ">
+    <div style={{ paddingBottom: "30px" }} className="container flex gap-2 pt-8 sm:container">
+      <div className="w-62 static left-24 top-[8rem] space-y-3.5">
         <div className="relative w-full rounded-[0.625rem] bg-shark-900 p-5">
           <input
             type="text"
@@ -59,9 +59,7 @@ export default function Forum() {
         <div className="relative w-full rounded-[0.625rem] bg-shark-900 p-2.5">
           <div className="space-y-4 p-2.5">
             <div>
-              <h1 className="w-fit border-b-2 border-laser-300 text-2xl font-semibold text-laser-300">
-                Filter
-              </h1>
+              <h1 className="w-fit border-b-2 border-laser-300 text-2xl font-semibold text-laser-300">Filter</h1>
             </div>
             <div className="text-xl font-extrabold text-white">
               <a href="" className="mt-4 block">
@@ -77,10 +75,7 @@ export default function Forum() {
           </div>
         </div>
         <div>
-          <TagPopuler
-            hashtags={tagData.map((data) => data.hashtag)}
-            posteds={tagData.map((data) => data.posted)}
-          />
+          <TagPopuler hashtags={tagData.map(data => data.hashtag)} posteds={tagData.map(data => data.posted)} />
         </div>
       </div>
 

@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { Toaster, toast } from 'sonner';
-import { z } from 'zod';
+import { Link, useNavigate } from "react-router-dom";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { Toaster, toast } from "sonner";
+import { z } from "zod";
 
-import { Button } from '@/components/ui/button';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { makeRequest } from '@/lib/axios';
+import { Button } from "@/components/ui/button";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { makeRequest } from "@/lib/axios";
 
 interface ResponseData {
   message: string;
@@ -15,9 +15,9 @@ interface ResponseData {
 }
 
 const formSchema = z.object({
-  username: z.string().min(3, 'Username must be at least 3 characters').max(20, 'Username cannot exceed 20 characters'),
-  email: z.string().email('Invalid email address'),
-  password: z.string().min(6, 'Password must be at least 6 characters'),
+  username: z.string().min(3, "Username must be at least 3 characters").max(20, "Username cannot exceed 20 characters"),
+  email: z.string().email("Invalid email address"),
+  password: z.string().min(6, "Password must be at least 6 characters"),
 });
 
 type FormSchemaValue = z.infer<typeof formSchema>;
@@ -27,9 +27,9 @@ export default function SignUp() {
   const form = useForm<FormSchemaValue>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: '',
-      email: '',
-      password: '',
+      username: "",
+      email: "",
+      password: "",
     },
   });
 
@@ -38,27 +38,33 @@ export default function SignUp() {
     formState: { isSubmitting },
   } = form;
 
+  const navigate = useNavigate();
+
   // 2. Define a submit handler.
   const onSubmit: SubmitHandler<FormSchemaValue> = async data => {
     try {
-      const newUserReq = await makeRequest.post('/auth/register', data);
+      const newUserReq = await makeRequest.post("/auth/register", data);
 
       const promise = () =>
         new Promise<{ data: ResponseData }>(resolve => setTimeout(() => resolve({ data: newUserReq.data }), 2000));
 
       toast.promise(promise, {
-        loading: 'Waiting minute....',
+        loading: "Waiting minute....",
         success: ({ data }: { data: ResponseData }) => {
           return data && data.newUserReg && data.newUserReg.length > 0
             ? `Hello ${data.newUserReg[0].username}, your account has been created successfully!`
-            : 'Your account has been created successfully!';
+            : "Your account has been created successfully!";
         },
-        error: 'Error',
+        error: "Error",
       });
 
       reset();
+
+      setTimeout(() => {
+        navigate(`/verify-email/${newUserReq.data.newUserReg[0].uid as ResponseData}`);
+      }, 2000);
     } catch (error: any) {
-      const errorMessage = error?.response?.data?.error || 'An error occurred. Please try again.';
+      const errorMessage = error?.response?.data?.error || "An error occurred. Please try again.";
       toast.error(errorMessage);
     }
   };
@@ -111,7 +117,7 @@ export default function SignUp() {
             {/* <Button type="submit">Submit</Button> */}
             <div>
               <Button disabled={isSubmitting} type="submit" variant="auth">
-                {isSubmitting ? 'Loading...' : 'Sign Up'}
+                {isSubmitting ? "Loading..." : "Sign Up"}
               </Button>
               <Link to="/profile">
                 <Button variant="auth-google">
@@ -123,7 +129,7 @@ export default function SignUp() {
             <div className="py-4">
               <div className="text-center">
                 <p className="text-base font-normal">
-                  Already have an account?{' '}
+                  Already have an account?{" "}
                   <span className="font-semibold text-[#CDB16E] underline">
                     <Link to="/login">Sign in</Link>
                   </span>

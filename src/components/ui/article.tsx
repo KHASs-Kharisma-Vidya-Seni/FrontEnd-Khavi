@@ -26,14 +26,13 @@ export const TrendingCard = ({
             ), url(${imageSrc})`,
           }}
           className="custom-image absolute inset-0 z-10 h-full w-full bg-gradient-to-b from-black/20 to-black/65"
-          whileHover={{ scale: 1.3, filter: "brightness(150%)" }}></motion.div>
+          whileHover={{ scale: 1.3, filter: "brightness(150%)" }}
+        ></motion.div>
       </div>
       <div className="absolute bottom-6 left-10 z-10 w-5/6">
         <div className="relative flex flex-col gap-2">
-          <h1 className="w-5/6 text-2xl lg:text-4xl font-bold text-heading-article">
-            {title}
-          </h1>
-          <div className="lg:text-base text-sm">
+          <h1 className="w-5/6 text-2xl font-bold text-heading-article lg:text-4xl">{title}</h1>
+          <div className="text-sm lg:text-base">
             <p className="text-wild-sand-200">{description}</p>
             <p className="text-wild-sand-200">{date}</p>
           </div>
@@ -53,12 +52,7 @@ export const ArticleTags = () => {
   return (
     <>
       {tags.map((tag, i: number) => (
-        <p
-          key={i}
-          className={cn(
-            "text-xl",
-            tag === "All" ? "font-bold text-black" : "font-normal text-gray-500"
-          )}>
+        <p key={i} className={cn("text-xl", tag === "All" ? "font-bold text-black" : "font-normal text-gray-500")}>
           {tag}
         </p>
       ))}
@@ -85,9 +79,7 @@ export const ArticleCard = ({
       <div className="flex flex-col gap-2 px-5 py-5">
         <div className="flex gap-2">
           {tags.map((tag, i: number) => (
-            <p
-              key={i}
-              className="inline max-w-fit rounded-lg bg-red-400 px-3 py-1 text-sm text-white">
+            <p key={i} className="inline max-w-fit rounded-lg bg-red-400 px-3 py-1 text-sm text-white">
               {tag}
             </p>
           ))}

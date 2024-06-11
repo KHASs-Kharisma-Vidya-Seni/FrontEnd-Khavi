@@ -1,10 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function AnimationPage({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function AnimationPage({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
       initial={{
@@ -24,7 +20,8 @@ export default function AnimationPage({
         ease: [0.22, 1, 0.36, 1],
       }}
       layout
-      className="h-full w-full">
+      className="h-full w-full"
+    >
       {children}
     </motion.div>
   );

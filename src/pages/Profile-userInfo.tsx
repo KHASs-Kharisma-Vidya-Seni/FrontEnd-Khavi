@@ -1,7 +1,7 @@
-import AnimationPage from '@/components/AnimationPage';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { useAuth } from '@/hooks/use-auth';
+import AnimationPage from "@/components/AnimationPage";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/use-auth";
 
 export default function ProfileUserInfo() {
   const { currentUser } = useAuth();
@@ -27,10 +27,10 @@ export default function ProfileUserInfo() {
 }
 
 const FormFields = ({
-  label = '',
-  value = '',
+  label = "",
+  value = "",
   id,
-  type = 'text',
+  type = "text",
 }: {
   label: string;
   value: string;
@@ -60,7 +60,7 @@ const Form = () => {
         </div>
         <div className="space-y-5">
           <FormFields label="Lokasi" value="Pekalongan, Indonesia" id="location" type="text" />
-          <FormFields label="Foto Profil" id="photo" type="file" value={''} />
+          <FormFields label="Foto Profil" id="photo" type="file" value={""} />
         </div>
       </section>
       <div className="py-6">

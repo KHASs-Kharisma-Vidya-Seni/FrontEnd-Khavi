@@ -24,9 +24,7 @@ const Tread = () => {
 
         <h2 className="text-xl">Yamada San</h2>
       </div>
-      <p className="text-gray-500">
-        Pertama nih aku spilll, kamu harus tauu ini coyyyy!!!!
-      </p>
+      <p className="text-gray-500">Pertama nih aku spilll, kamu harus tauu ini coyyyy!!!!</p>
       <div id="tags" className="flex gap-2">
         <Button>#hair</Button>
         <Button>#hair</Button>

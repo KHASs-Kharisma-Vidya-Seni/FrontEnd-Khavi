@@ -4,18 +4,16 @@ export default function Footer() {
       <div className="container mx-auto">
         <div className="flex items-center border-b border-laser-500 pb-10">
           <div className="w-2/6">
-            <img src="/images/KHASs-logo-2.png" alt="" className="border-0 w-24"/>
+            <img src="/images/KHASs-logo-2.png" alt="" className="w-24 border-0" />
           </div>
-  
+
           <section className="flex w-4/6 gap-20">
             <Menu />
             <MenuSosmed />
             <MenuContact />
           </section>
         </div>
-        <p className="py-10 text-end text-sm text-wild-sand-50">
-          Copyright © 2024 KHASs. Dibuat dengan cinta.
-        </p>
+        <p className="py-10 text-end text-sm text-wild-sand-50">Copyright © 2024 KHASs. Dibuat dengan cinta.</p>
       </div>
     </div>
   );
