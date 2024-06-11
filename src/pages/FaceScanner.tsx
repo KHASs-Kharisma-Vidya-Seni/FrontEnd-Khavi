@@ -113,7 +113,7 @@ const FaceScanner: React.FC = () => {
           "Tulang Pipi": "Tinggi",
         });
         setShowRecommendations(true);
-        setUploadCount((prevCount) => prevCount + 1);
+        setUploadCount(prevCount => prevCount + 1);
       };
       reader.readAsDataURL(file);
     }
@@ -153,11 +153,7 @@ const FaceScanner: React.FC = () => {
     active: boolean;
     handleClick: (index: number) => void;
   }> = ({ index, active, handleClick }) => (
-    <div
-      className="cursor-pointer"
-      onClick={() => handleClick(index)}
-      style={{ marginRight: "5px" }}
-    >
+    <div className="cursor-pointer" onClick={() => handleClick(index)} style={{ marginRight: "5px" }}>
       <StarIcon color={active ? "#FFC107" : "#e6e6e6"} size={30} />
     </div>
   );
@@ -168,12 +164,7 @@ const FaceScanner: React.FC = () => {
   }> = ({ rating, setRating }) => (
     <div className="stars flex flex-row">
       {[...Array(5)].map((_, index) => (
-        <Star
-          key={index}
-          index={index + 0}
-          active={index < rating}
-          handleClick={(index) => setRating(index + 1)}
-        />
+        <Star key={index} index={index + 0} active={index < rating} handleClick={index => setRating(index + 1)} />
       ))}
     </div>
   );
@@ -187,7 +178,7 @@ const FaceScanner: React.FC = () => {
           <div className="mr-[133px] flex h-auto w-auto flex-col items-center justify-start pt-5">
             <div className="analysisresult w-96 flex-shrink-0 flex-grow justify-center gap-12 lg:flex">
               <div
-                className=" foto mt-1 flex h-[500px] w-[515px] flex-col items-center justify-center gap-5 rounded-md lg:h-[600px]"
+                className="foto mt-1 flex h-[500px] w-[515px] flex-col items-center justify-center gap-5 rounded-md lg:h-[600px]"
                 style={{
                   backgroundImage: `url(${uploadedImage || Foto.img})`,
                   backgroundSize: "cover",
@@ -205,9 +196,7 @@ const FaceScanner: React.FC = () => {
                   <label
                     htmlFor="imageUpload"
                     className={`postbutton flex h-12 cursor-pointer items-center justify-center gap-2.5 rounded-lg border border-gray-800 bg-laser-300 p-2.5 ${
-                      uploadedImage
-                        ? "mb-[-100px] lg:mb-[-225px]"
-                        : "mb-[-100px]"
+                      uploadedImage ? "mb-[-100px] lg:mb-[-225px]" : "mb-[-100px]"
                     }`}
                   >
                     <span className="cobascan text-lg font-bold leading-relaxed text-slate-900 lg:text-xl">
@@ -239,18 +228,13 @@ const FaceScanner: React.FC = () => {
                     </h1>
                   </div>
                   <div className="result flex flex-col items-start justify-center">
-                    {analysisItems.map((item) => (
-                      <div
-                        key={item.name}
-                        className="flex w-full items-center justify-start gap-5"
-                      >
+                    {analysisItems.map(item => (
+                      <div key={item.name} className="flex w-full items-center justify-start gap-5">
                         <div className="flex items-center gap-2.5">
                           <div className="w-48 text-xl font-bold leading-loose text-gray-800 lg:text-2xl">
                             {item.name}
                           </div>
-                          <div className="text-2xl font-bold leading-loose text-gray-800">
-                            :
-                          </div>
+                          <div className="text-2xl font-bold leading-loose text-gray-800">:</div>
                         </div>
                         <div className="text-xl font-bold leading-loose text-gray-800 lg:text-2xl">
                           {analysisResults[item.name]}
@@ -311,12 +295,9 @@ const FaceScanner: React.FC = () => {
                                 className="ml-[-30px] mt-[-10px] text-xs font-normal leading-normal text-gray-800 lg:ml-[-23px] lg:mt-[-10px] lg:text-base"
                                 style={{ maxWidth: "100%" }}
                               >
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Eum ducimus cupiditate
-                                molestiae atque. Placeat ipsa dolorem quaerat,
-                                consectetur voluptas accusamus fugiat aperiam
-                                libero doloribus iure animi optio ducimus?
-                                Maxime, beatae?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ducimus cupiditate
+                                molestiae atque. Placeat ipsa dolorem quaerat, consectetur voluptas accusamus fugiat
+                                aperiam libero doloribus iure animi optio ducimus? Maxime, beatae?
                               </p>
                             </div>
                           )}
@@ -348,12 +329,12 @@ const FaceScanner: React.FC = () => {
                 delay: 0.8,
               }}
             >
-              <div className="w-full mr-14 mt-[-50px] py-10  gap-2.5 lg:mr-0 lg:mt-0">
-                <h1 className="text-center text-3xl font-extrabold  text-gray-800 lg:text-5xl">
+              <div className="mr-14 mt-[-50px] w-full gap-2.5 py-10 lg:mr-0 lg:mt-0">
+                <h1 className="text-center text-3xl font-extrabold text-gray-800 lg:text-5xl">
                   Rekomendasi Gaya Rambut
                 </h1>
               </div>
-              <div className="photo flex flex-col py-10 items-center justify-center gap-10">
+              <div className="photo flex flex-col items-center justify-center gap-10 py-10">
                 <div className="baris1 ml-[95px] mt-[-20px] items-start justify-center gap-12 lg:ml-0 lg:mt-0 lg:inline-flex">
                   {Rekomendasi.slice(0, 3).map((style, index) => (
                     <HairStyleItem

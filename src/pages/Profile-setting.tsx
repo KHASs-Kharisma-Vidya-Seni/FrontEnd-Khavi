@@ -1,5 +1,5 @@
-import AnimationPage from '@/components/AnimationPage';
-import { Button } from '@/components/ui/button';
+import AnimationPage from "@/components/AnimationPage";
+import { Button } from "@/components/ui/button";
 
 export default function ProfileSetting() {
   return (

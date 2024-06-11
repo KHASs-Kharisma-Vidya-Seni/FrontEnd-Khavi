@@ -1,29 +1,21 @@
 // import { Eye } from 'lucide-react';
 // import backgroundRegister from '../assets/img/BackgroundRegister.png';
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-
-import RightRegister from '../assets/img/rightregister.png';
-import SignUp from '@/components/modules/sign-up';
-import { FormAnimate, HideAnimate, ImageAnimate } from '@/components/anim/login-animate';
-import { HeadingForm } from '@/components/modules/form-modules';
+import RightRegister from "../assets/img/rightregister.png";
+import SignUp from "@/components/modules/sign-up";
+import { FormAnimate, HideAnimate, ImageAnimate } from "@/components/anim/auth-animate";
+import { HeadingForm } from "@/components/modules/form-modules";
 
 export default function Register() {
   return (
-    <div className="relative h-screen p-0 font-serif overflow-hidden">
+    <div className="relative h-screen overflow-hidden p-0 font-serif">
       <div className="absolute inset-0 opacity-50"></div>
       <div className="relative z-10 flex h-full w-full">
-        <div className="relative py-10 pl-10 h-full overflow-hidden w-3/6 items-center justify-center hidden lg:flex">
-          <figure className="w-full h-full overflow-hidden rounded-3xl">
-            <ImageAnimate style={{ objectPosition: '20% 30%' }}>
-              <img
-                className="w-full h-full overflow-hidden object-cover grayscale filter"
-                src={RightRegister}
-                alt="photo-cowok"
-                style={{}}
-              />
-            </ImageAnimate>
+        <div className="relative hidden h-full w-3/6 items-center justify-center overflow-hidden py-10 pl-10 lg:flex">
+          <figure className="h-full w-full overflow-hidden rounded-3xl">
+            <ImageAnimate src={RightRegister} />
             <HideAnimate />
           </figure>
         </div>
@@ -74,3 +66,12 @@ const Down = () => {
     </div>
   );
 };
+
+{
+  /* <img
+className="w-full h-full overflow-hidden object-cover grayscale filter"
+src={RightRegister}
+alt="photo-cowok"
+style={{}}
+/> */
+}

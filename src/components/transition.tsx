@@ -38,11 +38,7 @@
 
 import { motion } from "framer-motion";
 
-export default function Transition({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Transition({ children }: { children: React.ReactNode }) {
   return (
     <>
       {children}

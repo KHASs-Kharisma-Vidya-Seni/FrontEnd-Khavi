@@ -1,9 +1,5 @@
 import Container from "@/components/Container";
-import {
-  ArticleCard,
-  ArticleTags,
-  TrendingCard,
-} from "@/components/ui/article";
+import { ArticleCard, ArticleTags, TrendingCard } from "@/components/ui/article";
 
 export default function Article() {
   const dataArticle = [
@@ -19,8 +15,7 @@ export default function Article() {
       id: 2,
       imageSrc: "/images/arikel-2.png",
       title: "Inspirasi Gaya Rambut Pendek Wanita Manis dari Selebriti",
-      description:
-        "Temukan berbagai model rambut yang cocok untuk berbagai bentuk wajah dan gaya Pribadi.",
+      description: "Temukan berbagai model rambut yang cocok untuk berbagai bentuk wajah dan gaya Pribadi.",
       tags: ["Treatment", "Hair"],
     },
     {
@@ -101,12 +96,9 @@ export default function Article() {
 
       <div id="2" className="h-full w-full py-8">
         <div id="heading" className="pb-4">
-          <h1 className="text-4xl font-bold ">Trending</h1>
+          <h1 className="text-4xl font-bold">Trending</h1>
         </div>
-        <div
-          id="trending-main"
-          className="flex flex-col lg:flex-row h-[441px] w-full"
-        >
+        <div id="trending-main" className="flex h-[441px] w-full flex-col lg:flex-row">
           {dataTrending.map((trending, id) => (
             <TrendingCard {...trending} key={id} />
           ))}
@@ -117,8 +109,8 @@ export default function Article() {
         <div className="mb-4 flex gap-4">
           <ArticleTags />
         </div>
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-5">
-          {dataArticle.map((article) => (
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+          {dataArticle.map(article => (
             <ArticleCard {...article} key={article.id} />
           ))}
         </div>

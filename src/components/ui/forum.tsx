@@ -1,12 +1,6 @@
 import { ChevronDown, Ellipsis, Heart, MessageCircle } from "lucide-react";
 
-export const TagPopuler = ({
-  hashtags,
-  posteds,
-}: {
-  hashtags: string[];
-  posteds: string[];
-}) => {
+export const TagPopuler = ({ hashtags, posteds }: { hashtags: string[]; posteds: string[] }) => {
   const pairedTags = hashtags.map((tag, index) => ({
     hashtag: tag,
     posted: posteds[index],
@@ -16,9 +10,7 @@ export const TagPopuler = ({
     <div className="relative w-full rounded-[0.625rem] bg-shark-900 p-2.5">
       <div className="space-y-4 p-2.5">
         <div>
-          <h1 className="w-fit border-b-2 border-laser-300 text-2xl font-semibold text-laser-300">
-            Tag Populer
-          </h1>
+          <h1 className="w-fit border-b-2 border-laser-300 text-2xl font-semibold text-laser-300">Tag Populer</h1>
         </div>
         <div className="">
           {pairedTags.map(({ hashtag, posted }, index) => (

@@ -1,6 +1,6 @@
-import { useAuth } from '@/hooks/use-auth';
-import { PropsWithChildren, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useAuth } from "@/hooks/use-auth";
+import { PropsWithChildren, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 type ProtectedRouteProps = PropsWithChildren;
 
@@ -10,7 +10,7 @@ export default function ProtectedRoute({ children }: { children: ProtectedRouteP
 
   useEffect(() => {
     if (!currentUser || currentUser === null) {
-      navigate('/login', { replace: true });
+      navigate("/login", { replace: true });
     }
   }, [currentUser, navigate]);
 

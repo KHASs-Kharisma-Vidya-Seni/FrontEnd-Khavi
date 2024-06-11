@@ -1,22 +1,22 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { Toaster, toast } from 'sonner';
-import { z } from 'zod';
+import { Link, useNavigate } from "react-router-dom";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { Toaster, toast } from "sonner";
+import { z } from "zod";
 
-import { Button } from '@/components/ui/button';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { useAuth } from '@/hooks/use-auth';
+import { Button } from "@/components/ui/button";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { useAuth } from "@/hooks/use-auth";
 
 interface ResponseData {
   username: string;
 }
 
 const loginSchema = z.object({
-  email: z.string().email({ message: 'Please enter a valid email address.' }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
   password: z.string().refine(value => value.trim().length > 0, {
-    message: 'Password is required.',
+    message: "Password is required.",
   }),
 });
 
@@ -26,8 +26,8 @@ export default function SignIn() {
   const form = useForm<FormSchemaValue>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     },
   });
 
@@ -48,20 +48,20 @@ export default function SignIn() {
         new Promise<{ data: ResponseData }>(resolve => setTimeout(() => resolve({ data: userlogin.data }), 2000));
 
       toast.promise(promise, {
-        loading: 'Please wait while we authenticate you...',
+        loading: "Please wait while we authenticate you...",
         success: ({ data }: { data: ResponseData }) => {
-          return data && data.username ? `Hello, ${data.username}! Welcome back to our platform.` : 'Welcome back!';
+          return data && data.username ? `Hello, ${data.username}! Welcome back to our platform.` : "Welcome back!";
         },
-        error: 'Authentication failed. Please try again.',
+        error: "Authentication failed. Please try again.",
       });
 
       reset();
 
       setTimeout(() => {
-        navigate('/');
+        navigate("/");
       }, 2000);
     } catch (error: any) {
-      const errorMessage = error?.response?.data?.error || 'An error occurred. Please try again.';
+      const errorMessage = error?.response?.data?.error || "An error occurred. Please try again.";
       toast.error(errorMessage);
       console.log(error);
     }
@@ -101,7 +101,7 @@ export default function SignIn() {
           <section className="py-4">
             <div>
               <Button disabled={isSubmitting} type="submit" variant="auth">
-                {isSubmitting ? 'Loading...' : 'Sign Up'}
+                {isSubmitting ? "Loading..." : "Sign Up"}
               </Button>
               <Link to="/profile">
                 <Button variant="auth-google">
@@ -113,7 +113,7 @@ export default function SignIn() {
             <div className="py-4">
               <div className="text-center">
                 <p className="text-base font-normal">
-                  Don't have an account?{' '}
+                  Don't have an account?{" "}
                   <span className="font-semibold text-[#CDB16E] underline">
                     <Link to="/register">Sign Up</Link>
                   </span>
