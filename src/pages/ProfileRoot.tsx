@@ -1,22 +1,13 @@
 import Container from "@/components/Container";
 
-import { useEffect } from "react";
-import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
 import { cn } from "@/lib/utils";
 
 export default function ProfileRoot() {
   const location = useLocation();
-  const navigate = useNavigate();
-
-  const { currentUser, logout } = useAuth();
-
-  useEffect(() => {
-    if (!currentUser || currentUser === null) {
-      navigate("/login", { replace: true });
-    }
-  }, [currentUser, navigate]);
+  const { logout } = useAuth();
 
   return (
     <div>

@@ -10,7 +10,10 @@
     "preview": "vite preview",
     "lint-staged": "lint-staged",
     "prepare": "husky install",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "eslint": "npx eslint --quiet --fix",
+    "prettier": "npx prettier --write ./src --ignore-unknown",
+    "lint-fix": "yarn eslint && yarn prettier"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.6.0",
@@ -64,9 +67,11 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "npx prettier --write",
-      "npx eslint --fix"
+    "*.{js, jsx,ts,tsx}": [
+      "npx eslint --quiet --fix"
+    ],
+    "*.{json,js,ts,jsx,tsx,html}": [
+      "npx prettier --write --ignore-unknown"
     ]
   }
 }
