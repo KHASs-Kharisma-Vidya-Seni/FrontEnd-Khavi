@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 export default function ProfileRoot() {
   const location = useLocation();
-  const {  logout } = useAuth();
+  const { logout } = useAuth();
 
   return (
     <div>
