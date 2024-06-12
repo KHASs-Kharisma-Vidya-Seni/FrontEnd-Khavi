@@ -20,6 +20,7 @@ const buttonVariants = cva(
         logout: "bg-red-400 text-white hover:bg-red-500 transition-alls",
         update: "bg-shark-900 text-white hover:bg-shark-950",
         post: "bg-shark-900 hover:bg-shark-800 border border-white text-white",
+        responsive_post: "bg-shark-900 hover:bg-shark-800 border-[1px] border-white text-white",
         auth: "mb-2 h-12 w-full rounded-lg bg-shark-900 text-base font-semibold text-white transition duration-300 transform hover:bg-gray-800 hover:shadow-md",
         "auth-google":
           "flex h-11 w-full items-center justify-center rounded-lg border-2 text-base font-semibold text-shark-900 transition duration-300 transform bg-gray-100 hover:bg-gray-200",
@@ -31,6 +32,7 @@ const buttonVariants = cva(
         xl: "py-2 px-10",
         icon: "h-10 w-10",
         post: " w-20 h-2.5 px-[1.1rem] py-[1.1rem] rounded-lg",
+        responsive_post: " w-8 h-1 px-[1.1rem] py-3.5 rounded-[0.625rem] text-xs",
       },
     },
     defaultVariants: {
