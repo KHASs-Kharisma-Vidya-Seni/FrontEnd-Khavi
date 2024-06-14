@@ -32,7 +32,7 @@ const buttonVariants = cva(
         xl: "py-2 px-10",
         icon: "h-10 w-10",
         post: " w-20 h-2.5 px-[1.1rem] py-[1.1rem] rounded-lg",
-        responsive_post: " w-8 h-1 px-[1.1rem] py-3.5 rounded-[0.625rem] text-xs",
+        responsive_post: " w-20 h-9 px-[1.1rem] py-3.5 rounded-lg text-md",
       },
     },
     defaultVariants: {
