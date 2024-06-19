@@ -110,7 +110,7 @@ export default function Forum() {
   ];
 
   return (
-    <div className=" flex flex-col justify-center gap-2 bg-shark-900 p-0 xl:container lg:pt-8 xl:bg-white xl:pb-[30px]">
+    <div className="bg-[url('/images/bgArtikel.png')] flex flex-col justify-center gap-2 bg-shark-900 p-0 xl:container lg:pt-8 xl:bg-white xl:pb-[30px]">
       <div
         className={cn(
           "fixed left-0 flex h-screen w-12 justify-center border-r-[0.1875rem] border-t-[0.1875rem] border-shark-800 bg-shark-900 xl:hidden",
