@@ -5,6 +5,7 @@ export default function Article() {
   const dataArticle = [
     {
       id: 1,
+      slug: "rahasia-merawat-rambut-gimbal",
       imageSrc: "/images/arikel-1.png",
       title: "Rahasia Merawat Rambut Gimbal agar Tetap Sehat",
       description:
@@ -13,6 +14,7 @@ export default function Article() {
     },
     {
       id: 2,
+      slug: "inspirasi-gaya-rambut-pendek-wanita-manis",
       imageSrc: "/images/arikel-2.png",
       title: "Inspirasi Gaya Rambut Pendek Wanita Manis dari Selebriti",
       description: "Temukan berbagai model rambut yang cocok untuk berbagai bentuk wajah dan gaya Pribadi.",
@@ -20,14 +22,16 @@ export default function Article() {
     },
     {
       id: 3,
+      slug: "cara-mengetahui-bentuk-wajah",
       imageSrc: "/images/arikel-3.png",
       title: "4 Cara Mengetahui Bentuk Wajah, Ini Langkah Mudahnya",
       description:
-        "Bingung menentukan bentuk wajahmu?Temukan cara mudah untuk mengetahui bentuk wajahmu dengan langkah-langkah yang simpel dan praktis.",
+        "Bingung menentukan bentuk wajahmu? Temukan cara mudah untuk mengetahui bentuk wajahmu dengan langkah-langkah yang simpel dan praktis.",
       tags: ["Treatment", "Hair"],
     },
     {
       id: 4,
+      slug: "inspirasi-gaya-rambut-pria-ala-nguyen",
       imageSrc: "/images/arikel-4.png",
       title: "Inspirasi Gaya Rambut Pria ala Nguyen",
       description:
@@ -36,6 +40,7 @@ export default function Article() {
     },
     {
       id: 5,
+      slug: "tren-gaya-rambut-pendek-pria",
       imageSrc: "/images/arikel-5.png",
       title: "Tren Gaya Rambut Pendek Pria: Tampil Tampan dan Modern",
       description:
@@ -44,17 +49,20 @@ export default function Article() {
     },
     {
       id: 6,
+      slug: "cara-mengetahui-bentuk-wajah",
       imageSrc: "/images/arikel-6.png",
       title: "4 Cara Mengetahui Bentuk Wajah, Ini Langkah Mudahnya",
       description:
-        "Bingung menentukan bentuk wajahmu?Temukan cara mudah untuk mengetahui bentuk wajahmu dengan langkah-langkah yang simpel dan praktis.",
+        "Bingung menentukan bentuk wajahmu? Temukan cara mudah untuk mengetahui bentuk wajahmu dengan langkah-langkah yang simpel dan praktis.",
       tags: ["Treatment", "Hair"],
     },
   ];
+  
 
   const dataTrending = [
     {
       id: 1,
+      slug: "merawat-bentuk-wajah-agar-simetris",
       title: "Merawat Bentuk Wajah Agar Simetris",
       imageSrc: "/images/cewek-tranding-1.png",
       description:
@@ -63,13 +71,15 @@ export default function Article() {
     },
     {
       id: 2,
-      title: "Pesona Pria Gondrong , dimata Wanita",
+      slug: "pesona-pria-gondrong-di-mata-wanita",
+      title: "Pesona Pria Gondrong di Mata Wanita",
       imageSrc: "/images/cowo-trading-2-full.png",
       description:
         "Rambut gondrong pada pria memancarkan pesona yang unik dan tak terabaikan. Bagi banyak wanita, rambut panjang mencerminkan keberanian, kepercayaan diri, serta sisi kreatif dan bebas dari konvensi.",
       date: "11 Juni 2024",
     },
   ];
+  
 
   return (
     <Container className="w-full pb-48">

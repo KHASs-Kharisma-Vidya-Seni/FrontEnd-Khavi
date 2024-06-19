@@ -117,5 +117,8 @@ module.exports = {
       },
     },
   },
-  plugins: [tailwindAnimate],
+  plugins: [
+    require('@tailwindcss/typography'),
+    tailwindAnimate,
+  ],
 };
