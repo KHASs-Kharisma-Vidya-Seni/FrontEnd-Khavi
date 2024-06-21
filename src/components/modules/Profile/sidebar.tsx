@@ -1,28 +1,27 @@
-import Container from "@/components/Container";
-import Sidebar from "@/components/modules/Profile/sidebar";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+import React from "react";
+import SVG from "@/components/modules/Profile/sidebutton";
 
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
 import { cn } from "@/lib/utils";
 
-export default function ProfileRoot() {
+export default function sidebar() {
   const location = useLocation();
   const { logout } = useAuth();
-
   return (
     <div>
-      <div className="block xl:hidden fixed left-0 top-1/2">
-        <Sidebar />
-      </div>
-      <Container className="flex w-full justify-between overflow-y-hidden py-10">
-        {/* Konten tidak terlihat jika ukuran layar besar */}
-
-        {/* Konten Tidak terlihat jika ukuran layar kecil */}
-        <div className="hidden h-full w-3/12 flex-col justify-between md:flex">
-          <div id="main-side" className="static w-4/6 border-r">
+      <Drawer direction="left">
+        <DrawerTrigger>
+          <div>
+            <SVG />
+          </div>
+        </DrawerTrigger>
+        <DrawerContent>
+          <div className="w-full h-full bg-white py-20 px-20">
             <h1 className="pb-6 text-2xl font-bold">User Profile</h1>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mb-64">
               {["user-info", "bookmark", "settings"].map((menu, index) => (
                 <li key={index}>
                   <NavLink
@@ -45,11 +44,8 @@ export default function ProfileRoot() {
               </Button>
             </div>
           </div>
-        </div>
-        <div className="h-full w-9/12">
-          <Outlet />
-        </div>
-      </Container>
+        </DrawerContent>
+      </Drawer>
     </div>
   );
 }
