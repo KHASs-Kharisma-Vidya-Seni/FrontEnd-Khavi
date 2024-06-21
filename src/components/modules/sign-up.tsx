@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -63,9 +64,11 @@ export default function SignUp() {
       setTimeout(() => {
         navigate(`/verify-email/${newUserReq.data.newUserReg[0].uid as ResponseData}`);
       }, 2000);
-    } catch (error: any) {
-      const errorMessage = error?.response?.data?.error || "An error occurred. Please try again.";
-      toast.error(errorMessage);
+    } catch (error) {
+      if (axios.isAxiosError(error) && error.response?.status === 401) {
+        const errorMessage = error?.response?.data?.error || "An error occurred. Please try again.";
+        toast.error(errorMessage);
+      }
     }
   };
 
@@ -143,21 +146,3 @@ export default function SignUp() {
     </>
   );
 }
-
-const FormFields = ({ data, form }: { data: any; form: any }) => {
-  return (
-    <FormField
-      control={form.control}
-      name={data}
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel>{data.toUpperCase()}</FormLabel>
-          <FormControl>
-            <Input placeholder={data} {...field} />
-          </FormControl>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-  );
-};
