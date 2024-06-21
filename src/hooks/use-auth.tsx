@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect } from "react";
 
 export interface User {
-  id: number;
+  uid: number;
   email: string;
   username: string;
   created_at: string;
@@ -57,7 +57,7 @@ export const useAuth = () => {
     data: currentUser,
     error,
     mutate: mutateUser,
-  } = useSWR<User | null>("http://localhost:3000/current-user", fetcher, {
+  } = useSWR<User | null>("http://localhost:3000/api/current-user", fetcher, {
     // revalidateOnMount: true, // Lakukan revalidasi saat komponen dimount
     // revalidateOnFocus: true, // Lakukan revalidasi saat komponen mendapat fokus
     // errorRetryCount: 3, // Jumlah percobaan ulang jika terjadi kesalahan
