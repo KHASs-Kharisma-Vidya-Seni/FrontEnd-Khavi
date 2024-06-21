@@ -8,7 +8,7 @@ import ScrollToTop from "./hooks/use-scroll-up";
 const Root = () => {
   const location = useLocation();
   const isAuthPage = location.pathname === "/login" || location.pathname === "/register";
-
+  const isForumPage = location.pathname === "/forum";
   const isProfile = matchPath("/profile/*", location.pathname);
   // const { currentUser } = useAuth();
 
@@ -27,7 +27,7 @@ const Root = () => {
         </AnimatePresence>
       </main>
 
-      {!isAuthPage && !isProfile && <Footer />}
+      {!isAuthPage && !isProfile && !isForumPage && <Footer />}
     </div>
   );
 };
