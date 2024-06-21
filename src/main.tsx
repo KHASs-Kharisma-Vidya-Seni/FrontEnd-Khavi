@@ -22,6 +22,7 @@ import Forum from "./pages/Forum.tsx";
 import FaceScanner from "./pages/FaceScanner.tsx";
 import VerifyEmailStatus from "./pages/VerifyEmail.tsx";
 import ProtectedRoute from "./layout/RouteGuards.tsx";
+import RouteExistUser from "./layout/RouteExistUser.tsx";
 
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview
 const router = createBrowserRouter([
@@ -38,7 +39,6 @@ const router = createBrowserRouter([
         path: "/tentang",
         element: <About />,
       },
-      { path: "/register", element: <Register /> },
       {
         path: "/profile",
         element: (
@@ -65,14 +65,28 @@ const router = createBrowserRouter([
       { path: "/artikel", element: <Article /> },
       { path: "/forum", element: <Forum /> },
       { path: "/face-scanner", element: <FaceScanner /> },
-      { path: "/register", element: <Register /> },
-      { path: "/login", element: <Login /> },
       { path: "*", element: <NotFound /> },
     ],
   },
   {
     path: "/verify-email/:id",
     element: <VerifyEmailStatus />,
+  },
+  {
+    path: "/register",
+    element: (
+      <RouteExistUser>
+        <Register />
+      </RouteExistUser>
+    ),
+  },
+  {
+    path: "/login",
+    element: (
+      <RouteExistUser>
+        <Login />
+      </RouteExistUser>
+    ),
   },
 ]);
 

@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Toaster, toast } from "sonner";
 import { z } from "zod";
+import axios from "axios";
 
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -60,10 +61,12 @@ export default function SignIn() {
       setTimeout(() => {
         navigate("/");
       }, 2000);
-    } catch (error: any) {
-      const errorMessage = error?.response?.data?.error || "An error occurred. Please try again.";
-      toast.error(errorMessage);
-      console.log(error);
+    } catch (error) {
+      if (axios.isAxiosError(error) && error.response?.status === 401) {
+        const errorMessage = error?.response?.data?.error || "An error occurred. Please try again.";
+        toast.error(errorMessage);
+        console.log(error);
+      }
     }
   };
 

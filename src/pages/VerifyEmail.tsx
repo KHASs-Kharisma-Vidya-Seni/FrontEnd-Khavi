@@ -52,7 +52,12 @@ export default function VerifyEmailStatus() {
         <p className="text-gray-700">
           We have sent an email to your email address. Please verify your email address to continue.
         </p>
-        <p>Email Verification Status: {data.verified ? "Verified" : "Not Verified"}</p>
+        <p>
+          Email Verification Status:{" "}
+          {data.verified
+            ? (<span className='text-green-500'>Verified</span>)
+            : (<span className='text-red-500'>Not Verified</span>) }
+        </p>
       </div>
     </div>
   );
