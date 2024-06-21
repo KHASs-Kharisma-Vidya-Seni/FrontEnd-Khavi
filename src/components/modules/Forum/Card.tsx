@@ -2,6 +2,8 @@
 import { AvatarImage } from "@/components/ui/avatar";
 import { Avatar } from "@radix-ui/react-avatar";
 import { ChevronDown, Ellipsis, MessageCircle } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export const Card = ({
   profileImage,
@@ -71,12 +73,9 @@ export const Card = ({
                   <div key={comment.id} className="rounded-md p-2">
                     <div className="flex flex-col gap-2">
                       <div className="flex gap-2">
-                        {/* <figure>
-                          <img src={comment.profileImage} alt="" className="h-8 w-8 rounded-full" />
-                        </figure> */}
                         <figure>
                           <Avatar className="flex ">
-                            <AvatarImage className="object-cover h-8 w-8" src={comment.profileImage} />
+                            <AvatarImage className="h-8 w-8 object-cover" src={comment.profileImage} />
                           </Avatar>
                         </figure>
                         <div>
@@ -87,12 +86,23 @@ export const Card = ({
                         <p className="pl-10 text-sm text-wild-sand-50">{comment.comment}</p>
                       </div>
                     </div>
-                    {/* <div className="ml-10 mt-1 flex gap-1">
-                      <Heart color="#cdb16e" />
-                      <h6 className="text-white">{comment.likes}</h6>
-                    </div> */}
                   </div>
                 ))}
+                <div className="ml-2 flex gap-2">
+                  <div>
+                    <figure>
+                      <Avatar className="flex ">
+                        <AvatarImage className="h-8 w-8 object-cover" src="/images/Ellipse-2.png" />
+                      </Avatar>
+                    </figure>
+                  </div>
+                  <div className="w-10/12 ">
+                    <Input className="bg-white text-sm h-8" placeholder="Post Komentar Kamu" />
+                  </div>
+                  <div>
+                    <Button className="bg-laser-300 hover:bg-laser-500 h-8 font-semibold text-md">Post</Button>
+                  </div>
+                </div>
               </div>
             )}
           </div>
