@@ -23,7 +23,7 @@ module.exports = {
         center: true,
       },
       backdropBlur: {
-        '10px': '10px',
+        "10px": "10px",
       },
       colors: {
         "heading-article": "#F5F8F8",
