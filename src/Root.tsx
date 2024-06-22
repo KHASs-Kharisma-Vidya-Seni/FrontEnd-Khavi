@@ -9,6 +9,7 @@ const Root = () => {
   const location = useLocation();
   const isAuthPage = location.pathname === "/login" || location.pathname === "/register";
   const isForumPage = location.pathname === "/forum";
+  const isScannerPage = location.pathname === "/face-scanner";
   const isProfile = matchPath("/profile/*", location.pathname);
   // const { currentUser } = useAuth();
 
@@ -27,7 +28,7 @@ const Root = () => {
         </AnimatePresence>
       </main>
 
-      {!isAuthPage && !isProfile && !isForumPage && <Footer />}
+      {!isAuthPage && !isProfile && !isForumPage &&  !isScannerPage &&<Footer />}
     </div>
   );
 };
