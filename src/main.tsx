@@ -22,6 +22,7 @@ import Forum from "./pages/Forum.tsx";
 import FaceScanner from "./pages/FaceScanner.tsx";
 import VerifyEmailStatus from "./pages/VerifyEmail.tsx";
 import ProtectedRoute from "./layout/RouteGuards.tsx";
+import DetailArticle from "./pages/DetailArticle.tsx";
 import RouteExistUser from "./layout/RouteExistUser.tsx";
 
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview
@@ -63,6 +64,7 @@ const router = createBrowserRouter([
       },
       // { path: '/profile/user-info', element: <ProfileUserInfo /> }
       { path: "/artikel", element: <Article /> },
+      { path: "/artikel/:slug", element: <DetailArticle /> },
       { path: "/forum", element: <Forum /> },
       { path: "/face-scanner", element: <FaceScanner /> },
       { path: "*", element: <NotFound /> },

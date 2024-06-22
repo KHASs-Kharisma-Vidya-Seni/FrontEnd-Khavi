@@ -1,20 +1,28 @@
 import { cn } from "@/lib/utils";
-import { convertToKebabCase } from "@/utility";
 import { motion } from "framer-motion";
+import { useNavigate } from 'react-router-dom';
 
 export const TrendingCard = ({
   title,
   imageSrc,
   description,
   date,
+  slug,
 }: {
   imageSrc: string;
   title: string;
   description: string;
   date: string;
+  slug: string;
 }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/artikel/${slug}`);
+  };
+
   return (
-    <div id="trending-1" className="relative h-full w-full overflow-hidden">
+    <div id="trending-1" className="relative h-full w-full overflow-hidden cursor-pointer" onClick={handleClick}>
       <div className="relative h-full">
         <motion.div
           style={{
@@ -36,11 +44,6 @@ export const TrendingCard = ({
             <p className="text-wild-sand-200">{description}</p>
             <p className="text-wild-sand-200">{date}</p>
           </div>
-          <a
-            href={convertToKebabCase(`/article/${title}`)}
-            className="absolute bottom-0 left-0 h-full w-full bg-transparent"
-            aria-label={`Read more about ${title}`}
-          />
         </div>
       </div>
     </div>
@@ -65,20 +68,28 @@ export const ArticleCard = ({
   description,
   tags,
   title,
+  slug,
 }: {
   imageSrc: string;
   title: string;
   description?: string;
   tags: string[];
+  slug: string;
 }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/artikel/${slug}`);
+  };
+
   return (
-    <article className="relative w-full max-w-full overflow-hidden rounded-md shadow-lg">
+    <article className="relative w-full max-w-full overflow-hidden rounded-md shadow-lg cursor-pointer" onClick={handleClick}>
       <figure className="h-52 w-full">
         <img src={imageSrc} alt="" className="h-full w-full object-cover" />
       </figure>
       <div className="flex flex-col gap-2 px-5 py-5">
         <div className="flex gap-2">
-          {tags.map((tag, i: number) => (
+          {tags.map((tag, i) => (
             <p key={i} className="inline max-w-fit rounded-lg bg-red-400 px-3 py-1 text-sm text-white">
               {tag}
             </p>
@@ -87,11 +98,6 @@ export const ArticleCard = ({
         <h1 className="text-2xl font-bold">{title}</h1>
         <p className="text-lg text-wild-sand-500">{description}</p>
       </div>
-      <a
-        href={convertToKebabCase(`/article/${title}`)}
-        className="absolute left-0 top-0 h-full w-full bg-transparent"
-        aria-label={`Read more about ${title}`}
-      />
     </article>
   );
 };
