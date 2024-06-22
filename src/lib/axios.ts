@@ -1,4 +1,5 @@
-import { BASE_URL_API } from "@/utility";
+
+import { BASE_URL_API } from "@/utility/base-url";
 import axios from "axios";
 
 export const makeRequest = axios.create({

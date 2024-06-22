@@ -11,7 +11,7 @@ export default function ProfileSetting() {
 
 function DeleteAccount() {
   return (
-    <div className="flex h-[75vh] flex-col items-center justify-center gap-y-1">
+    <div className="flex h-[75vh] max-h-fit flex-col items-center justify-center gap-y-1">
       <h1 className="text-3xl font-bold">Hapus Akun</h1>
       <div className="w-3/6 text-center">
         <p className="text-gray-500">

@@ -1,21 +1,13 @@
 // import React from "react";
-import { SlidersHorizontal, Flame, Search } from "lucide-react";
+import { SlidersHorizontal, Search } from "lucide-react";
 import { Drawer, DrawerContent, DrawerTrigger } from "../../ui/drawer";
 
 import { cn } from "@/lib/utils";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
 
 export function Sidebar() {
-  const hashtags = ["#haircare", "#hair", "#twintail"];
-  const posteds = ["1.067 diposting", "837 diposting", "504 diposting"];
   
   const isScrolled = useScrollPosition();
-
-  const pairedTags = hashtags.map((tag, index) => ({
-    hashtag: tag,
-    posted: posteds[index],
-  }));
-
   return (
     <Drawer direction="left">
       <DrawerTrigger>
@@ -24,7 +16,6 @@ export function Sidebar() {
           isScrolled ? "mt-44" : "mt-20"
         )}>
           <SlidersHorizontal color="#cdb16e" size={20} />
-          <Flame color="#cdb16e" size={20} />
         </div>
       </DrawerTrigger>
       <DrawerContent>
@@ -55,24 +46,6 @@ export function Sidebar() {
                 <a href="">
                   <h3>Terlama</h3>
                 </a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="flex flex-col gap-1 p-2.5">
-              <div className="flex w-fit gap-2 border-b-2 border-laser-300">
-                <Flame color="#cdb16e" size={20} />
-                <h1 className=" text-lg font-semibold text-laser-300">Tag Populer</h1>
-              </div>
-              <div className="">
-                {pairedTags.map(({ hashtag, posted }, index) => (
-                  <div key={index}>
-                    <a href="">
-                      <h3 className="text-md font-normal text-white">{hashtag}</h3>
-                    </a>
-                    <h3 className="text-xs font-normal text-[#9C9C9C]">{posted}</h3>
-                  </div>
-                ))}
               </div>
             </div>
           </div>

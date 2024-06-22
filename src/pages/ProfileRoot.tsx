@@ -19,7 +19,7 @@ export default function ProfileRoot() {
               {["user-info", "bookmark", "settings"].map((menu, index) => (
                 <li key={index}>
                   <NavLink
-                    to={`/profile/${menu}`}
+                    to={`/profile/${menu === "user-info" ? "" : menu}`}
                     className={({ isActive }) =>
                       cn([
                         "text-gray-400",
