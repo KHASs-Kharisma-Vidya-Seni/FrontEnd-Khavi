@@ -133,7 +133,7 @@ function AvatarProfile(currentUser: CurrentUserWithOut) {
             <AvatarFallback>{currentUser?.username}</AvatarFallback>
           </Avatar>
         </figure>
-        <p className="text-white hover:text-gray-400">{currentUser?.username}</p>
+        {/* <p className="text-white hover:text-gray-400">{currentUser?.username}</p> */}
       </div>
     </Link>
   );
