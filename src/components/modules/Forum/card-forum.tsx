@@ -4,8 +4,16 @@ import { Avatar } from "@radix-ui/react-avatar";
 import { ChevronDown, Ellipsis, MessageCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Link } from "react-router-dom";
 
-export const Card = ({
+export const CardForum = ({
   profileImage,
   name,
   text,
@@ -45,10 +53,21 @@ export const Card = ({
             <h1 className="mb-2.5 text-xl font-bold text-laser-300">{name}</h1>
           </div>
           <div>
-            <Ellipsis color="#f4f4f4" size={24} />
+            <DropdownMenu>
+              <DropdownMenuTrigger>
+                <Ellipsis color="#f4f4f4" size={24} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white">
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>
+                  <Link to="/forum/:id/edit">Edit</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>Billing</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
-        <div className="lg:pl-24 lg:pr-16 pl-14 pr-2">
+        <div className="pl-14 pr-2 lg:pl-24 lg:pr-16">
           <p className="text-wild-sand-50">{text}</p>
           {image && <img src={image} alt=" " className="mt-2.5" />}
           <div className="mt-2.5 w-fit rounded-[0.625rem] bg-laser-300 px-2.5">
@@ -76,7 +95,7 @@ export const Card = ({
                         <Avatar className="h-8 w-8 object-cover">
                           <AvatarImage className="h-8 w-8 object-cover" src={comment.profileImage} />
                         </Avatar>
-                        <h5 className="py-1 lg:text-xl text-md font-black text-laser-300">{comment.name}</h5>
+                        <h5 className="text-md py-1 font-black text-laser-300 lg:text-xl">{comment.name}</h5>
                       </div>
                     </div>
                     <div>
