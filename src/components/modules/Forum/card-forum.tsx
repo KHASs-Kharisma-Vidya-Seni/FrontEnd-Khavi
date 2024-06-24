@@ -84,7 +84,7 @@ export const CardForum = ({
           </div>
         </div>
         <div className="pl-14 pr-2 lg:pl-24 lg:pr-16">
-          {image && <img src={image} alt=" " className="mt-2.5" />}
+          {image && <img src={image} alt=" " className="mt-2.5 h-[300px] object-cover" />}
           <div className="prose mt-3 prose-h1:text-wild-sand-50 prose-h2:text-wild-sand-50 prose-h3:text-wild-sand-50 prose-p:text-wild-sand-50 prose-blockquote:text-wild-sand-50 prose-strong:text-wild-sand-50">
             <div
               dangerouslySetInnerHTML={{
@@ -140,4 +140,3 @@ export const CardForum = ({
     </div>
   );
 };
-
