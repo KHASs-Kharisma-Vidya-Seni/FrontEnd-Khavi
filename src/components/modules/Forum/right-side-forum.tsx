@@ -5,7 +5,7 @@ import CreateForum from "./create-forum";
 interface Forum {
   author: {
     email: string;
-    photoURL: string;
+    photo_url: string;
     uid: string;
     username: string;
   };
@@ -39,6 +39,8 @@ export const RightSideForum = ({ posts }: { posts: Forum[] }) => {
     setVisibleComments(prev => ({ ...prev, [postId]: !prev[postId] }));
   };
 
+  console.log(posts);
+
   return (
     <div className="lg:flex lg:flex-col lg:gap-4">
       <CreateForum/>
@@ -46,7 +48,7 @@ export const RightSideForum = ({ posts }: { posts: Forum[] }) => {
         {posts.map(post => (
           <CardForum
             key={post.id_forum}
-            profileImage={post.author.photoURL}
+            profileImage={post.author.photo_url}
             name={post.author.username}
             text={post.content}
             image={post.image || ""}

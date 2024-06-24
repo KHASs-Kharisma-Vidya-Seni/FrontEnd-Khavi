@@ -22,7 +22,7 @@ const fetcher = async (url: string) => {
 export default function Forum() {
   const isScrolled = useScrollPosition();
 
-  const { data, error } = useSWR<ForumData>(`${BASE_URL_API}/api/forum?withUser=true`, fetcher);
+  const { data, error } = useSWR<ForumData>(`${BASE_URL_API}/forum?withUser=true`, fetcher);
 
   if (!data) {
     return (

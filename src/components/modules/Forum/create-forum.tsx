@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/use-auth";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 import { ImagePlus } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
@@ -7,6 +8,8 @@ export default function CreateForum() {
   const profileImage: string = "/images/Ellipse-2.png";
   const [text, setText] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  const { currentUser } = useAuth();
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setText(event.target.value);
@@ -45,7 +48,7 @@ export default function CreateForum() {
             <div className="flex w-full gap-2 px-0 lg:px-10">
               <div>
                 <Avatar className="flex h-10 w-10">
-                  <AvatarImage className="object-cover" src={profileImage} />
+                  <AvatarImage className="rounded-full object-cover" src={currentUser?.photo_url} />
                 </Avatar>
               </div>
               <div className="flex-grow">

@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
+import { useAuth } from "@/hooks/use-auth";
 
 interface Comment {
   id_comment: string;
@@ -21,7 +22,7 @@ interface Comment {
   created_at: string;
   user: {
     email: string;
-    photoURL: string;
+    photo_url: string;
     uid: string;
     username: string;
   };
@@ -51,13 +52,14 @@ export const CardForum = ({
   commentData: Comment[];
   created_at: string;
 }) => {
+  const { currentUser } = useAuth();
   return (
     <div className="flex w-full flex-col items-center">
       <div className="item-center flex w-full flex-col border-t-[0.1875rem] border-shark-800 bg-[#2E323A] py-5 pl-16 pr-6 lg:w-[47.5rem] lg:rounded-[0.625rem] lg:border-none lg:pl-0 lg:pr-0">
         <div className="flex items-center justify-between py-4 lg:px-10">
           <div className="flex items-center gap-x-3">
             <Avatar className="flex h-10 w-10">
-              <AvatarImage className="object-cover" src={profileImage} />
+              <AvatarImage className="rounded-full  object-cover" src={profileImage} />
             </Avatar>
             <div className="flex gap-3">
               <h1 className="mb-2.5 text-xl font-bold text-laser-300">{name}</h1>
@@ -81,7 +83,7 @@ export const CardForum = ({
         </div>
         <div className="pl-14 pr-2 lg:pl-24 lg:pr-16">
           {image && <img src={image} alt=" " className="mt-2.5" />}
-          <div className="mt-3 prose prose-h1:text-wild-sand-50 prose-h2:text-wild-sand-50 prose-h3:text-wild-sand-50 prose-p:text-wild-sand-50 prose-blockquote:text-wild-sand-50 prose-strong:text-wild-sand-50">
+          <div className="prose mt-3 prose-h1:text-wild-sand-50 prose-h2:text-wild-sand-50 prose-h3:text-wild-sand-50 prose-p:text-wild-sand-50 prose-blockquote:text-wild-sand-50 prose-strong:text-wild-sand-50">
             <div
               dangerouslySetInnerHTML={{
                 __html: text,
@@ -111,7 +113,7 @@ export const CardForum = ({
                     <div className="flex gap-2">
                       <div className="flex items-center gap-x-3">
                         <Avatar className="h-8 w-8 object-cover">
-                          <AvatarImage className="h-8 w-8 object-cover" src={comment.user.photoURL} />
+                          <AvatarImage className="h-8 w-8 rounded-full object-cover" src={comment.user.photo_url} />
                         </Avatar>
                         <h5 className="text-md py-1 font-black text-laser-300 lg:text-xl">{comment.user.username}</h5>
                       </div>
@@ -125,7 +127,7 @@ export const CardForum = ({
               <div className="ml-2 flex w-full items-center justify-between gap-2">
                 <div className="flex w-full items-center">
                   <Avatar>
-                    <AvatarImage className="mr-4 h-8 w-8 object-cover" src="/images/Ellipse-2.png" />
+                    <AvatarImage className="mr-4 h-8 w-8 rounded-full object-cover" src={currentUser?.photo_url} />
                   </Avatar>
                   <Input className="h-8 truncate bg-white text-sm" placeholder="Post Komentar Kamu" />
                 </div>
