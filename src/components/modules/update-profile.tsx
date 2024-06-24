@@ -217,7 +217,7 @@ export const UpdateProfile = () => {
             <Avatar className="h-24 w-24 rounded-full shadow-md">
               <AvatarImage
                 className="h-full w-full rounded-full object-cover"
-                src={imagePreview || currentUser?.photoURL}
+                src={imagePreview || currentUser?.photo_url}
               />
               <AvatarFallback className="flex items-center justify-center rounded-full bg-gray-800 text-white">
                 {currentUser?.username?.charAt(0).toUpperCase()}

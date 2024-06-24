@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ImagePlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/modules/Forum/card";
+import { Card } from "./Card";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 
 interface Post {
