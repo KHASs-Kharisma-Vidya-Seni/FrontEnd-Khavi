@@ -54,7 +54,7 @@ export const TrendingCard = ({
 };
 
 export const ArticleTags = () => {
-  const tags = ["All", "Hair", "Treatment", "Haircare"];
+  const tags = ["All", "Hair", "Face", "Treatment"];
 
   const { search } = useLocation();
   const queryParams = useMemo(() => new URLSearchParams(search), [search]);
@@ -109,8 +109,6 @@ export const ArticleCard = ({
       </figure>
       <div className="flex flex-col gap-2 px-5 py-5">
         <div className="flex gap-2">
-          {tags.map((tag, i: number) => (
-            <p key={i} className="inline max-w-fit rounded-lg bg-laser-300 px-3 py-1 text-sm text-white">
           {tags.map((tag, i) => (
             <p key={i} className="inline max-w-fit rounded-lg bg-red-400 px-3 py-1 text-sm text-white">
               {tag}

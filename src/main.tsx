@@ -23,7 +23,7 @@ import FaceScanner from "./pages/FaceScanner.tsx";
 import VerifyEmailStatus from "./pages/VerifyEmail.tsx";
 import ProtectedRoute from "./layout/RouteGuards.tsx";
 import EditForum from "./pages/EditForum.tsx";
-import DetailArticle from "./pages/DetailArticle.tsx";
+import DetailArticle from "./pages/ArticleDetail.tsx";
 import RouteExistUser from "./layout/RouteExistUser.tsx";
 
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview

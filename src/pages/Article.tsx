@@ -1,28 +1,25 @@
-import useSWR from 'swr';
-import axios from 'axios';
+import useSWR from "swr";
+import axios from "axios";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import { ArticleCard, ArticleTags, TrendingCard } from "@/components/ui/article";
-import { slugify } from '@/utils/slugify';
-
+import { slugify } from "@/utils/slugify";
 
 import Container from "@/components/Container";
 import AnimationPage from "@/components/AnimationPage";
 
-
 const fetcher = (url: string) => axios.get(url).then(res => res.data);
-  
+
 export default function Article() {
-  const { data: dataArticle, error } = useSWR('http://localhost:3000/api/article', fetcher);
+  const { data: dataArticle, error } = useSWR("http://localhost:3000/api/article", fetcher);
   const dataTrending = [
     {
       id: 1,
       slug: "merawat-bentuk-wajah-agar-simetris",
       title: "Merawat Bentuk Wajah Agar Simetris",
-      slug: "merawat-bentuk-wajah-agar-simetris",
       imageSrc: "/images/cewek-tranding-1.png",
       description:
         "Memiliki wajah simetris adalah dambaan banyak orang. Temukan panduan lengkap untuk mendapatkan bentuk wajah yang ideal dan proporsional.",
@@ -31,9 +28,6 @@ export default function Article() {
     {
       id: 2,
       title: "Pesona Pria Gondrong , dimata Wanita",
-      slug: "pesona-pria-gondrong-dimata-wanita",
-      slug: "pesona-pria-gondrong-di-mata-wanita",
-      title: "Pesona Pria Gondrong di Mata Wanita",
       imageSrc: "/images/cowo-trading-2-full.png",
       description:
         "Rambut gondrong pada pria memancarkan pesona yang unik dan tak terabaikan. Bagi banyak wanita, rambut panjang mencerminkan keberanian, kepercayaan diri, serta sisi kreatif dan bebas dari konvensi.",
@@ -79,10 +73,11 @@ export default function Article() {
           <ArticleTags />
         </div>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
-          {filteredArticles.map((article: any) => (
-            <Link to={`/artikel/${slugify(article.title)}`} key={article.id}>
+          {filteredArticles.map((article: any, id: number) => (
+            <Link key={id} to={`/artikel/${slugify(article.title)}`} >
               <ArticleCard {...article} />
             </Link>
+          ))}
         </div>
       </div>
     </Container>
