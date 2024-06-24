@@ -41,7 +41,8 @@ const DrawerContent = React.forwardRef<
         className={cn(
           "fixed z-50 flex h-auto flex-col rounded-t-[10px] border bg-shark-900",
           (!direction || direction === "bottom") && "inset-x-0 bottom-0 mt-24",
-          direction === "right" && "right-0 top-0 h-full w-screen max-w-80"
+          direction === "right" && "right-0 top-0 h-full w-screen max-w-80",
+          direction === "left" && "left-0 top-0 h-screen w-fit max-w-80 rounded-none"
         )}
         {...props}
       >
