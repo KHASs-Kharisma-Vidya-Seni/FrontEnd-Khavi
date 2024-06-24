@@ -15,7 +15,10 @@ import LoadingArticle from "@/components/modules/Article/loading-article";
 const fetcher = (url: string) => axios.get(url).then(res => res.data);
 
 export default function Article() {
-  const { data: dataArticle, error } = useSWR("http://localhost:3000/api/article", fetcher);
+  const { data: dataArticle, error } = useSWR(
+    "https://api-artikel-dot-deploy-suka-suka.et.r.appspot.com/api/article",
+    fetcher
+  );
   const dataTrending = [
     {
       id: 1,
@@ -24,7 +27,7 @@ export default function Article() {
       imageSrc: "/images/cewek-tranding-1.png",
       description:
         "Memiliki wajah simetris adalah dambaan banyak orang. Temukan panduan lengkap untuk mendapatkan bentuk wajah yang ideal dan proporsional.",
-      date: "11 Juni 2024"
+      date: "11 Juni 2024",
     },
     {
       id: 2,
@@ -52,7 +55,9 @@ export default function Article() {
   }, [location.search, searchParams]);
 
   // Filter dataArticle berdasarkan nilai tag yang didapat dari query parameter
-  const filteredArticles = tag ? dataArticle?.filter((article: { tags: string | string[]; }) => article.tags.includes(tag)) : dataArticle;
+  const filteredArticles = tag
+    ? dataArticle?.filter((article: { tags: string | string[] }) => article.tags.includes(tag))
+    : dataArticle;
 
   if (error) return <div>Failed to load articles</div>;
   if (!dataArticle)

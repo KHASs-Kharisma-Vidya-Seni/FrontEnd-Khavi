@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { AvatarImage } from "@/components/ui/avatar";
 import { Avatar } from "@radix-ui/react-avatar";
 import moment from "moment";
@@ -14,19 +15,19 @@ import {
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/use-auth";
 
-// interface Comment {
-//   id_comment: string;
-//   id_forum: string;
-//   comment_content: string;
-//   pinned: boolean;
-//   created_at: string;
-//   user?: {
-//     email: string;
-//     photo_url: string; // Ensure this property is defined
-//     uid: string;
-//     username: string;
-//   };
-// }
+// // interface Comment {
+// //   id_comment: string;
+// //   id_forum: string;
+// //   comment_content: string;
+// //   pinned: boolean;
+// //   created_at: string;
+// //   user?: {
+// //     email: string;
+// //     photo_url: string; // Ensure this property is defined
+// //     uid: string;
+// //     username: string;
+// //   };
+// // }
 
 export const CardForum = ({
   profileImage,
@@ -139,3 +140,4 @@ export const CardForum = ({
     </div>
   );
 };
+

@@ -102,7 +102,7 @@ export const RightBar = ({ posts, comments }: { posts: Post[]; comments: Comment
         </div>
       </div>
       <div className="lg:flex lg:flex-col lg:gap-4">
-        {posts.map(post => (
+        {posts?.map(post => (
           <CardForum
             key={post.id}
             profileImage={post.profileImage}

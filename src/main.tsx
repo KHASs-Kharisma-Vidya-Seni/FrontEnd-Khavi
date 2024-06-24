@@ -25,7 +25,7 @@ import VerifyEmailStatus from "./pages/VerifyEmail.tsx";
 import ProtectedRoute from "./layout/RouteGuards.tsx";
 import EditForum from "./pages/EditForum.tsx";
 import DetailArticle from "./pages/ArticleDetail.tsx";
-import RouteExistUser from "./layout/RouteExistUser.tsx";
+// import RouteExistUser from "./layout/RouteExistUser.tsx";
 
 export const App = () => {
   return (
@@ -43,8 +43,22 @@ export const App = () => {
                 </ProtectedRoute>
               }
             />
-            <Route path="/profile/bookmark" element={<ProfileBookmark />} />
-            <Route path="/profile/settings" element={<ProfileSetting />} />
+            <Route
+              path="/profile/bookmark"
+              element={
+                <ProtectedRoute>
+                  <ProfileBookmark />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/profile/settings"
+              element={
+                <ProtectedRoute>
+                  <ProfileSetting />
+                </ProtectedRoute>
+              }
+            />
           </Route>
           <Route path="/artikel" element={<Article />} />
           <Route path="/artikel/:slug" element={<DetailArticle />} />
@@ -61,22 +75,8 @@ export const App = () => {
           <Route path="*" element={<NotFound />} />
         </Route>
         <Route path="/verify-email/:id" element={<VerifyEmailStatus />} />
-        <Route
-          path="/register"
-          element={
-            <RouteExistUser>
-              <Register />
-            </RouteExistUser>
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <RouteExistUser>
-              <Login />
-            </RouteExistUser>
-          }
-        />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );

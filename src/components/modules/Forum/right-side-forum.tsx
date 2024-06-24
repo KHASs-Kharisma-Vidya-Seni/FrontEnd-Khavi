@@ -46,7 +46,7 @@ export const RightSideForum = ({ posts }: { posts: any[] }) => {
     <div className="lg:flex lg:flex-col lg:gap-4">
       <CreateForum/>
       <div className="lg:flex lg:flex-col lg:gap-4">
-        {posts.map(post => (
+        {posts?.map(post => (
           <CardForum
             key={post.id_forum}
             profileImage={post?.author?.photo_url || ""}

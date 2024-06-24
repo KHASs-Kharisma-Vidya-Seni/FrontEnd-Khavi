@@ -13,31 +13,38 @@ import LoadingArticle from "@/components/modules/Article/loading-article";
 // }
 
 // Define a fetcher function to use with swr
-const fetcher = (url: string) => axios.get(url).then((res) => res.data);
+const fetcher = (url: string) => axios.get(url).then(res => res.data);
 
 const ArticleDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const location = useLocation();
   const navigate = useNavigate();
 
-  if (location.pathname === "/artikel/undefined"){
-    navigate(`/artikel`)
+  if (location.pathname === "/artikel/undefined") {
+    navigate(`/artikel`);
   }
   console.log(location.pathname);
-  // Use SWR for data fetching
-  const { data: article, error: fetchError, isLoading } = useSWR(`http://localhost:3000/api/article/${slug}` , fetcher);
-  console.log(location);
 
+  console.log("Slug", slug);
+  // Use SWR for data fetching
+  const {
+    data: article,
+    error: fetchError,
+    isLoading,
+  } = useSWR(`https://api-artikel-dot-deploy-suka-suka.et.r.appspot.com/api/article/${slug}`, fetcher);
+  console.log(article);
 
   if (isLoading) {
-    return <div><LoadingArticle/></div>;
+    return (
+      <div>
+        <LoadingArticle />
+      </div>
+    );
   }
 
-  if (fetchError ) {
+  if (fetchError) {
     return <div>{"Article not found"}</div>;
   }
-
-
 
   return (
     <div className='bg-[url("/images/bgArtikel.png")]'>
