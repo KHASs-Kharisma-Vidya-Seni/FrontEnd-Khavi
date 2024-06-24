@@ -1,6 +1,7 @@
 import useSWR, { mutate } from "swr";
 import axios from "axios";
 import { useEffect } from "react";
+import { BASE_URL_API } from "@/utility/base-url";
 
 export interface User {
   uid: number;
@@ -57,7 +58,7 @@ export const useAuth = () => {
     data: currentUser,
     error,
     mutate: mutateUser,
-  } = useSWR<User | null>("http://localhost:3000/api/current-user", fetcher, {
+  } = useSWR<User | null>(`${BASE_URL_API}/current-user`, fetcher, {
     // revalidateOnMount: true, // Lakukan revalidasi saat komponen dimount
     // revalidateOnFocus: true, // Lakukan revalidasi saat komponen mendapat fokus
     // errorRetryCount: 3, // Jumlah percobaan ulang jika terjadi kesalahan
@@ -71,7 +72,7 @@ export const useAuth = () => {
   }, [error, mutateUser]);
 
   const login = async (inputs: LoginInputs) => {
-    const res = await axios.post("http://localhost:3000/api/auth/login", inputs, { withCredentials: true });
+    const res = await axios.post(`${BASE_URL_API}/api/auth/login`, inputs, { withCredentials: true });
     // localStorage.setItem('user', JSON.stringify(res.data));
     mutateUser(res.data, false);
 
@@ -82,8 +83,8 @@ export const useAuth = () => {
 
   const logout = async () => {
     try {
-      await axios.get("http://localhost:3000/api/auth/logout", { withCredentials: true });
-      mutate("http://localhost:3000/current-user", false);
+      await axios.get(`${BASE_URL_API}/api/auth/logout`, { withCredentials: true });
+      mutate(`${BASE_URL_API}/current-user`, false);
       isUnauthorized = true;
     } catch (error) {
       console.error("Error logging out:", error);

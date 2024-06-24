@@ -116,7 +116,7 @@ export const ArticleCard = ({
           ))}
         </div>
         <h1 className="text-2xl font-bold">{title}</h1>
-        <p className="text-lg text-wild-sand-500">{description}</p>
+        <p className="text-lg text-wild-sand-500 truncate">{description}</p>
       </div>
     </article>
   );

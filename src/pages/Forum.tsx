@@ -6,96 +6,35 @@ import { cn } from "@/lib/utils";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
 import AnimationPage from "@/components/AnimationPage";
 
-interface Post {
-  id: number;
-  profileImage: string;
-  name: string;
-  text: string;
-  image?: string;
-  hashtags: string[];
-  comments: number;
-  likes: number;
-}
+import axios from "axios";
+import useSWR from "swr";
+import { BASE_URL_API } from "@/utility/base-url";
+import type { Forum } from "@/components/types/forum-types";
 
-interface Comment {
-  id: number;
-  postId: number;
-  profileImage: string;
-  name: string;
-  comment: string;
-  likes: number;
-}
+  interface ForumData {
+    forums: Forum[];
+  }
+
+const fetcher = async (url: string) => {
+  return axios.get(url, { withCredentials: true }).then((res) => res.data);
+};
 
 export default function Forum() {
   const isScrolled = useScrollPosition();
 
-  const posts: Post[] = [
-    {
-      id: 1,
-      profileImage: "/images/Ellipse-2.png",
-      name: "Khalisa",
-      text: "Menemukan Bentuk Wajah yang Tepat untuk Khalisa: Tips dan Trik Halo semuanya! 🌸 Kali ini, kita akan membahas tentang bentuk wajah dan bagaimana mengenalinya dengan benar. Mengetahui bentuk wajah bisa membantu kita dalam memilih gaya rambut, kacamata, dan riasan yang paling sesuai. Ayo kita cari tahu bentuk wajah Khalisa dan tips-tips yang bisa diterapkan!",
-      image: "",
-      hashtags: ["haircare"],
-      comments: 17,
-      likes: 10,
-    },
-    {
-      id: 2,
-      profileImage: "/images/Ellipse-2.png",
-      name: "Tok Dalang",
-      text: "Gais aku kan udah masuk masa menopause jadi rambut udah mulai pada warna putih dan pada rontok, ada saran ga yaa pewarna sama penumbuh rambut tapi yang berbahan alami? Biar makin pede nihh",
-      image: "",
-      hashtags: ["hair"],
-      comments: 2,
-      likes: 10,
-    },
-    {
-      id: 3,
-      profileImage: "/images/Ellipse-2.png",
-      name: "Ilham",
-      text: "Pamer Mullet",
-      image: "./images/Foto-1.png",
-      hashtags: ["hair"],
-      comments: 10,
-      likes: 23,
-    },
-  ];
+  const { data, error } = useSWR<ForumData>(`${BASE_URL_API}/api/forum?withUser=true`, fetcher);
 
-  const comments: Comment[] = [
-    {
-      id: 1,
-      postId: 1,
-      profileImage: "/images/Ellipse-2.png",
-      name: "User1",
-      comment: "This is a comment",
-      likes: 5,
-    },
-    {
-      id: 2,
-      postId: 2,
-      profileImage: "/images/Ellipse-2.png",
-      name: "User2",
-      comment: "This is another comment",
-      likes: 2,
-    },
-    {
-      id: 3,
-      postId: 3,
-      profileImage: "/images/Ellipse-2.png",
-      name: "User3",
-      comment: "potongannya jelek",
-      likes: 1,
-    },
-    {
-      id: 4,
-      postId: 3,
-      profileImage: "/images/Ellipse-2.png",
-      name: "User4",
-      comment: "anjayyyyy",
-      likes: 0,
-    },
-  ];
+  if (!data) {
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div>Gagal mengambil data forum pengguna. Silakan coba lagi nanti.</div>;
+  }
 
   return (
     <AnimationPage>
@@ -115,7 +54,7 @@ export default function Forum() {
             <LeftSideForum />
           </div>
           <div className="">
-            <RightSideForum posts={posts} comments={comments} />
+            <RightSideForum posts={data.forums} />
           </div>
         </div>
       </div>
