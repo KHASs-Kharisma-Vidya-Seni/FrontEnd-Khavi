@@ -1,6 +1,7 @@
 import AnimationPage from "@/components/AnimationPage";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
+import { BASE_URL_API } from "@/utility/base-url";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast, Toaster } from "sonner";
@@ -18,21 +19,25 @@ function DeleteAccount() {
   const { currentUser } = useAuth();
   const navigate = useNavigate();
 
-  const handleDeleteAccount = () => {
-    toast.promise(
-      axios.delete(`http://localhost:3000/api/users/${currentUser?.uid}/delete`, {
-        withCredentials: true,
-      }),
-      {
-        loading: "Deleting account...",
-        success: () => {
-          return "Account deleted successfully!";
-        },
-        error: "Failed to delete account.",
-      }
-    );
-    
-    navigate("/login");
+  const handleDeleteAccount = async () => {
+    try {
+      toast.promise(
+        axios.delete(`${BASE_URL_API}/users/${currentUser?.uid}/delete`, {
+          withCredentials: true,
+        }),
+        {
+          loading: "Deleting account...",
+          success: () => {
+            return "Account deleted successfully!";
+          },
+          error: "Failed to delete account.",
+        }
+      );
+
+      navigate("/login");
+    } catch (error) {
+      toast.error("Failed to delete account.");
+    }
   };
 
   return (
