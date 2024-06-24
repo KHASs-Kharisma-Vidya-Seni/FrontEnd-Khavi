@@ -55,10 +55,18 @@ export default function VerifyEmailStatus() {
         </p>
         <p>
           Email Verification Status:{" "}
-          {data.verified
-            ? (<span className='text-green-500'>Verified</span>)
-            : (<span className='text-red-500'>Not Verified</span>) }
+          {data.verified ? (
+            <span className="text-green-500">Verified</span>
+          ) : (
+            <span className="text-red-500">Not Verified</span>
+          )}
         </p>
+        {!data.verified && (
+          <p className="mt-2 text-red-500">
+            If you do not see the email in your inbox, please check your{" "}
+            <span className="text-red-500">spam folder</span>.
+          </p>
+        )}
       </div>
     </div>
   );

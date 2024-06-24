@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import useSWR from "swr";
 import axios from "axios";
 
@@ -9,7 +10,6 @@ import { ArticleCard, ArticleTags, TrendingCard } from "@/components/ui/article"
 import { slugify } from "@/utils/slugify";
 
 import Container from "@/components/Container";
-import AnimationPage from "@/components/AnimationPage";
 import LoadingArticle from "@/components/modules/Article/loading-article";
 
 const fetcher = (url: string) => axios.get(url).then(res => res.data);
@@ -24,7 +24,7 @@ export default function Article() {
       imageSrc: "/images/cewek-tranding-1.png",
       description:
         "Memiliki wajah simetris adalah dambaan banyak orang. Temukan panduan lengkap untuk mendapatkan bentuk wajah yang ideal dan proporsional.",
-      date: "11 Juni 2024",
+      date: "11 Juni 2024"
     },
     {
       id: 2,
@@ -33,6 +33,7 @@ export default function Article() {
       description:
         "Rambut gondrong pada pria memancarkan pesona yang unik dan tak terabaikan. Bagi banyak wanita, rambut panjang mencerminkan keberanian, kepercayaan diri, serta sisi kreatif dan bebas dari konvensi.",
       date: "11 Juni 2024",
+      slug: "pesona-pria-gondrong-dimata-wanita",
     },
   ];
 
@@ -51,10 +52,15 @@ export default function Article() {
   }, [location.search, searchParams]);
 
   // Filter dataArticle berdasarkan nilai tag yang didapat dari query parameter
-  const filteredArticles = tag ? dataArticle.filter(article => article.tags.includes(tag)) : dataArticle;
+  const filteredArticles = tag ? dataArticle?.filter((article: { tags: string | string[]; }) => article.tags.includes(tag)) : dataArticle;
 
   if (error) return <div>Failed to load articles</div>;
-  if (!dataArticle) return <div><LoadingArticle/></div>;
+  if (!dataArticle)
+    return (
+      <div>
+        <LoadingArticle />
+      </div>
+    );
 
   return (
     <Container className="w-full pb-48">
@@ -74,8 +80,9 @@ export default function Article() {
           <ArticleTags />
         </div>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+          {/* // eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           {filteredArticles.map((article: any, id: number) => (
-            <Link key={id} to={`/artikel/${slugify(article.title)}`} >
+            <Link key={id} to={`/artikel/${slugify(article.title)}`}>
               <ArticleCard {...article} />
             </Link>
           ))}

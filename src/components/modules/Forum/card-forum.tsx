@@ -14,19 +14,19 @@ import {
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/use-auth";
 
-interface Comment {
-  id_comment: string;
-  id_forum: string;
-  comment_content: string;
-  pinned: boolean;
-  created_at: string;
-  user: {
-    email: string;
-    photo_url: string;
-    uid: string;
-    username: string;
-  };
-}
+// interface Comment {
+//   id_comment: string;
+//   id_forum: string;
+//   comment_content: string;
+//   pinned: boolean;
+//   created_at: string;
+//   user?: {
+//     email: string;
+//     photo_url: string; // Ensure this property is defined
+//     uid: string;
+//     username: string;
+//   };
+// }
 
 export const CardForum = ({
   profileImage,
@@ -49,7 +49,8 @@ export const CardForum = ({
   likes: number;
   showComments: boolean;
   toggleComments: () => void;
-  commentData: Comment[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  commentData?: any[];
   created_at: string;
 }) => {
   const { currentUser } = useAuth();
@@ -59,7 +60,7 @@ export const CardForum = ({
         <div className="flex items-center justify-between py-4 lg:px-10">
           <div className="flex items-center gap-x-3">
             <Avatar className="flex h-10 w-10">
-              <AvatarImage className="rounded-full  object-cover" src={profileImage} />
+              <AvatarImage className="rounded-full  object-cover" src={profileImage || ""} />
             </Avatar>
             <div className="flex gap-3">
               <h1 className="mb-2.5 text-xl font-bold text-laser-300">{name}</h1>
@@ -91,9 +92,7 @@ export const CardForum = ({
             />
           </div>
           <div className="mt-2.5 w-fit rounded-[0.625rem] bg-laser-300 px-2.5">
-            {hashtags.map((hashtag, index) => (
-              <h5 key={index}>#{hashtag}</h5>
-            ))}
+            {hashtags?.map((hashtag, index) => <h5 key={index}>#{hashtag}</h5>)}
           </div>
           <div className="mt-2.5 flex gap-1">
             <MessageCircle color="#cdb16e" />
@@ -107,19 +106,19 @@ export const CardForum = ({
           </div>
           {showComments && (
             <div className="mt-4 space-y-2">
-              {commentData.map(comment => (
+              {commentData?.map(comment => (
                 <div key={comment.id_comment} className="rounded-md p-2">
                   <div className="flex flex-col gap-2">
                     <div className="flex gap-2">
                       <div className="flex items-center gap-x-3">
                         <Avatar className="h-8 w-8 object-cover">
-                          <AvatarImage className="h-8 w-8 rounded-full object-cover" src={comment.user.photo_url} />
+                          <AvatarImage className="h-8 w-8 rounded-full object-cover" src={comment?.user?.photo_url} />
                         </Avatar>
-                        <h5 className="text-md py-1 font-black text-laser-300 lg:text-xl">{comment.user.username}</h5>
+                        <h5 className="text-md py-1 font-black text-laser-300 lg:text-xl">{comment?.user?.username}</h5>
                       </div>
                     </div>
                     <div>
-                      <p className="pl-10 text-sm font-normal text-wild-sand-50">{comment.comment_content}</p>
+                      <p className="pl-10 text-sm font-normal text-wild-sand-50">{comment?.comment_content}</p>
                     </div>
                   </div>
                 </div>

@@ -3,14 +3,14 @@ import useSWR from "swr";
 import axios from "axios";
 import LoadingArticle from "@/components/modules/Article/loading-article";
 
-interface Article {
-  id: number;
-  imageurl: string;
-  title: string;
-  description: string;
-  content: string;
-  tags: string[];
-}
+// interface Article {
+//   id: number;
+//   imageurl: string;
+//   title: string;
+//   description: string;
+//   content: string;
+//   tags: string[];
+// }
 
 // Define a fetcher function to use with swr
 const fetcher = (url: string) => axios.get(url).then((res) => res.data);

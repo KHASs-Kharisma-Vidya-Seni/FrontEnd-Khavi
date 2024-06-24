@@ -114,8 +114,7 @@ export const RightBar = ({ posts, comments }: { posts: Post[]; comments: Comment
             likes={post.likes}
             showComments={!!visibleComments[post.id]}
             toggleComments={() => toggleComments(post.id)}
-            commentData={comments.filter(comment => comment.postId === post.id)}
-          />
+            commentData={comments.filter(comment => comment.postId === post.id)} created_at={""}          />
         ))}
       </div>
     </div>

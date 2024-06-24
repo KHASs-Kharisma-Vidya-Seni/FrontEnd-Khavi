@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useMemo } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 export const TrendingCard = ({

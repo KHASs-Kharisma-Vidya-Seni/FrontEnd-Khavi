@@ -5,7 +5,7 @@ import { ImagePlus } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 
 export default function CreateForum() {
-  const profileImage: string = "/images/Ellipse-2.png";
+  // const profileImage: string = "/images/Ellipse-2.png";
   const [text, setText] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
