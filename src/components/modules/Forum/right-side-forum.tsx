@@ -42,11 +42,17 @@ export const RightSideForum = ({ posts }: { posts: any[] }) => {
 
   console.log(posts);
 
+  const sortedPosts = posts?.slice()?.sort((a, b) => {
+    const dateA = new Date(a.created_at).getTime();
+    const dateB = new Date(b.created_at).getTime();
+    return dateB - dateA; // Sort descending (latest first)
+  });
+
   return (
     <div className="lg:flex lg:flex-col lg:gap-4">
-      <CreateForum/>
+      <CreateForum />
       <div className="lg:flex lg:flex-col lg:gap-4">
-        {posts?.map(post => (
+        {sortedPosts?.map(post => (
           <CardForum
             key={post.id_forum}
             profileImage={post?.author?.photo_url || ""}
@@ -59,7 +65,8 @@ export const RightSideForum = ({ posts }: { posts: any[] }) => {
             showComments={!!visibleComments[post.id_forum]}
             toggleComments={() => toggleComments(post.id_forum)}
             commentData={post?.comments || []}
-            created_at={post.created_at}          />
+            created_at={post.created_at}
+          />
         ))}
       </div>
     </div>
