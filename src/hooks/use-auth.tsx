@@ -2,6 +2,8 @@ import useSWR, { mutate } from "swr";
 import axios from "axios";
 import { useEffect } from "react";
 import { BASE_URL_API } from "@/utility/base-url";
+import { makeRequest } from "@/lib/axios";
+
 
 export interface User {
   uid: number;
@@ -59,9 +61,7 @@ export const useAuth = () => {
     error,
     mutate: mutateUser,
   } = useSWR<User | null>(`${BASE_URL_API}/current-user`, fetcher, {
-    // revalidateOnMount: true, // Lakukan revalidasi saat komponen dimount
-    // revalidateOnFocus: true, // Lakukan revalidasi saat komponen mendapat fokus
-    // errorRetryCount: 3, // Jumlah percobaan ulang jika terjadi kesalahan
+    errorRetryCount: 3, // Jumlah percobaan ulang jika terjadi kesalahan
   });
 
   useEffect(() => {
@@ -72,10 +72,9 @@ export const useAuth = () => {
   }, [error, mutateUser]);
 
   const login = async (inputs: LoginInputs) => {
-    const res = await axios.post(`${BASE_URL_API}/api/auth/login`, inputs, { withCredentials: true });
-    // localStorage.setItem('user', JSON.stringify(res.data));
-    mutateUser(res.data, false);
+    const res = await makeRequest.post("/auth/login", inputs);
 
+    mutateUser(res.data, false);
     isUnauthorized = false;
 
     return res;
@@ -83,7 +82,8 @@ export const useAuth = () => {
 
   const logout = async () => {
     try {
-      await axios.get(`${BASE_URL_API}/api/auth/logout`, { withCredentials: true });
+      await makeRequest.get("/auth/logout");
+
       mutate(`${BASE_URL_API}/current-user`, false);
       isUnauthorized = true;
     } catch (error) {

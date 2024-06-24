@@ -44,7 +44,9 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: (
+          <ProtectedRoute>
             <ProfileRoot />
+          </ProtectedRoute>
         ),
         children: [
           {
@@ -64,8 +66,8 @@ const router = createBrowserRouter([
       // { path: '/profile/user-info', element: <ProfileUserInfo /> }
       { path: "/artikel", element: <Article /> },
       { path: "/artikel/:slug", element: <DetailArticle /> },
-      { path: "/forum", element: <Forum />},
-      { path: "/forum/:id/edit", element: <EditForum />},
+      { path: "/forum", element: <Forum /> },
+      { path: "/forum/:id/edit", element: <EditForum /> },
       { path: "/face-scanner", element: <FaceScanner /> },
       { path: "*", element: <NotFound /> },
     ],
