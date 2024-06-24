@@ -13,7 +13,7 @@ export default function Footer() {
             <MenuContact />
           </section>
         </div>
-        <p className="py-10 text-end text-sm text-wild-sand-50">Copyright © 2024 KHASs. Dibuat dengan cinta.</p>
+        <p className="py-10 text-end text-sm text-wild-sand-50">Copyright © 2024 KHASs. Dibuat dengan Developer Mandiri.</p>
       </div>
     </div>
   );
