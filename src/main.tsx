@@ -25,6 +25,7 @@ import VerifyEmailStatus from "./pages/VerifyEmail.tsx";
 import ProtectedRoute from "./layout/RouteGuards.tsx";
 import EditForum from "./pages/EditForum.tsx";
 import DetailArticle from "./pages/ArticleDetail.tsx";
+import CreateForum from "./components/modules/Forum/create-forum.tsx";
 // import RouteExistUser from "./layout/RouteExistUser.tsx";
 
 export const App = () => {
@@ -77,6 +78,7 @@ export const App = () => {
         <Route path="/verify-email/:id" element={<VerifyEmailStatus />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/a" element={<CreateForum />} />
       </Routes>
     </Router>
   );

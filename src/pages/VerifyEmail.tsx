@@ -62,9 +62,9 @@ export default function VerifyEmailStatus() {
           )}
         </p>
         {!data.verified && (
-          <p className="mt-2 text-red-500">
-            If you do not see the email in your inbox, please check your{" "}
-            <span className="text-red-500">spam folder</span>.
+          <p className="mt-2">
+            We have sent an email to your email address. Please verify your email address to continue. If you do not see
+            the email in your inbox, please check your <span className="text-red-500">spam folder</span>.
           </p>
         )}
       </div>

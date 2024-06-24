@@ -132,14 +132,14 @@ export default function CreateForum() {
               <div className="flex-grow">
                 <div className="flex flex-col gap-4">
                   <ReactQuill
-                    className="text-white"
+                    className="text-white placeholder:text-slate-400"
                     ref={quillRef}
                     theme="snow"
                     modules={{
                       toolbar: [
-                        [{ header: "1" }, { header: "2" }, { font: [] }],
+                        [{ header: "1" }, { header: "2" }],
                         [{ size: [] }],
-                        ["bold", "italic", "underline", "strike", "blockquote"],
+                        ["bold", "italic", "underline"],
                         [{ list: "ordered" }, { list: "bullet" }, { indent: "-1" }, { indent: "+1" }],
                         ["link"],
                         ["clean"],
@@ -156,12 +156,25 @@ export default function CreateForum() {
                     id="image"
                     {...register("image")}
                     accept="image/*"
-                    placeholder=" "
+                    className="hidden"
                     onChange={handleImagePreview}
                   />
-                  <label htmlFor="image">
-                    {" "}
-                    <span className="pr-2 text-red-500">*</span>Gambar
+                  <label htmlFor="image" className="flex cursor-pointer items-center text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="mr-2 h-6 w-6 text-red-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                    <span className="text-red-500">* </span> Upload Gambar
                   </label>
                   {errors.image && <span className="error">{errors.image.message}</span>}
 
