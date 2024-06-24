@@ -1,6 +1,7 @@
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import useSWR from "swr";
 import axios from "axios";
+import LoadingArticle from "@/components/modules/Article/loading-article";
 
 interface Article {
   id: number;
@@ -29,7 +30,7 @@ const ArticleDetail: React.FC = () => {
 
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div><LoadingArticle/></div>;
   }
 
   if (fetchError ) {

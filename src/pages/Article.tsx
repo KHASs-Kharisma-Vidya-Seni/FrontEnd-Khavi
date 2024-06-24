@@ -10,6 +10,7 @@ import { slugify } from "@/utils/slugify";
 
 import Container from "@/components/Container";
 import AnimationPage from "@/components/AnimationPage";
+import LoadingArticle from "@/components/modules/Article/loading-article";
 
 const fetcher = (url: string) => axios.get(url).then(res => res.data);
 
@@ -53,7 +54,7 @@ export default function Article() {
   const filteredArticles = tag ? dataArticle.filter(article => article.tags.includes(tag)) : dataArticle;
 
   if (error) return <div>Failed to load articles</div>;
-  if (!dataArticle) return <div>Loading...</div>;
+  if (!dataArticle) return <div><LoadingArticle/></div>;
 
   return (
     <Container className="w-full pb-48">
