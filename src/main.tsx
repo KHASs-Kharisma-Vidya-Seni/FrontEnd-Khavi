@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Login from "./pages/Login.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -16,7 +17,7 @@ import ProfileUserInfo from "./pages/Profile-userInfo.tsx";
 import ProfileSetting from "./pages/Profile-setting.tsx";
 import Article from "./pages/Article.tsx";
 
-import Error from "./pages/Error.tsx";
+// import Error from "./pages/Error.tsx";
 import Root from "./Root.tsx";
 import Forum from "./pages/Forum.tsx";
 import FaceScanner from "./pages/FaceScanner.tsx";
@@ -26,76 +27,132 @@ import EditForum from "./pages/EditForum.tsx";
 import DetailArticle from "./pages/ArticleDetail.tsx";
 import RouteExistUser from "./layout/RouteExistUser.tsx";
 
+export const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Root />}>
+          <Route index element={<Home />} />
+          <Route path="/tentang" element={<About />} />
+          <Route path="/profile" element={<ProfileRoot />}>
+            <Route
+              index
+              element={
+                <ProtectedRoute>
+                  <ProfileUserInfo />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/profile/bookmark" element={<ProfileBookmark />} />
+            <Route path="/profile/settings" element={<ProfileSetting />} />
+          </Route>
+          <Route path="/artikel" element={<Article />} />
+          <Route path="/artikel/:slug" element={<DetailArticle />} />
+          <Route path="/forum" element={<Forum />} />
+          <Route path="/forum/:id/edit" element={<EditForum />} />
+          <Route
+            path="/face-scanner"
+            element={
+              <ProtectedRoute>
+                <FaceScanner />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+        <Route path="/verify-email/:id" element={<VerifyEmailStatus />} />
+        <Route
+          path="/register"
+          element={
+            <RouteExistUser>
+              <Register />
+            </RouteExistUser>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <RouteExistUser>
+              <Login />
+            </RouteExistUser>
+          }
+        />
+      </Routes>
+    </Router>
+  );
+};
+
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <Error />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "/tentang",
-        element: <About />,
-      },
-      {
-        path: "/profile",
-        element: (
-          <ProtectedRoute>
-            <ProfileRoot />
-          </ProtectedRoute>
-        ),
-        children: [
-          {
-            index: true,
-            element: <ProfileUserInfo />,
-          },
-          {
-            path: "/profile/bookmark",
-            element: <ProfileBookmark />,
-          },
-          {
-            path: "/profile/settings",
-            element: <ProfileSetting />,
-          },
-        ],
-      },
-      // { path: '/profile/user-info', element: <ProfileUserInfo /> }
-      { path: "/artikel", element: <Article /> },
-      { path: "/artikel/:slug", element: <DetailArticle /> },
-      { path: "/forum", element: <Forum /> },
-      { path: "/forum/:id/edit", element: <EditForum /> },
-      { path: "/face-scanner", element: <FaceScanner /> },
-      { path: "*", element: <NotFound /> },
-    ],
-  },
-  {
-    path: "/verify-email/:id",
-    element: <VerifyEmailStatus />,
-  },
-  {
-    path: "/register",
-    element: (
-      <RouteExistUser>
-        <Register />
-      </RouteExistUser>
-    ),
-  },
-  {
-    path: "/login",
-    element: (
-      <RouteExistUser>
-        <Login />
-      </RouteExistUser>
-    ),
-  },
-]);
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <Root />,
+//     errorElement: <Error />,
+//     children: [
+//       {
+//         index: true,
+//         element: <Home />,
+//       },
+//       {
+//         path: "/tentang",
+//         element: <About />,
+//       },
+//       {
+//         path: "/profile",
+//         element: (
+//           <ProtectedRoute>
+//             <ProfileRoot />
+//           </ProtectedRoute>
+//         ),
+//         children: [
+//           {
+//             index: true,
+//             element: <ProfileUserInfo />,
+//           },
+//           {
+//             path: "/profile/bookmark",
+//             element: <ProfileBookmark />,
+//           },
+//           {
+//             path: "/profile/settings",
+//             element: <ProfileSetting />,
+//           },
+//         ],
+//       },
+//       // { path: '/profile/user-info', element: <ProfileUserInfo /> }
+//       { path: "/artikel", element: <Article /> },
+//       { path: "/artikel/:slug", element: <DetailArticle /> },
+//       { path: "/forum", element: <Forum /> },
+//       { path: "/forum/:id/edit", element: <EditForum /> },
+//       { path: "/face-scanner", element: <FaceScanner /> },
+//       { path: "*", element: <NotFound /> },
+//     ],
+//   },
+//   {
+//     path: "/verify-email/:id",
+//     element: <VerifyEmailStatus />,
+//   },
+//   {
+//     path: "/register",
+//     element: (
+//       <RouteExistUser>
+//         <Register />
+//       </RouteExistUser>
+//     ),
+//   },
+//   {
+//     path: "/login",
+//     element: (
+//       <RouteExistUser>
+//         <Login />
+//       </RouteExistUser>
+//     ),
+//   },
+// ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    {/* <RouterProvider router={router} /> */}
+    <App />
   </React.StrictMode>
 );
