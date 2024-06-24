@@ -1,6 +1,6 @@
-// import React from "react";
 import { AvatarImage } from "@/components/ui/avatar";
 import { Avatar } from "@radix-ui/react-avatar";
+import moment from "moment";
 import { ChevronDown, Ellipsis, MessageCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -13,6 +13,20 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
 
+interface Comment {
+  id_comment: string;
+  id_forum: string;
+  comment_content: string;
+  pinned: boolean;
+  created_at: string;
+  user: {
+    email: string;
+    photoURL: string;
+    uid: string;
+    username: string;
+  };
+}
+
 export const CardForum = ({
   profileImage,
   name,
@@ -20,10 +34,10 @@ export const CardForum = ({
   image,
   hashtags,
   comments,
-  // likes,
   showComments,
   toggleComments,
   commentData,
+  created_at,
 }: {
   profileImage: string;
   name: string;
@@ -34,13 +48,8 @@ export const CardForum = ({
   likes: number;
   showComments: boolean;
   toggleComments: () => void;
-  commentData: {
-    id: number;
-    profileImage: string;
-    name: string;
-    comment: string;
-    likes: number;
-  }[];
+  commentData: Comment[];
+  created_at: string;
 }) => {
   return (
     <div className="flex w-full flex-col items-center">
@@ -50,7 +59,10 @@ export const CardForum = ({
             <Avatar className="flex h-10 w-10">
               <AvatarImage className="object-cover" src={profileImage} />
             </Avatar>
-            <h1 className="mb-2.5 text-xl font-bold text-laser-300">{name}</h1>
+            <div className="flex gap-3">
+              <h1 className="mb-2.5 text-xl font-bold text-laser-300">{name}</h1>
+              <h1 className="text-ll mt-0.5 font-extralight text-gray-400">{moment(created_at).fromNow()}</h1>
+            </div>
           </div>
           <div>
             <DropdownMenu>
@@ -68,8 +80,14 @@ export const CardForum = ({
           </div>
         </div>
         <div className="pl-14 pr-2 lg:pl-24 lg:pr-16">
-          <p className="text-wild-sand-50">{text}</p>
           {image && <img src={image} alt=" " className="mt-2.5" />}
+          <div className="mt-3 prose prose-h1:text-wild-sand-50 prose-h2:text-wild-sand-50 prose-h3:text-wild-sand-50 prose-p:text-wild-sand-50 prose-blockquote:text-wild-sand-50 prose-strong:text-wild-sand-50">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: text,
+              }}
+            />
+          </div>
           <div className="mt-2.5 w-fit rounded-[0.625rem] bg-laser-300 px-2.5">
             {hashtags.map((hashtag, index) => (
               <h5 key={index}>#{hashtag}</h5>
@@ -88,18 +106,18 @@ export const CardForum = ({
           {showComments && (
             <div className="mt-4 space-y-2">
               {commentData.map(comment => (
-                <div key={comment.id} className="rounded-md p-2">
+                <div key={comment.id_comment} className="rounded-md p-2">
                   <div className="flex flex-col gap-2">
                     <div className="flex gap-2">
                       <div className="flex items-center gap-x-3">
                         <Avatar className="h-8 w-8 object-cover">
-                          <AvatarImage className="h-8 w-8 object-cover" src={comment.profileImage} />
+                          <AvatarImage className="h-8 w-8 object-cover" src={comment.user.photoURL} />
                         </Avatar>
-                        <h5 className="text-md py-1 font-black text-laser-300 lg:text-xl">{comment.name}</h5>
+                        <h5 className="text-md py-1 font-black text-laser-300 lg:text-xl">{comment.user.username}</h5>
                       </div>
                     </div>
                     <div>
-                      <p className="pl-10 text-sm font-normal text-wild-sand-50">{comment.comment}</p>
+                      <p className="pl-10 text-sm font-normal text-wild-sand-50">{comment.comment_content}</p>
                     </div>
                   </div>
                 </div>

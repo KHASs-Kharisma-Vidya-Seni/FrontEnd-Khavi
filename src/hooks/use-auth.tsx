@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { BASE_URL_API } from "@/utility/base-url";
 import { makeRequest } from "@/lib/axios";
 
+
 export interface User {
   uid: number;
   email: string;
@@ -82,6 +83,7 @@ export const useAuth = () => {
   const logout = async () => {
     try {
       await makeRequest.get("/auth/logout");
+
       mutate(`${BASE_URL_API}/current-user`, false);
       isUnauthorized = true;
     } catch (error) {

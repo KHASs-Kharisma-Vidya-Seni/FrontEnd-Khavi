@@ -2,31 +2,40 @@ import { useState } from "react";
 import { CardForum } from "@/components/modules/Forum/card-forum";
 import CreateForum from "./create-forum";
 
-interface Post {
-  id: number;
-  profileImage: string;
-  name: string;
-  text: string;
-  image?: string;
-  hashtags: string[];
-  comments: number;
-  likes: number;
+interface Forum {
+  author: {
+    email: string;
+    photoURL: string;
+    uid: string;
+    username: string;
+  };
+  comments: Comment[];
+  content: string;
+  created_at: string;
+  id_forum: string;
+  id_tags: string | null;
+  image: string;
+  update_at: string;
 }
 
 interface Comment {
-  id: number;
-  postId: number;
-  profileImage: string;
-  name: string;
-  comment: string;
-  likes: number;
+  id_comment: string;
+  id_forum: string;
+  comment_content: string;
+  pinned: boolean;
+  created_at: string;
+  user: {
+    email: string;
+    photoURL: string;
+    uid: string;
+    username: string;
+  };
 }
 
-export const RightSideForum = ({ posts, comments }: { posts: Post[]; comments: Comment[] }) => {
+export const RightSideForum = ({ posts }: { posts: Forum[] }) => {
+  const [visibleComments, setVisibleComments] = useState<{ [key: string]: boolean }>({});
 
-  const [visibleComments, setVisibleComments] = useState<{ [key: number]: boolean }>({});
-
-  const toggleComments = (postId: number) => {
+  const toggleComments = (postId: string) => {
     setVisibleComments(prev => ({ ...prev, [postId]: !prev[postId] }));
   };
 
@@ -36,18 +45,18 @@ export const RightSideForum = ({ posts, comments }: { posts: Post[]; comments: C
       <div className="lg:flex lg:flex-col lg:gap-4">
         {posts.map(post => (
           <CardForum
-            key={post.id}
-            profileImage={post.profileImage}
-            name={post.name}
-            text={post.text}
+            key={post.id_forum}
+            profileImage={post.author.photoURL}
+            name={post.author.username}
+            text={post.content}
             image={post.image || ""}
-            hashtags={post.hashtags}
-            comments={post.comments}
-            likes={post.likes}
-            showComments={!!visibleComments[post.id]}
-            toggleComments={() => toggleComments(post.id)}
-            commentData={comments.filter(comment => comment.postId === post.id)}
-          />
+            hashtags={[]}
+            comments={post.comments.length}
+            likes={0}
+            showComments={!!visibleComments[post.id_forum]}
+            toggleComments={() => toggleComments(post.id_forum)}
+            commentData={post.comments} 
+            created_at={post.created_at}          />
         ))}
       </div>
     </div>
