@@ -1,14 +1,10 @@
-import { Sidebar } from "@/components/modules/Forum/side-bar";
-import { LeftBar } from "@/components/modules/Forum/left-bar";
-import { RightBar } from "@/components/modules/Forum/right-bar";
+import { SidebarForum } from "@/components/modules/Forum/side-bar-forum";
+import { LeftSideForum } from "@/components/modules/Forum/left-forum-forum";
+import { RightSideForum } from "@/components/modules/Forum/right-side-forum";
 
 import { cn } from "@/lib/utils";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
-
-interface TagData {
-  hashtag: string;
-  posted: string;
-}
+import AnimationPage from "@/components/AnimationPage";
 
 interface Post {
   id: number;
@@ -102,25 +98,27 @@ export default function Forum() {
   ];
 
   return (
-    <div className="flex flex-col justify-center gap-2 bg-shark-900 p-0 xl:container lg:bg-white lg:bg-[url('/images/bgArtikel.png')] lg:pb-[30px] lg:pt-8">
-      <div
-        className={cn(
-          "fixed left-0 flex h-screen w-12 justify-center border-r-[0.1875rem] border-t-[0.1875rem] border-shark-800 bg-shark-900 xl:hidden",
-          isScrolled ? "top-0" : "top-24"
-        )}
-      >
-        <div className="">
-          <Sidebar />
-        </div>
-      </div>
-      <div className="">
-        <div className="hidden xl:block">
-          <LeftBar />
+    <AnimationPage>
+      <div className="flex flex-col justify-center gap-2 bg-shark-900 p-0 xl:container lg:bg-white lg:bg-[url('/images/bgArtikel.png')] lg:pb-[30px] lg:pt-8">
+        <div
+          className={cn(
+            "fixed left-0 flex h-screen w-12 justify-center border-r-[0.1875rem] border-t-[0.1875rem] border-shark-800 bg-shark-900 xl:hidden",
+            isScrolled ? "top-0" : "top-24"
+          )}
+        >
+          <div className="">
+            <SidebarForum />
+          </div>
         </div>
         <div className="">
-          <RightBar posts={posts} comments={comments} />
+          <div className="hidden xl:block">
+            <LeftSideForum />
+          </div>
+          <div className="">
+            <RightSideForum posts={posts} comments={comments} />
+          </div>
         </div>
       </div>
-    </div>
+    </AnimationPage>
   );
 }

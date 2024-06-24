@@ -1,6 +1,9 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { useNavigate } from 'react-router-dom';
+import { useMemo } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const TrendingCard = ({
   title,
@@ -22,7 +25,7 @@ export const TrendingCard = ({
   };
 
   return (
-    <div id="trending-1" className="relative h-full w-full overflow-hidden cursor-pointer" onClick={handleClick}>
+    <div id="trending-1" className="relative h-full w-full cursor-pointer overflow-hidden" onClick={handleClick}>
       <div className="relative h-full">
         <motion.div
           style={{
@@ -52,16 +55,30 @@ export const TrendingCard = ({
 
 export const ArticleTags = () => {
   const tags = ["All", "Hair", "Treatment", "Haircare"];
+
+  const { search } = useLocation();
+  const queryParams = useMemo(() => new URLSearchParams(search), [search]);
+  const activeTag = queryParams.get("tag") || "All";
+
   return (
     <>
-      {tags.map((tag, i: number) => (
-        <p key={i} className={cn("text-xl", tag === "All" ? "font-bold text-black" : "font-normal text-gray-500")}>
+      {tags.map((tag, i) => (
+        <NavLink
+          to={tag === "All" ? "/artikel" : `/artikel?tag=${tag}`}
+          key={i}
+          className={cn(
+            "text-xl",
+            activeTag === tag ? "font-bold text-black" : ""
+          )}
+        >
           {tag}
-        </p>
+        </NavLink>
       ))}
     </>
   );
 };
+
+// className={`text-xl ${tag === "All" ? "font-bold text-black" : "text-gray-500"}`}
 
 export const ArticleCard = ({
   imageurl,
@@ -83,7 +100,10 @@ export const ArticleCard = ({
   };
 
   return (
-    <article className="relative w-full max-w-full overflow-hidden rounded-md shadow-lg cursor-pointer" onClick={handleClick}>
+    <article
+      className="relative w-full max-w-full cursor-pointer overflow-hidden rounded-md shadow-lg"
+      onClick={handleClick}
+    >
       <figure className="h-52 w-full">
         <img src={imageurl} alt="" className="h-full w-full object-cover" />
       </figure>

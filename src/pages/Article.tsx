@@ -1,72 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Container from "@/components/Container";
-import { ArticleCard, ArticleTags, TrendingCard } from "@/components/ui/article";
 import useSWR from 'swr';
 import axios from 'axios';
+
+import { Link } from 'react-router-dom';
+import { useEffect, useMemo, useState } from "react";
+import { useLocation } from "react-router-dom";
+
+import { ArticleCard, ArticleTags, TrendingCard } from "@/components/ui/article";
 import { slugify } from '@/utils/slugify';
 
-const fetcher = (url: string) => axios.get(url).then(res => res.data);
 
+import Container from "@/components/Container";
+import AnimationPage from "@/components/AnimationPage";
+
+
+const fetcher = (url: string) => axios.get(url).then(res => res.data);
+  
 export default function Article() {
   const { data: dataArticle, error } = useSWR('http://localhost:3000/api/article', fetcher);
-  const dataArticle = [
-    {
-      id: 1,
-      slug: "rahasia-merawat-rambut-gimbal",
-      imageSrc: "/images/arikel-1.png",
-      title: "Rahasia Merawat Rambut Gimbal agar Tetap Sehat",
-      description:
-        "Metode efektif untuk merawat rambut gimbal agar tetap sehat dan terlihat menawan. Dari pemilihan produk perawatan yang tepat hingga teknik pencucian dan pemeliharaan sehari-hari",
-      tags: ["Treatment", "Hair"],
-    },
-    {
-      id: 2,
-      slug: "inspirasi-gaya-rambut-pendek-wanita-manis",
-      imageSrc: "/images/arikel-2.png",
-      title: "Inspirasi Gaya Rambut Pendek Wanita Manis dari Selebriti",
-      description: "Temukan berbagai model rambut yang cocok untuk berbagai bentuk wajah dan gaya Pribadi.",
-      tags: ["Treatment", "Hair"],
-    },
-    {
-      id: 3,
-      slug: "cara-mengetahui-bentuk-wajah",
-      imageSrc: "/images/arikel-3.png",
-      title: "4 Cara Mengetahui Bentuk Wajah, Ini Langkah Mudahnya",
-      description:
-        "Bingung menentukan bentuk wajahmu? Temukan cara mudah untuk mengetahui bentuk wajahmu dengan langkah-langkah yang simpel dan praktis.",
-      tags: ["Treatment", "Hair"],
-    },
-    {
-      id: 4,
-      slug: "inspirasi-gaya-rambut-pria-ala-nguyen",
-      imageSrc: "/images/arikel-4.png",
-      title: "Inspirasi Gaya Rambut Pria ala Nguyen",
-      description:
-        "Tentang keindahan dan keanggunan gaya rambut pria ala Nguyen, mengungkapkan rahasia di balik penampilan rambut yang elegan dan memikat.",
-      tags: ["Treatment", "Hair"],
-    },
-    {
-      id: 5,
-      slug: "tren-gaya-rambut-pendek-pria",
-      imageSrc: "/images/arikel-5.png",
-      title: "Tren Gaya Rambut Pendek Pria: Tampil Tampan dan Modern",
-      description:
-        "Temukan berbagai model rambut yang cocok untuk berbagai bentuk wajah dan gaya Pribadi. Dapatkan tips dan trik untuk menata rambut pendek agar selalu terlihat rapi dan menarik.",
-      tags: ["Treatment", "Hair"],
-    },
-    {
-      id: 6,
-      slug: "cara-mengetahui-bentuk-wajah",
-      imageSrc: "/images/arikel-6.png",
-      title: "4 Cara Mengetahui Bentuk Wajah, Ini Langkah Mudahnya",
-      description:
-        "Bingung menentukan bentuk wajahmu? Temukan cara mudah untuk mengetahui bentuk wajahmu dengan langkah-langkah yang simpel dan praktis.",
-      tags: ["Treatment", "Hair"],
-    },
-  ];
-  
-
   const dataTrending = [
     {
       id: 1,
@@ -90,7 +40,23 @@ export default function Article() {
       date: "11 Juni 2024",
     },
   ];
-  
+
+  const location = useLocation();
+
+  // Memoize searchParams using useMemo
+  const searchParams = useMemo(() => new URLSearchParams(location.search), [location.search]);
+  const initialTag = searchParams.get("tag");
+
+  const [tag, setTag] = useState(initialTag);
+
+  // Menggunakan useEffect untuk memantau perubahan pada query parameter 'tag'
+  useEffect(() => {
+    const newTag = searchParams.get("tag");
+    setTag(newTag);
+  }, [location.search, searchParams]);
+
+  // Filter dataArticle berdasarkan nilai tag yang didapat dari query parameter
+  const filteredArticles = tag ? dataArticle.filter(article => article.tags.includes(tag)) : dataArticle;
 
   if (error) return <div>Failed to load articles</div>;
   if (!dataArticle) return <div>Loading...</div>;
@@ -113,11 +79,10 @@ export default function Article() {
           <ArticleTags />
         </div>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
-          {dataArticle.map((article: any) => (
+          {filteredArticles.map((article: any) => (
             <Link to={`/artikel/${slugify(article.title)}`} key={article.id}>
               <ArticleCard {...article} />
             </Link>
-          ))}
         </div>
       </div>
     </Container>

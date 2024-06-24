@@ -16,9 +16,12 @@ interface ResponseData {
 
 const loginSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address." }),
-  password: z.string().refine(value => value.trim().length > 0, {
-    message: "Password is required.",
-  }),
+  password: z
+    .string()
+    .min(6, "Password must be at least 6 characters")
+    .refine(value => value.trim().length > 0, {
+      message: "Password is required.",
+    }),
 });
 
 type FormSchemaValue = z.infer<typeof loginSchema>;
@@ -62,11 +65,12 @@ export default function SignIn() {
         navigate("/");
       }, 2000);
     } catch (error) {
-      if (axios.isAxiosError(error) && error.response?.status === 401) {
-        const errorMessage = error?.response?.data?.error || "An error occurred. Please try again.";
-        toast.error(errorMessage);
-        console.log(error);
+      let errorMessage;
+      if (axios.isAxiosError(error)) {
+        errorMessage = error?.response?.data?.error || "An error occurred. Please try again.";
       }
+      toast.error(errorMessage);
+      console.log(error);
     }
   };
 

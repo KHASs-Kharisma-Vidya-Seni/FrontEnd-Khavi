@@ -129,7 +129,7 @@ function AvatarProfile(currentUser: CurrentUserWithOut) {
       <div className="flex items-center justify-normal gap-x-4 lg:justify-center">
         <figure className="relative">
           <Avatar className="flex h-10 w-10 items-center justify-center before:absolute before:left-0 before:top-0 before:h-full before:w-full before:rounded-full before:bg-black before:opacity-0 before:transition-all before:hover:opacity-35">
-            <AvatarImage className="object-cover" src={currentUser?.photoURL} />
+            <AvatarImage className="object-cover" src={currentUser?.photo_url} />
             <AvatarFallback>{currentUser?.username}</AvatarFallback>
           </Avatar>
         </figure>
