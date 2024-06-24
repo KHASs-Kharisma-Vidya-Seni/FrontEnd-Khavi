@@ -61,12 +61,12 @@ export const ArticleTags = () => {
 };
 
 export const ArticleCard = ({
-  imageSrc,
+  imageurl,
   description,
   tags,
   title,
 }: {
-  imageSrc: string;
+  imageurl: string;
   title: string;
   description?: string;
   tags: string[];
@@ -74,12 +74,12 @@ export const ArticleCard = ({
   return (
     <article className="relative w-full max-w-full overflow-hidden rounded-md shadow-lg">
       <figure className="h-52 w-full">
-        <img src={imageSrc} alt="" className="h-full w-full object-cover" />
+        <img src={imageurl} alt="" className="h-full w-full object-cover" />
       </figure>
       <div className="flex flex-col gap-2 px-5 py-5">
         <div className="flex gap-2">
           {tags.map((tag, i: number) => (
-            <p key={i} className="inline max-w-fit rounded-lg bg-red-400 px-3 py-1 text-sm text-white">
+            <p key={i} className="inline max-w-fit rounded-lg bg-laser-300 px-3 py-1 text-sm text-white">
               {tag}
             </p>
           ))}
