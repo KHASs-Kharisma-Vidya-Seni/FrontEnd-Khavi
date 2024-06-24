@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 // Definisikan tipe Article
@@ -46,7 +47,7 @@ const dataArticle: Article[] = [
     title: "Inspirasi Gaya Rambut Pria ala Nguyen",
     description:
       "Tentang keindahan dan keanggunan gaya rambut pria ala Nguyen, mengungkapkan rahasia di balik penampilan rambut yang elegan dan memikat.",
-    tags: ["Treatment", "Hair"],
+    tags: ["Haircare", "Hair"],
   },
   {
     id: 5,
@@ -66,6 +67,24 @@ const dataArticle: Article[] = [
       "Bingung menentukan bentuk wajahmu? Temukan cara mudah untuk mengetahui bentuk wajahmu dengan langkah-langkah yang simpel dan praktis.",
     tags: ["Treatment", "Hair"],
   },
+  {
+    id: 7,
+    slug: "merawat-bentuk-wajah-agar-simetris",
+    title: "Merawat Bentuk Wajah Agar Simetris",
+    imageSrc: "/images/cewek-tranding-1.png",
+    description:
+      "Memiliki wajah simetris adalah dambaan banyak orang. Temukan panduan lengkap untuk mendapatkan bentuk wajah yang ideal dan proporsional.",
+    tags: ["Treatment", "Hair"],
+  },
+  {
+    id: 8,
+    slug: "pesona-pria-gondrong-di-mata-wanita",
+    title: "Pesona Pria Gondrong di Mata Wanita",
+    imageSrc: "/images/cowo-trading-2-full.png",
+    description:
+      "Rambut gondrong pada pria memancarkan pesona yang unik dan tak terabaikan. Bagi banyak wanita, rambut panjang mencerminkan keberanian, kepercayaan diri, serta sisi kreatif dan bebas dari konvensi.",
+    tags: ["Treatment", "Hair"],
+  },
 ];
 
 const DetailArticle: React.FC = () => {
@@ -83,10 +102,13 @@ const DetailArticle: React.FC = () => {
 
   return (
     <div className='bg-[url("/images/bgArtikel.png")]'>
-      <div className="w-full xl:px-60 lg:px-36 md:px-14 px-9  py-10">
+      <div className="w-full px-9 py-10 md:px-14 lg:px-36  xl:px-60">
         <div>
-          <h4 className="font-black">Artikel</h4>
-          <h1 className="text-center xl:text-6xl lg:text-4xl md:text-3xl text-2xl font-bold">{article.title}</h1>
+          <div>
+            <Link to="/artikel">&larr;</Link>
+            <h4 className="font-black">Artikel</h4>
+          </div>
+          <h1 className="text-center text-2xl font-bold md:text-3xl lg:text-4xl xl:text-6xl">{article.title}</h1>
           <p className="py-6 font-bold text-[#837F7F]">{article.tags.join(", ")}</p>
           <img src={article.imageSrc} alt={article.title} className="w-full" />
         </div>

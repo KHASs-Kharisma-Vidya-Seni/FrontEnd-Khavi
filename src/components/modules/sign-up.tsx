@@ -16,8 +16,14 @@ interface ResponseData {
 }
 
 const formSchema = z.object({
-  username: z.string().min(3, "Username must be at least 3 characters").max(20, "Username cannot exceed 20 characters"),
-  email: z.string().email("Invalid email address"),
+  username: z
+    .string()
+    .min(3, "Username must be at least 3 characters")
+    .max(20, "Username cannot exceed 10 characters")
+    .refine(value => value.trim().length > 0, {
+      message: "Username is required.",
+    }),
+  email: z.string().email("Please enter a valid email address."),
   password: z.string().min(6, "Password must be at least 6 characters"),
 });
 
@@ -65,7 +71,7 @@ export default function SignUp() {
         navigate(`/verify-email/${newUserReq.data.newUserReg[0].uid as ResponseData}`);
       }, 2000);
     } catch (error) {
-      if (axios.isAxiosError(error) && error.response?.status === 401) {
+      if (axios.isAxiosError(error)) {
         const errorMessage = error?.response?.data?.error || "An error occurred. Please try again.";
         toast.error(errorMessage);
       }
@@ -83,7 +89,7 @@ export default function SignUp() {
               <FormItem>
                 <FormLabel className="text-lg">Username</FormLabel>
                 <FormControl>
-                  <Input placeholder="create your username" {...field} />
+                  <Input {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -96,7 +102,7 @@ export default function SignUp() {
               <FormItem>
                 <FormLabel className="text-lg">Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="youremail@gmai.com" type="email" {...field} />
+                  <Input {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
