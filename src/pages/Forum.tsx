@@ -7,7 +7,7 @@ import { useScrollPosition } from "@/hooks/use-scroll-position";
 import AnimationPage from "@/components/AnimationPage";
 
 import axios from "axios";
-import useSWR from "swr";
+import useSWR, { mutate } from "swr";
 import { BASE_URL_API } from "@/utility/base-url";
 import type { Forum } from "@/components/types/forum-types";
 
@@ -23,6 +23,9 @@ export default function Forum() {
   const isScrolled = useScrollPosition();
 
   const { data, error } = useSWR<ForumData>(`${BASE_URL_API}/forum?withUser=true`, fetcher);
+
+
+  mutate(`${BASE_URL_API}/forum?withUser=true`);
 
   if (!data) {
     return (
