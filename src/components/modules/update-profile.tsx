@@ -103,7 +103,7 @@ export const UpdateProfile = () => {
             </div>
             <div className="py-4">
               <div>
-                <section className="grid grid-cols-2 gap-10">
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <FormField
                     control={form.control}
                     name="username"
