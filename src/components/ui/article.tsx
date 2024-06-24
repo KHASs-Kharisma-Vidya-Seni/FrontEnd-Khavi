@@ -81,13 +81,13 @@ export const ArticleTags = () => {
 // className={`text-xl ${tag === "All" ? "font-bold text-black" : "text-gray-500"}`}
 
 export const ArticleCard = ({
-  imageSrc,
+  imageurl,
   description,
   tags,
   title,
   slug,
 }: {
-  imageSrc: string;
+  imageurl: string;
   title: string;
   description?: string;
   tags: string[];
@@ -105,10 +105,12 @@ export const ArticleCard = ({
       onClick={handleClick}
     >
       <figure className="h-52 w-full">
-        <img src={imageSrc} alt="" className="h-full w-full object-cover" />
+        <img src={imageurl} alt="" className="h-full w-full object-cover" />
       </figure>
       <div className="flex flex-col gap-2 px-5 py-5">
         <div className="flex gap-2">
+          {tags.map((tag, i: number) => (
+            <p key={i} className="inline max-w-fit rounded-lg bg-laser-300 px-3 py-1 text-sm text-white">
           {tags.map((tag, i) => (
             <p key={i} className="inline max-w-fit rounded-lg bg-red-400 px-3 py-1 text-sm text-white">
               {tag}
