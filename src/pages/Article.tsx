@@ -1,5 +1,8 @@
+import AnimationPage from "@/components/AnimationPage";
 import Container from "@/components/Container";
 import { ArticleCard, ArticleTags, TrendingCard } from "@/components/ui/article";
+import { useEffect, useMemo, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Article() {
   const dataArticle = [
@@ -10,7 +13,7 @@ export default function Article() {
       title: "Rahasia Merawat Rambut Gimbal agar Tetap Sehat",
       description:
         "Metode efektif untuk merawat rambut gimbal agar tetap sehat dan terlihat menawan. Dari pemilihan produk perawatan yang tepat hingga teknik pencucian dan pemeliharaan sehari-hari",
-      tags: ["Treatment", "Hair"],
+      tags: ["Hair"],
     },
     {
       id: 2,
@@ -54,10 +57,9 @@ export default function Article() {
       title: "4 Cara Mengetahui Bentuk Wajah, Ini Langkah Mudahnya",
       description:
         "Bingung menentukan bentuk wajahmu? Temukan cara mudah untuk mengetahui bentuk wajahmu dengan langkah-langkah yang simpel dan praktis.",
-      tags: ["Treatment", "Hair"],
+      tags: ["Haircare", "Hair"],
     },
   ];
-  
 
   const dataTrending = [
     {
@@ -79,7 +81,23 @@ export default function Article() {
       date: "11 Juni 2024",
     },
   ];
-  
+
+  const location = useLocation();
+
+  // Memoize searchParams using useMemo
+  const searchParams = useMemo(() => new URLSearchParams(location.search), [location.search]);
+  const initialTag = searchParams.get("tag");
+
+  const [tag, setTag] = useState(initialTag);
+
+  // Menggunakan useEffect untuk memantau perubahan pada query parameter 'tag'
+  useEffect(() => {
+    const newTag = searchParams.get("tag");
+    setTag(newTag);
+  }, [location.search, searchParams]);
+
+  // Filter dataArticle berdasarkan nilai tag yang didapat dari query parameter
+  const filteredArticles = tag ? dataArticle.filter(article => article.tags.includes(tag)) : dataArticle;
 
   return (
     <Container className="w-full pb-48">
@@ -120,7 +138,7 @@ export default function Article() {
           <ArticleTags />
         </div>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
-          {dataArticle.map(article => (
+          {filteredArticles.map(article => (
             <ArticleCard {...article} key={article.id} />
           ))}
         </div>

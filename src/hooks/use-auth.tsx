@@ -7,7 +7,7 @@ export interface User {
   email: string;
   username: string;
   created_at: string;
-  photoURL: string;
+  photo_url: string;
 }
 
 interface LoginInputs {
