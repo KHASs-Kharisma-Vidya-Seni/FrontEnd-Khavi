@@ -5,7 +5,7 @@ import { Drawer, DrawerContent, DrawerTrigger } from "../../ui/drawer";
 import { cn } from "@/lib/utils";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
 
-export function Sidebar() {
+export function SidebarForum() {
   
   const isScrolled = useScrollPosition();
   return (

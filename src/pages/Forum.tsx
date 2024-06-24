@@ -1,15 +1,10 @@
-import { Sidebar } from "@/components/modules/Forum/side-bar";
-import { LeftBar } from "@/components/modules/Forum/left-bar";
-import { RightBar } from "@/components/modules/Forum/right-bar";
+import { SidebarForum } from "@/components/modules/Forum/side-bar-forum";
+import { LeftSideForum } from "@/components/modules/Forum/left-forum-forum";
+import { RightSideForum } from "@/components/modules/Forum/right-side-forum";
 
 import { cn } from "@/lib/utils";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
 import AnimationPage from "@/components/AnimationPage";
-
-// interface TagData {
-//   hashtag: string;
-//   posted: string;
-// }
 
 interface Post {
   id: number;
@@ -112,15 +107,15 @@ export default function Forum() {
           )}
         >
           <div className="">
-            <Sidebar />
+            <SidebarForum />
           </div>
         </div>
         <div className="">
           <div className="hidden xl:block">
-            <LeftBar />
+            <LeftSideForum />
           </div>
           <div className="">
-            <RightBar posts={posts} comments={comments} />
+            <RightSideForum posts={posts} comments={comments} />
           </div>
         </div>
       </div>

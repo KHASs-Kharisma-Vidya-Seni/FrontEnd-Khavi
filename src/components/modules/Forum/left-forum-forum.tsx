@@ -1,6 +1,6 @@
 import { Search, SlidersHorizontal } from "lucide-react";
 
-export function LeftBar() {
+export function LeftSideForum() {
   return (
     <div className="w-62 fixed left-5 top-[8rem] space-y-3.5">
       <div className="relative w-full rounded-[0.625rem] bg-shark-900 p-5">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ImagePlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "./Card";
+import { CardForum } from "@/components/modules/Forum/card-forum";
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
 
 interface Post {
@@ -103,7 +103,7 @@ export const RightBar = ({ posts, comments }: { posts: Post[]; comments: Comment
       </div>
       <div className="lg:flex lg:flex-col lg:gap-4">
         {posts.map(post => (
-          <Card
+          <CardForum
             key={post.id}
             profileImage={post.profileImage}
             name={post.name}
