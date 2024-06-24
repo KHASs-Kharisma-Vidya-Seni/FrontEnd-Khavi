@@ -2,13 +2,15 @@ import AnimationPage from "@/components/AnimationPage";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import digiImage from "../assets/Luigi-Gigi-DallIgna.jpg";
+import UnderMaintenance from "@/components/UnderMaintance";
 
 export default function ProfileBookmark() {
   return (
     <AnimationPage>
       <h1 className="text-3xl font-bold">Bookmarks</h1>
-      <Tread />
-      <Tread />
+      <UnderMaintenance />
+      {/* <Tread />
+      <Tread /> */}
     </AnimationPage>
   );
 }
