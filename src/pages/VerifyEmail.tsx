@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useSWR from "swr";
 import axios from "axios";
+import { BASE_URL_API } from "@/utility/base-url";
 
 const fetcher = (url: string) =>
   axios
@@ -13,7 +14,7 @@ const fetcher = (url: string) =>
 export default function VerifyEmailStatus() {
   const { id } = useParams();
   const history = useNavigate();
-  const { data, error } = useSWR(`http://localhost:3000/api/auth/verify/status/${id}`, fetcher);
+  const { data, error } = useSWR(`${BASE_URL_API}/auth/verify/status/${id}`, fetcher);
 
   React.useEffect(() => {
     if (data?.verified) {
