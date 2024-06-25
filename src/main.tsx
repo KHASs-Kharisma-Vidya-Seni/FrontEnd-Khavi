@@ -63,7 +63,11 @@ export const App = () => {
           </Route>
           <Route path="/artikel" element={<Article />} />
           <Route path="/artikel/:slug" element={<DetailArticle />} />
-          <Route path="/forum" element={<Forum />} />
+          <Route path="/forum" element={
+            <ProtectedRoute>
+              <Forum />
+            </ProtectedRoute>
+          } />
           <Route path="/forum/:id/edit" element={<EditForum />} />
           <Route
             path="/face-scanner"
