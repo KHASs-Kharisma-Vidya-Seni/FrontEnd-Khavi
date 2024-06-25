@@ -26,6 +26,7 @@ import ProtectedRoute from "./layout/RouteGuards.tsx";
 import EditForum from "./pages/EditForum.tsx";
 import DetailArticle from "./pages/ArticleDetail.tsx";
 import CreateForum from "./components/modules/Forum/create-forum.tsx";
+import ForumStatic from "./static/ForumStatic"
 // import RouteExistUser from "./layout/RouteExistUser.tsx";
 
 export const App = () => {
@@ -68,7 +69,8 @@ export const App = () => {
               <Forum />
             </ProtectedRoute>
           } />
-          <Route path="/forum/:id/edit" element={<EditForum />} />
+          
+          <Route path="/forum-static" element={<ForumStatic />} />
           <Route
             path="/face-scanner"
             element={
