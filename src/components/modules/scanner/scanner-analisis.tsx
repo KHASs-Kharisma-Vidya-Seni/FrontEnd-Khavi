@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { cn } from "@/lib/utils";
 import { Toaster, toast } from "sonner";
+import recomendedRambut from "../../../data/database_gaya_rambut.json";
 
 interface ResultData {
   faceshape: string;
@@ -11,7 +12,7 @@ interface ResultData {
   recommended_haircuts?: string[];
 }
 
-const ImageUpload = () => {
+export default function Scanner() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
@@ -94,11 +95,11 @@ const ImageUpload = () => {
     <>
       <Toaster richColors />
       <div className="flex flex-col justify-center gap-10 gap-x-20 lg:flex-row lg:gap-y-0">
-        <div>
+        <div className="w-3/6">
           <div
             onDrop={handleDrop}
             onDragOver={handleDragOver}
-            className=" h-[300px] w-full  lg:w-[300px]"
+            className="h-[300px] w-full"
             style={{
               border: "2px dashed #ccc",
               padding: "20px",
@@ -156,23 +157,29 @@ const ImageUpload = () => {
 
           {errorMessage && <p style={{ color: "red", marginBottom: "20px" }}>{errorMessage}</p>}
         </div>
-        <div id="analysis" className="flex flex-col gap-y-8">
+        <div id="analysis" className="flex w-3/6 flex-col gap-y-8">
           <div>
-            <h1 className="text-2xl font-bold sm:text-4xl">Hasil Analisa</h1>
-            {resultsModel?.map((item, index) => (
-              <Result key={index} resultHeading={item.resultHeading} resultValue={item.resultValue} />
-            ))}
+            <h1 className="text-2xl font-bold sm:text-5xl">Hasil Analisa</h1>
+            <div className="">
+              {resultsModel?.map((item, index) => (
+                <Result key={index} resultHeading={item.resultHeading} resultValue={item.resultValue} />
+              ))}
+            </div>
           </div>
           <div>
-            <TreatmentDescription resultsModel={resultsModel} />
+            <TreatmentDescription resultFace={resultData?.faceshape || ""} />
           </div>
         </div>
       </div>
+      {resultData && (
+        <div className="flex flex-col items-center justify-center py-10">
+          <h1 className="text-4xl font-bold">Hair Recomended</h1>
+          <HairStyleList resultHair={resultData.faceshape} resultGender={resultData.gender} />
+        </div>
+      )}
     </>
   );
-};
-
-export default ImageUpload;
+}
 
 interface ResultProps {
   resultHeading: string;
@@ -183,7 +190,7 @@ interface ResultProps {
 const Result = ({ resultHeading, resultValue, detailsInformation = false }: ResultProps) => {
   return (
     <div>
-      <h2 className="text-lg text-gray-400 sm:text-xl">
+      <h2 className="text-lg font-bold text-shark-600 sm:text-xl">
         {resultHeading} : {detailsInformation ? null : <span>{resultValue ? resultValue : "-"}</span>}
       </h2>
       {detailsInformation && <p>{resultValue ? resultValue : "-"}</p>}
@@ -191,18 +198,74 @@ const Result = ({ resultHeading, resultValue, detailsInformation = false }: Resu
   );
 };
 
-interface TreatmentDescriptionProps extends Omit<ResultProps, "detailsInformation"> {}
+// interface TreatmentDescriptionProps extends Omit<ResultProps, "detailsInformation"> {}
 
-const TreatmentDescription = ({ resultsModel }: { resultsModel: TreatmentDescriptionProps[] }) => {
-  console.log(resultsModel);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const TreatmentDescription = ({ resultFace }: { resultFace: string }) => {
+  const resultRecommendedHair = recomendedRambut.filter(item => item.shape_face === resultFace.toLowerCase());
+  const shape_face_description =
+    resultRecommendedHair.length > 0 ? resultRecommendedHair[0].shape_face_description : "";
+
   return (
-    <div>
-      <h1 className="text-xl font-bold sm:text-2xl">Treatment Description</h1>
-      <div>
-        {resultsModel.map((item, index) => (
-          <Result key={index} resultHeading={item.resultHeading} resultValue={item.resultValue} />
-        ))}
+    <div className="">
+      <h1 className="text-xl font-bold sm:text-3xl">Treatment Description</h1>
+      <div className="py-2">
+        <div className="mb-2 flex flex-col gap-y-4">
+          <div>
+            <h2 className="text-lg font-bold text-shark-800 sm:text-xl">
+              Bentuk Wajah : {resultFace ? resultFace : "-"}
+            </h2>
+            <p className="text-lg leading-relaxed text-shark-500">{shape_face_description}</p>
+          </div>
+        </div>
       </div>
+    </div>
+  );
+};
+
+const HairStyleList = ({ resultHair, resultGender }: { resultHair: string; resultGender: string }) => {
+  const resultRecommendedHair = recomendedRambut.filter(item => item.shape_face === resultHair.toLowerCase());
+
+  function mapGender(gender: string) {
+    if (gender.toLowerCase() === "male") {
+      return "cowo";
+    } else if (gender.toLowerCase() === "female") {
+      return "cewe";
+    }
+  }
+
+  function capitalizeWords(str: string): string {
+    const words = str.split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+
+    return words.join(" ");
+  }
+
+  console.log(resultGender);
+
+  const debug = resultRecommendedHair.map(i => {
+    console.log(i.gender);
+  });
+
+  console.log(debug);
+
+  return (
+    <div className="py-10">
+      {resultRecommendedHair.map(hair => (
+        <>
+          {hair.gender === mapGender(resultGender) &&
+            hair.recommended_hair.map(item => (
+              <div className="flex flex-col">
+                <h2 className="pt-10 text-lg font-bold text-shark-800 sm:text-4xl">
+                  {capitalizeWords(item.hair_recomend)}
+                </h2>
+                <p className="w-5/6 text-xl leading-relaxed text-shark-500">{item.deskripsi}</p>
+                <div className="flex space-x-2 py-2">
+                  {item?.foto.map(foto => <img src={foto} alt="" width={250} className="object-cover " />)}
+                </div>
+              </div>
+            ))}
+        </>
+      ))}
     </div>
   );
 };

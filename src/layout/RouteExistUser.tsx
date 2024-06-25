@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 type RouteExistProps = PropsWithChildren;
 
-export default function RouteExistUser({ children }: RouteExistProps) {
+export default function ProtectedExistUser({ children }: RouteExistProps) {
   const { currentUser } = useAuth();
   const navigate = useNavigate();
 

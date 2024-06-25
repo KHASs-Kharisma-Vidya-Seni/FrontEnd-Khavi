@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -193,7 +194,9 @@ export default function Home() {
                 untuk penampilan sempurna!
               </p>
 
-              <button className="rounded-md bg-[#CDB16E] px-10 py-1 text-2xl text-gray-900">Coba</button>
+              <button className="rounded-md bg-[#CDB16E] px-10 py-1 text-2xl text-gray-900">
+                <Link to="/face-scanner">Coba</Link>
+              </button>
             </div>
           </div>
         </div>
@@ -216,15 +219,6 @@ export default function Home() {
                   <h1 className="text-2xl font-bold text-[#F4F4F4]">Laura Hofmann</h1>
                 </div>
               </div>
-              {/* <div className="my-auto ">
-                <div className="flex gap-3">
-                  <img src="src/assets/img/Star.png" alt="" />
-                  <img src="src/assets/img/Star.png" alt="" />
-                  <img src="src/assets/img/Star.png" alt="" />
-                  <img src="src/assets/img/Star.png" alt="" />
-                  <img src="src/assets/img/Star.png" alt="" />
-                </div>
-              </div> */}
             </div>
             <div className="mt-4">
               <p className="font-normal leading-loose text-[#CAC5C5] lg:text-xl">
@@ -233,9 +227,6 @@ export default function Home() {
                 rambut. Sangat direkomendasikan bagi siapa pun yang ingin memahami aspek visual wajah mereka dengan
                 lebih baik"
               </p>
-              {/* <p className="pt-[0.88rem] text-[0.875rem] text-black text-opacity-60">
-                12 Orang Menyukai Ini
-              </p> */}
             </div>
           </div>
         </div>
@@ -247,10 +238,10 @@ export default function Home() {
         </h1>
         <div className="">
           <button className="mr-[0.88rem] mt-6 rounded-[3.125rem] border-2 border-[#2E323A] bg-[#F4F4F4] px-10 py-1 text-lg text-[#2E323A] md:text-2xl">
-            Login
+            <Link to="/login"> Login</Link>
           </button>
           <button className="mt-6 rounded-[3.125rem] border-2 border-[#2E323A] bg-[#2E323A] px-10 py-1 text-lg text-[#F4F4F4] md:text-2xl">
-            Daftar
+            <Link to="/register"> Daftar</Link>
           </button>
         </div>
       </div>

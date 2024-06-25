@@ -1,0 +1,871 @@
+[
+  {
+    "id": 1,
+    "shape_face": "oval",
+    "shape_face_description": "Bentuk wajah oval adalah kombinasi persegi dan bulat . Biasanya, lebar dahi lebih kecil dari lebar tulang pipi, dan wajah lebih panjang dari lebarnya. Shafer menambahkan, garis rahang dan dagu lebih bulat merupakan karakteristik dari bentuk wajah oval.",
+    "resource_shape_face": "https://lifestyle.kompas.com/read/2022/09/01/070128720/tips-sederhana-untuk-mengenali-bentuk-wajah?page=all#:~:text=Oval,karakteristik%20dari%20bentuk%20wajah%20oval.",
+    "sign_name": "Agit",
+    "status": "Done",
+    "gender": "cowo",
+    "recommended_hair": [
+      {
+        "hair_recomend": "curtain_haircut",
+        "deskripsi": "Model rambut curtain haircut atau curtain bangs tidak hanya populer di kalangan wanita, gaya rambut ini juga jadi trend model rambut pria. Bagaimana tidak? Style rambut ini tidak perlu penataan yang ribet alias low maintenance. Cukup sisir dengan jari tangan, rambutmu sudah terlihat menarik.",
+        "resource_hair_recomend": "https://www.allthingshair.com/id-id/rambut/gaya-rambut-pria/model-rambut-curtain-haircut",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F357f29db5f0c85c8c5f2aebca6d2736e1185c564-1080x1340.jpg%3Fw%3D1080%26h%3D1340%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://image.cdn2.seaart.ai/2024-02-15/cn7aamte878c73djl8ag/a23858a2cb112ec15c4bc256d42b7bc207398286_high.webp",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F893aa0c3dc1d152b6f60c33d6330c1617da27749-900x1350.jpg%3Fw%3D900%26h%3D1350%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fba103a7199d3854c6fe999fc749447db1912aa2b-1440x1440.jpg%3Fw%3D1440%26h%3D1440%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "edgar_cut",
+        "deskripsi": "Edgar adalah potongan berbentuk mangkuk dengan pinggiran tumpul yang menggantung seperti kumis di dahi. Rambut tetap terpanjang di bagian atas, dan potongan pudar, potongan bawah, atau potongan kasar meningkatkan potensi gaya untuk menggairahkan.",
+        "resource_hair_recomend": "https://www.latimes.com/lifestyle/image/story/2023-08-10/the-edgar-haircut-all-the-rage-among-the-foos",
+        "foto": [
+          "https://ca-times.brightspotcdn.com/dims4/default/cb5ef80/2147483647/strip/true/crop/7200x9018+0+0/resize/1440x1804!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F16%2F95%2Fb1540fb3455db94a2431ca42621d%2Fig-edgar-cut-12.jpg",
+          "https://ca-times.brightspotcdn.com/dims4/default/997d93d/2147483647/strip/true/crop/7200x9020+0+0/resize/1440x1804!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F36%2F8e%2F702039684f26a99fe71b15997bba%2Fig-edgar-cut-06.jpg",
+          "https://ca-times.brightspotcdn.com/dims4/default/802ed72/2147483647/strip/true/crop/7200x9020+0+0/resize/1440x1804!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F8c%2Ff9%2Fd95962f74275beb0d1bc130d7b1a%2Fig-edgar-cut-07.jpg",
+          "https://ca-times.brightspotcdn.com/dims4/default/ded0d3e/2147483647/strip/true/crop/7200x9017+0+0/resize/1440x1804!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F38%2F32%2Fc55398774aac81cb4e9919abf8ac%2Fig-edgar-cut-02.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "fluffy",
+        "deskripsi": "Di dunia yang mempesona pada tahun 2024, tren anak laki-laki dengan rambut halus telah menjadi pusat perhatian, memikat hati dan menarik perhatian dengan pesona rambut halus anak laki-laki mereka yang tak tertahankan.",
+        "resource_hair_recomend": "https://mendeserve.com/blogs/hair/tutorial-boys-with-fluffy-hair-2024",
+        "foto": [
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/61b91f0745b5549e0ea006b0d256cb1a_480x480.jpg?v=1707368472",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/af361026a99c747076671515c71ed754_480x480.jpg?v=1707368626",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/bd67f11b4df594feceaca9ba08d56408_480x480.jpg?v=1707370661",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/c4e46659973d7684f6d65a53270ade26_480x480.jpg?v=1707371101"
+        ]
+      },
+      {
+        "hair_recomend": "layer_haircut",
+        "deskripsi": "Layer Haircut adalah rambut yang terbagi menjadi beberapa lapisan, terjalin dan ditumpuk. Ini menciptakan efek bervolume pada rambut, menipu visual agar tampak lebih panjang dan tebal. Biasanya, penata rambut akan memotong bagian atas lebih panjang dan bagian bawah lebih pendek. Bagian belakang rambut dan kedua sisi poni akan dicukur rapat, rapi.",
+        "resource_hair_recomend": "https://mytour.vn/en/blog/bai-viet/32-most-handsome-men-s-layered-hairstyles-ultra-cool-leading-the-2024-trends.html",
+        "foto": [
+          "https://gcs.tripi.vn/public-tripi/tripi-feed/img/474409KEJ/1a_ho-ylil19hv2wvwmggnpabwnjsyo2qyuhbyey9bh2rfmrkrqfdb2jmhdlzuasubi8ri-cg1era4kqwjgfz0wgcrhhgo-gi9pmmgn96pvp20upivk9bmzrr5bqxgb0o_jake-u95pazw5-p1hw0gp95k4novrdxgmh_e1sf0_pjfd6rxqgqfpjow5tda.png",
+          "https://gcs.tripi.vn/public-tripi/tripi-feed/img/474409vyl/tiki-anh-trong-bai-3-2-compressed-2.jpg",
+          "https://gcs.tripi.vn/public-tripi/tripi-feed/img/474409deN/tiki-anh-trong-bai-3-3-compressed-2.jpg",
+          "https://gcs.tripi.vn/public-tripi/tripi-feed/img/474409vOA/tiki-anh-trong-bai-3-compressed-1.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "man_bun",
+        "deskripsi": "Gaya rambut man bun pasti tak asing lagi untukmu. Untuk para pria yang membiarkan rambutnya tumbuh panjang, gaya rambut kerap dijadikan andalan saat ingin tampil beda namun tetap praktis. Katanya nih, banyak wanita yang menganggap gaya rambut man bun bisa membuat tingkat keseksian pria meningkat 100%!",
+        "resource_hair_recomend": "https://www.allthingshair.com/id-id/rambut/gaya-rambut-pria/man-bun",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fa12b3e9d90479e98f3a32d73df19dc5b38a8c244-2154x3000.jpg%3Fw%3D2154%26h%3D3000%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F83dd7a7f18d035915160dd03070ce575d77573f1-3368x2392.jpg%3Fw%3D3368%26h%3D2392%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fdd5d5e1a2f289cab4e2ef6fa3dc35ddb71d016cd-2000x3000.jpg%3Fw%3D2000%26h%3D3000%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F3cedc8cee46d9c35ba526fcb34af9f17cb252c9c-1500x1151.jpg%3Fw%3D1500%26h%3D1151%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "mohawk_taper",
+        "deskripsi": "Taper cut adalah salah satu teknik cukuran yang bergradasi. Model rambut klasik ini akan semakin menipis mengikuti bentuk garis alami rambut, mulai dari bagian tengah hingga ke bawah. Tetapi, gradasi ini tak akan bikin rambutmu terlihat plontos, karena tetap ada sisa sekitar 2cm hingga 10cm.",
+        "resource_hair_recomend": "https://www.allthingshair.com/id-id/rambut/gaya-rambut-pria/apa-itu-taper-fade",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F5befaeada9a3d888054eb892c4fc9643e455b7ec-800x1000.jpg%3Fw%3D800%26h%3D1000%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F62d77910d755dc0616474b1803d31eff9365d7b0-742x928.jpg%3Fw%3D742%26h%3D928%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fe5ec53eadcd208189785d8aca177cf001844760d-2000x1349.jpg%3Fw%3D2000%26h%3D1349%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F2212bcabe543df65df756e94c5c2d4137dc7d4f2-708x724.jpg%3Fw%3D708%26h%3D724%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "morrissey",
+        "deskripsi": "Bagi laki-laki, memilih gaya rambut adalah hal yang cukup tricky. Pasalnya, ada banyak gaya rambut yang bisa menjadi inspirasi untuk membuat penampilan baru. Kali ini, IDN Times akan mengulas gaya rambut morrissey yang wajib banget kamu coba.Gaya rambut ini terinspirasi dari seorang penyanyi Inggris sekaligus vokalis band The Smiths bernama Steven Patrick Morrissey. Morrissey dikenal dengan gaya rambutnya yang khas, yakni sisi samping dibuat tipis lalu sisi atas dibuat lebih tebal membentuk jambul.",
+        "resource_hair_recomend": "https://www.idntimes.com/men/style/yogama-wisnu-oktyandito/gaya-rambut-morrissey-paling-trendy-dan-stylish",
+        "foto": [
+          "https://cdn.idntimes.com/content-images/post/20230210/d7kcmv8w0aaco6l-43947bbb40cfe1821512a3a0b43b4c9d.jpeg",
+          "https://cdn.idntimes.com/content-images/post/20230210/morrissey-pendek-02b918d1103f5d5e0264dbceb393387c.jpg",
+          "https://cdn.idntimes.com/content-images/post/20230210/morrissey-samping-02b918d1103f5d5e0264dbceb393387c.jpeg",
+          "https://cdn.idntimes.com/content-images/post/20230210/82862585-774088773083695-2495287375001858741-n-188b6c9bc7527939e6d7a0c60e8195d9.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "mullet",
+        "deskripsi": "Memasuki Tahun Baru, dunia fesyen dan dandanan pria terus berkembang, menghadirkan kembali potongan rambut dan gaya klasik pria 2024 dengan sentuhan modern. Salah satu gaya rambut pria yang kembali populer dan menarik perhatian di tahun 2024 adalah potongan rambut mullet yang ikonik .Sempat terdegradasi ke ranah nostalgia retro, potongan rambut mullet kini kembali populer di tahun 2024, memikat para fashion forward yang mencari penampilan berani dan khas.",
+        "resource_hair_recomend": "https://mendeserve.com/blogs/hair/trending-mullet-hairstyles-for-men-in-2024",
+        "foto": [
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/Classic_Mullet_Hairstyle_1_480x480.jpg?v=1714647506",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/Classic_Mullet_Hairstyle_480x480.jpg?v=1714647367",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/Shaggy-Mullet_480x480.jpg?v=1714650135",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/Wolf_Cut_Mullet_Men_480x480.jpg?v=1714652545"
+        ]
+      },
+      {
+        "hair_recomend": "pompadour",
+        "deskripsi": "Pompadour pria klasik memiliki sisi yang lebih panjang dan disisir ke belakang yang pernah disebut-sebut oleh orang-orang seperti Elvis dan Johnny Cash. Sebaliknya, pompadour modern memperpendek bagian samping dengan cara undercut, fade, atau taper, dan sering kali mengambil lebih banyak risiko di bagian atas untuk menciptakan kesan ekspresi pribadi yang lebih kuat.",
+        "resource_hair_recomend": "https://manofmany.com/fashion/mens-hairstyles/pompadour-haircut-hairstyles-men",
+        "foto": [
+          "https://manofmany.com/wp-content/uploads/2021/03/Pompadour-Haircut-Hairstyles-for-Men-5.jpg",
+          "https://manofmany.com/wp-content/uploads/2021/03/Pompadour-Haircut-Hairstyles-for-Men-6.jpg",
+          "https://manofmany.com/wp-content/uploads/2021/03/Pompadour-Haircut-Hairstyles-for-Men-12.jpg",
+          "https://manofmany.com/wp-content/uploads/2021/03/Pompadour-Haircut-Hairstyles-for-Men-13.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "side_parted_hair",
+        "deskripsi": "Gaya rambut belahan samping telah ada selama bertahun-tahun, tetapi menjadi sorotan pria di mana pun dengan kedatangan Don Draper dari Mad Men. Menunjukkan kepada kita bagaimana tampil serapi dan ramah tamah dalam lingkungan bisnis, gaya rambut belahan samping adalah kunci kesuksesannya.",
+        "resource_hair_recomend": "https://www.dmarge.com/side-part",
+        "foto": [
+          "https://www.dmarge.com/wp-content/uploads/2014/09/Last-Import-014.jpg",
+          "https://www.dmarge.com/wp-content/uploads/2014/09/Last-Import-044.jpg",
+          "https://www.dmarge.com/wp-content/uploads/2014/09/Last-Import-054.jpg",
+          "https://www.dmarge.com/wp-content/uploads/2014/09/Last-Import-122.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "spiky_hair",
+        "deskripsi": "Memang benar bahwa setiap musim menghadirkan sesuatu yang baru. Namun, ada gaya yang tetap trendi tidak peduli dekade apa pun. Ketika Anda berpikir tentang rambut runcing, jelas sekali bahwa gaya ini sudah ada sejak lama dan sepertinya tidak akan keluar dalam waktu dekat. Setelah dipikir-pikir, tidak ada yang aneh dengan fakta ini. Faktanya, gaya rambut spiky adalah gaya yang dapat menghadirkan maskulinitas dan keangkuhan pada penampilan Anda.",
+        "resource_hair_recomend": "https://menshaircuts.com/spiky-hair/",
+        "foto": [
+          "https://menshaircuts.com/wp-content/uploads/2022/02/spiky-hair-men-long-fringe-short-sides-messy-fade-683x1024.jpg",
+          "https://menshaircuts.com/wp-content/uploads/2018/12/spiky-hair-fade-haircut.jpg",
+          "https://menshaircuts.com/wp-content/uploads/2018/12/spiky-hair-short.jpg",
+          "https://menshaircuts.com/wp-content/uploads/2018/12/spiky-hair-blonde.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "two_block",
+        "deskripsi": "two block haircut adalah gaya rambut ala pria Korea yang potongannya mirip dengan undercut. Namun, yang jadi pembeda adalah bagian atas rambut two block haircut dibiarkan tebal, kemudian ada gradasi pada rambut sehingga terlihat lebih dramatis.",
+        "resource_hair_recomend": "https://www.detik.com/bali/berita/d-6422261/17-inspirasi-gaya-two-block-haircut-khas-korea",
+        "foto": [
+          "https://akcdn.detik.net.id/community/media/visual/2022/11/23/two-block-haircut-9.jpeg?w=477",
+          "https://akcdn.detik.net.id/community/media/visual/2022/11/23/two-block-haircut-7.jpeg?w=727",
+          "https://akcdn.detik.net.id/community/media/visual/2022/11/23/two-block-haircut-6.jpeg?w=690",
+          "https://akcdn.detik.net.id/community/media/visual/2022/11/23/two-block-haircut-5.jpeg?w=564"
+        ]
+      },
+      {
+        "hair_recomend": "curtain_haircut",
+        "deskripsi": "Model rambut curtain haircut atau curtain bangs tidak hanya populer di kalangan wanita, gaya rambut ini juga jadi trend model rambut pria. Bagaimana tidak?Style rambut ini tidak perlu penataan yang ribet alias low maintenance. Cukup sisir dengan jari tangan, rambutmu sudah terlihat menarik.",
+        "resource_hair_recomend": "https://www.allthingshair.com/id-id/rambut/gaya-rambut-pria/model-rambut-curtain-haircut",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F357f29db5f0c85c8c5f2aebca6d2736e1185c564-1080x1340.jpg%3Fw%3D1080%26h%3D1340%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://image.cdn2.seaart.ai/2024-02-15/cn7aamte878c73djl8ag/a23858a2cb112ec15c4bc256d42b7bc207398286_high.webp",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F893aa0c3dc1d152b6f60c33d6330c1617da27749-900x1350.jpg%3Fw%3D900%26h%3D1350%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fba103a7199d3854c6fe999fc749447db1912aa2b-1440x1440.jpg%3Fw%3D1440%26h%3D1440%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "edgar_cut",
+        "deskripsi": "Edgar adalah potongan berbentuk mangkuk dengan pinggiran tumpul yang menggantung seperti kumis di dahi. Rambut tetap terpanjang di bagian atas, dan potongan pudar, potongan bawah, atau potongan kasar meningkatkan potensi gaya untuk menggairahkan.",
+        "resource_hair_recomend": "https://www.latimes.com/lifestyle/image/story/2023-08-10/the-edgar-haircut-all-the-rage-among-the-foos",
+        "foto": [
+          "https://ca-times.brightspotcdn.com/dims4/default/cb5ef80/2147483647/strip/true/crop/7200x9018+0+0/resize/1440x1804!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F16%2F95%2Fb1540fb3455db94a2431ca42621d%2Fig-edgar-cut-12.jpg",
+          "https://ca-times.brightspotcdn.com/dims4/default/997d93d/2147483647/strip/true/crop/7200x9020+0+0/resize/1440x1804!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F36%2F8e%2F702039684f26a99fe71b15997bba%2Fig-edgar-cut-06.jpg",
+          "https://ca-times.brightspotcdn.com/dims4/default/802ed72/2147483647/strip/true/crop/7200x9020+0+0/resize/1440x1804!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F8c%2Ff9%2Fd95962f74275beb0d1bc130d7b1a%2Fig-edgar-cut-07.jpg",
+          "https://ca-times.brightspotcdn.com/dims4/default/ded0d3e/2147483647/strip/true/crop/7200x9017+0+0/resize/1440x1804!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F38%2F32%2Fc55398774aac81cb4e9919abf8ac%2Fig-edgar-cut-02.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "fluffy",
+        "deskripsi": "Di dunia yang mempesona pada tahun 2024, tren anak laki-laki dengan rambut halus telah menjadi pusat perhatian, memikat hati dan menarik perhatian dengan pesona rambut halus anak laki-laki mereka yang tak tertahankan.",
+        "resource_hair_recomend": "https://mendeserve.com/blogs/hair/tutorial-boys-with-fluffy-hair-2024",
+        "foto": [
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/61b91f0745b5549e0ea006b0d256cb1a_480x480.jpg?v=1707368472",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/af361026a99c747076671515c71ed754_480x480.jpg?v=1707368626",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/bd67f11b4df594feceaca9ba08d56408_480x480.jpg?v=1707370661",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/c4e46659973d7684f6d65a53270ade26_480x480.jpg?v=1707371101"
+        ]
+      },
+      {
+        "hair_recomend": "layer_haircut",
+        "deskripsi": "Layer Haircut adalah rambut yang terbagi menjadi beberapa lapisan, terjalin dan ditumpuk. Ini menciptakan efek bervolume pada rambut, menipu visual agar tampak lebih panjang dan tebal. Biasanya, penata rambut akan memotong bagian atas lebih panjang dan bagian bawah lebih pendek. Bagian belakang rambut dan kedua sisi poni akan dicukur rapat, rapi.",
+        "resource_hair_recomend": "https://mytour.vn/en/blog/bai-viet/32-most-handsome-men-s-layered-hairstyles-ultra-cool-leading-the-2024-trends.html",
+        "foto": [
+          "https://gcs.tripi.vn/public-tripi/tripi-feed/img/474409KEJ/1a_ho-ylil19hv2wvwmggnpabwnjsyo2qyuhbyey9bh2rfmrkrqfdb2jmhdlzuasubi8ri-cg1era4kqwjgfz0wgcrhhgo-gi9pmmgn96pvp20upivk9bmzrr5bqxgb0o_jake-u95pazw5-p1hw0gp95k4novrdxgmh_e1sf0_pjfd6rxqgqfpjow5tda.png",
+          "https://gcs.tripi.vn/public-tripi/tripi-feed/img/474409vyl/tiki-anh-trong-bai-3-2-compressed-2.jpg",
+          "https://gcs.tripi.vn/public-tripi/tripi-feed/img/474409deN/tiki-anh-trong-bai-3-3-compressed-2.jpg",
+          "https://gcs.tripi.vn/public-tripi/tripi-feed/img/474409vOA/tiki-anh-trong-bai-3-compressed-1.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "man_bun",
+        "deskripsi": "Gaya rambut man bun pasti tak asing lagi untukmu. Untuk para pria yang membiarkan rambutnya tumbuh panjang, gaya rambut kerap dijadikan andalan saat ingin tampil beda namun tetap praktis. Katanya nih,banyak wanita yang menganggap gaya rambut man bun bisa membuat tingkat keseksian pria meningkat 100%!",
+        "resource_hair_recomend": "https://www.allthingshair.com/id-id/rambut/gaya-rambut-pria/man-bun",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fa12b3e9d90479e98f3a32d73df19dc5b38a8c244-2154x3000.jpg%3Fw%3D2154%26h%3D3000%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F83dd7a7f18d035915160dd03070ce575d77573f1-3368x2392.jpg%3Fw%3D3368%26h%3D2392%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fdd5d5e1a2f289cab4e2ef6fa3dc35ddb71d016cd-2000x3000.jpg%3Fw%3D2000%26h%3D3000%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F3cedc8cee46d9c35ba526fcb34af9f17cb252c9c-1500x1151.jpg%3Fw%3D1500%26h%3D1151%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "mohawk_taper",
+        "deskripsi": "Taper cut adalah salah satu teknik cukuran yang bergradasi. Model rambut klasik ini akan semakin menipis mengikuti bentuk garis alami rambut, mulai dari bagian tengah hingga ke bawah. Tetapi, gradasi ini tak akan bikin rambutmu terlihat plontos, karena tetap ada sisa sekitar 2cm hingga 10cm.",
+        "resource_hair_recomend": "https://www.allthingshair.com/id-id/rambut/gaya-rambut-pria/apa-itu-taper-fade",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F5befaeada9a3d888054eb892c4fc9643e455b7ec-800x1000.jpg%3Fw%3D800%26h%3D1000%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F62d77910d755dc0616474b1803d31eff9365d7b0-742x928.jpg%3Fw%3D742%26h%3D928%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fe5ec53eadcd208189785d8aca177cf001844760d-2000x1349.jpg%3Fw%3D2000%26h%3D1349%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F2212bcabe543df65df756e94c5c2d4137dc7d4f2-708x724.jpg%3Fw%3D708%26h%3D724%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "morrissey",
+        "deskripsi": "Bagi laki-laki, memilih gaya rambut adalah hal yang cukup tricky. Pasalnya, ada banyak gaya rambut yang bisa menjadi inspirasi untuk membuat penampilan baru. Kali ini, IDN Times akan mengulas gaya rambut morrissey yang wajib banget kamu coba.Gaya rambut ini terinspirasi dari seorang penyanyi Inggris sekaligus vokalis band The Smiths bernama Steven Patrick Morrissey. Morrissey dikenal dengan gaya rambutnya yang khas, yakni sisi samping dibuat tipis lalu sisi atas dibuat lebih tebal membentuk jambul.",
+        "resource_hair_recomend": "https://www.idntimes.com/men/style/yogama-wisnu-oktyandito/gaya-rambut-morrissey-paling-trendy-dan-stylish",
+        "foto": [
+          "https://cdn.idntimes.com/content-images/post/20230210/d7kcmv8w0aaco6l-43947bbb40cfe1821512a3a0b43b4c9d.jpeg",
+          "https://cdn.idntimes.com/content-images/post/20230210/morrissey-pendek-02b918d1103f5d5e0264dbceb393387c.jpg",
+          "https://cdn.idntimes.com/content-images/post/20230210/morrissey-samping-02b918d1103f5d5e0264dbceb393387c.jpeg",
+          "https://cdn.idntimes.com/content-images/post/20230210/82862585-774088773083695-2495287375001858741-n-188b6c9bc7527939e6d7a0c60e8195d9.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "mullet",
+        "deskripsi": "Memasuki Tahun Baru, dunia fesyen dan dandanan pria terus berkembang, menghadirkan kembali potongan rambut dan gaya klasik pria 2024 dengan sentuhan modern. Salah satu gaya rambut pria yang kembali populer dan menarik perhatian di tahun 2024 adalah potongan rambut mullet yang ikonik .Sempat terdegradasi ke ranah nostalgia retro, potongan rambut mullet kini kembali populer di tahun 2024, memikat para fashion forward yang mencari penampilan berani dan khas.",
+        "resource_hair_recomend": "https://mendeserve.com/blogs/hair/trending-mullet-hairstyles-for-men-in-2024",
+        "foto": [
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/Classic_Mullet_Hairstyle_1_480x480.jpg?v=1714647506",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/Classic_Mullet_Hairstyle_480x480.jpg?v=1714647367",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/Shaggy-Mullet_480x480.jpg?v=1714650135",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/Wolf_Cut_Mullet_Men_480x480.jpg?v=1714652545"
+        ]
+      },
+      {
+        "hair_recomend": "pompadour",
+        "deskripsi": "Pompadour pria klasik memiliki sisi yang lebih panjang dan disisir ke belakang yang pernah disebut-sebut oleh orang-orang seperti Elvis dan Johnny Cash. Sebaliknya, pompadour modern memperpendek bagian samping dengan cara undercut, fade, atau taper, dan sering kali mengambil lebih banyak risiko di bagian atas untuk menciptakan kesan ekspresi pribadi yang lebih kuat.",
+        "resource_hair_recomend": "https://manofmany.com/fashion/mens-hairstyles/pompadour-haircut-hairstyles-men",
+        "foto": [
+          "https://manofmany.com/wp-content/uploads/2021/03/Pompadour-Haircut-Hairstyles-for-Men-5.jpg",
+          "https://manofmany.com/wp-content/uploads/2021/03/Pompadour-Haircut-Hairstyles-for-Men-6.jpg",
+          "https://manofmany.com/wp-content/uploads/2021/03/Pompadour-Haircut-Hairstyles-for-Men-12.jpg",
+          "https://manofmany.com/wp-content/uploads/2021/03/Pompadour-Haircut-Hairstyles-for-Men-13.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "side_parted_hair",
+        "deskripsi": "Gaya rambut belahan samping telah ada selama bertahun-tahun, tetapi menjadi sorotan pria di mana pun dengan kedatangan Don Draper dari Mad Men. Menunjukkan kepada kita bagaimana tampil serapi dan ramah tamah dalam lingkungan bisnis, gaya rambut belahan samping adalah kunci kesuksesannya.",
+        "resource_hair_recomend": "https://www.dmarge.com/side-part",
+        "foto": [
+          "https://www.dmarge.com/wp-content/uploads/2014/09/Last-Import-014.jpg",
+          "https://www.dmarge.com/wp-content/uploads/2014/09/Last-Import-044.jpg",
+          "https://www.dmarge.com/wp-content/uploads/2014/09/Last-Import-054.jpg",
+          "https://www.dmarge.com/wp-content/uploads/2014/09/Last-Import-122.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "spiky_hair",
+        "deskripsi": "Memang benar bahwa setiap musim menghadirkan sesuatu yang baru. Namun, ada gaya yang tetap trendi tidak peduli dekade apa pun. Ketika Anda berpikir tentang rambut runcing, jelas sekali bahwa gaya ini sudah ada sejak lama dan sepertinya tidak akan keluar dalam waktu dekat. Setelah dipikir-pikir, tidak ada yang aneh dengan fakta ini. Faktanya, gaya rambut spiky adalah gaya yang dapat menghadirkan maskulinitas dan keangkuhan pada penampilan Anda.",
+        "resource_hair_recomend": "https://menshaircuts.com/spiky-hair/",
+        "foto": [
+          "https://menshaircuts.com/wp-content/uploads/2022/02/spiky-hair-men-long-fringe-short-sides-messy-fade-683x1024.jpg",
+          "https://menshaircuts.com/wp-content/uploads/2018/12/spiky-hair-fade-haircut.jpg",
+          "https://menshaircuts.com/wp-content/uploads/2018/12/spiky-hair-short.jpg",
+          "https://menshaircuts.com/wp-content/uploads/2018/12/spiky-hair-blonde.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "two_block",
+        "deskripsi": "two block haircut adalah gaya rambut ala pria Korea yang potongannya mirip dengan undercut. Namun, yang jadi pembeda adalah bagian atas rambut two block haircut dibiarkan tebal, kemudian ada gradasi pada rambut sehingga terlihat lebih dramatis.",
+        "resource_hair_recomend": "https://www.detik.com/bali/berita/d-6422261/17-inspirasi-gaya-two-block-haircut-khas-korea",
+        "foto": [
+          "https://akcdn.detik.net.id/community/media/visual/2022/11/23/two-block-haircut-9.jpeg?w=477",
+          "https://akcdn.detik.net.id/community/media/visual/2022/11/23/two-block-haircut-7.jpeg?w=727",
+          "https://akcdn.detik.net.id/community/media/visual/2022/11/23/two-block-haircut-6.jpeg?w=690",
+          "https://akcdn.detik.net.id/community/media/visual/2022/11/23/two-block-haircut-5.jpeg?w=564"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "shape_face": "oblong",
+    "shape_face_description": "Bentuk wajah oblong (lonjong) memiliki karakteristik lebih panjang daripada lebar mirip dengan bentuk oval yang ramping.",
+    "resource_shape_face": "https://www.byrdie.com/the-most-flattering-hairstyles-for-the-oblong-face-shape-345773",
+    "sign_name": "Dimas",
+    "status": "Done",
+    "gender": "cowo",
+    "recommended_hair": [
+      {
+        "hair_recomend": "caesar_cut",
+        "deskripsi": "Caesar cut adalah gaya rambut dengan poni pendek lurus horizontal. Rambutnya berlapis-lapis sekitar 2–5 cm di seluruh bagiannya. Namanya diambil dari Kaisar Romawi Tiberius Caesar Augustus, yang gambarnya sering menggambarkan dia menata rambutnya sedemikian rupa.",
+        "resource_hair_recomended": "https://en.wikipedia.org/wiki/Caesar_cut",
+        "foto": [
+          "https://o-cdn-cas.sirclocdn.com/parenting/images/Classic_Taper_Fade.width-800.format-webp.webp",
+          "https://mrwallpaper.com/images/hd/caesar-cut-men-hair-style-nsuifhaovrmfk1yc.jpg",
+          "https://i.pinimg.com/736x/3d/1c/e8/3d1ce82ccc67bbc1537cf0470616a4f2.jpg",
+          "https://storage.googleapis.com/postcrafts-public-content/hairstyleai/blog/64140ea4-dd3c-4b7e-a35b-bd670bff12c6.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "faux_hawk",
+        "deskripsi": "Potongan rambut pria dengan sisi pendek dan potongan rambut panjang yang membentang dari depan hingga belakang kepala. Ini adalah mohawk tanpa bagian samping yang dicukur tetapi tetap bergaya seperti gaya rambut punk!",
+        "resource_hair_recomended": "https://therighthairstyles.com/faux-hawk-haircuts-for-men/14/",
+        "foto": [
+          "https://manofmany.com/_next/image?url=https%3A%2F%2Fapi.manofmany.com%2Fwp-content%2Fuploads%2F2017%2F08%2F10-Faux-Hawk-Haircuts-Hairstyles-for-Men.jpg&w=1200&q=75",
+          "https://cdn.idntimes.com/content-images/community/2021/11/skin-sharp-fade-faux-hawk-3-2df74cab14a794816f8530862347a9af-003316c719b5426ab453659928477408.jpg",
+          "https://cdn.idntimes.com/content-images/community/2021/11/mens-faux-hawk-fade-haircuts-2df74cab14a794816f8530862347a9af-919d2a14575a89db1078a59e79c2a3bb_600x400.jpg",
+          "https://i0.wp.com/www.hairstyle.org.in/wp-content/uploads/2017/04/messy-faux-hawk-hairstyle.jpg?ssl=1"
+        ]
+      },
+      {
+        "hair_recomend": "french_crop",
+        "deskripsi": "French crop adalah model rambut yang dipotong pendek di bagian belakang dan samping, namun menyisakan sedikit lebih banyak rambut di bagian atas melalui bagian atas. Nah, bagian atas ini yang bisa dimodifikasi sesuai keinginanmu. Kamu bisa menyisirnya ke depan, ke atas dahi, atau didorong ke samping tergantung panjangnya.",
+        "resource_hair_recomended": "https://www.idntimes.com/men/style/yogama-wisnu-oktyandito/model-rambut-french-crop-kekinian-mau-coba-yang-mana",
+        "foto": [
+          "https://cdn.idntimes.com/content-images/community/2019/07/tp-french-crop-haircut-a81e9de87832d9e41d8317f2c6cb669e_600x400.jpg",
+          "https://cdn.idntimes.com/content-images/post/20221103/french-crop-classic-ed0e2febea439b2bf5e343d77f462472.jpg",
+          "https://cdn.idntimes.com/content-images/post/20221103/french-crop-poni-panjang-3b9637e5a3700256443248a799789981.jpg",
+          "https://cdn.idntimes.com/content-images/post/20221103/curly-french-crop-623b5ac52c5d937fc79d07308518b4ff.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "mandarin_haircut",
+        "deskripsi": "Potongan rambut mandarin biasanya juga menggunakan teknik taper dan fade seperti model cukuran rambut pria lainnya. Hal yang perlu diperhatikan pada model rambut mandarin adalah tampilan rambut bagian atas harus rapi, sehingga biasanya menggunakan minyak rambut atau pomade agar rambut klimis dan berkilau.",
+        "resource_hair_recomended": "https://cdn.idntimes.com/content-images/post/20220325/pexels-mentatdgt-2040662-99a83019bd64efedfd6aa87e78f10cbd_600x400.png",
+        "foto": [
+          "https://cdn.idntimes.com/content-images/post/20240108/download-5-5f35db7a1ca5b8eff978d54797e281a6.jpeg",
+          "https://cdn.idntimes.com/content-images/post/20240108/hairstyle-trends-25-best-fohawk-haircuts-for-men-aka-the-faux-hawk-photos-collection-5906ade767b68336d338133e464ad3e8.jpeg",
+          "https://cdn.idntimes.com/content-images/post/20240108/korean-hairstyles-for-men-length-16-ideas-uncovering-the-ultimate-guide-for-trendsetters-mens-club-online-d7acba17f27943bc7a06b18c4d94541c.jpeg",
+          "https://cdn.idntimes.com/content-images/post/20240108/the-todays-take-at-majestic-samurai-hair-for-warriors-of-modern-trends-d28d21b583a04ecb7fa9aa378b90c36e.jpeg"
+        ]
+      },
+      {
+        "hair_recomend": "textured_crop",
+        "deskripsi": "Bagian atas biasanya dipotong sedemikian rupa sehingga menciptakan tampilan acak-acakan yang tampak alami dengan tambahan tekstur dan gerakan. Potongan rambut crop bertekstur ini sering kali ditata dengan produk matte atau low gloss untuk menyempurnakan tekstur dan menciptakan tampilan yang santai dan bergaya tanpa susah payah.",
+        "resource_hair_recomended": "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/3-Textured-French-Crop_480x480.webp?v=1707457391",
+        "foto": [
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/27ac8cdcf876597debb9ac4c6ab39741_480x480.jpg?v=1707461069",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/French-Crop-with-Sleek-Drop-Fade-e1566290155316_480x480.jpg?v=1707464799",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/598d7e82d5a878fca11089f0484aadb5_480x480.jpg?v=1707461490",
+          "https://cdn.shopify.com/s/files/1/0639/1237/8602/files/893f1eaeaa9e6c66272ffa28fceed37a_480x480.jpg?v=1707461561"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "shape_face": "heart",
+    "shape_face_description": "Heart face shape memiliki karakteristik seperti segitiga terbalik. Jika diperhatikan heart face shape memiliki rahang yang sempit dan dagu yang lancip dengan dahi lebih lebar dari lebar pipi.",
+    "resource_shape_face": "https://www.purplle.com/magazine/article/best-hairstyle-for-heart-shaped-face-male",
+    "sign_name": "Dimas",
+    "status": "Done",
+    "gender": "cowo",
+    "recommended_hair": [
+      {
+        "hair_recomend": "slicked_back",
+        "deskripsi": "Potongan rambut undercut slick back memiliki ciri khas bagian samping dan belakang dibiarkan tipis, sementara bagian atasnya panjang dan dibikin klimis.",
+        "resource_hair_recomended": "https://www.allthingshair.com/id-id/rambut/gaya-rambut-pria/gaya-rambut-undercut-slick-back",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F4170c887e491a58a19f2b8c38108d46350d9eac3-1440x1240.jpg%3Fw%3D1440%26h%3D1240%26fm%3Dwebp%26q%3D90&w=1080&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F47b7475d90b536dc6e1fc061cedb37d1b87562df-1000x1215.jpg%3Fw%3D1000%26h%3D1215%26fm%3Dwebp%26q%3D90&w=1080&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F492eb44055e84ceff6a5767c647ccf162a4ba0c7-2000x3000.jpg%3Fw%3D2000%26h%3D3000%26fm%3Dwebp%26q%3D90&w=1080&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F0748690568f93284ab26017c200ea10a264516dd-1334x2000.jpg%3Fw%3D1334%26h%3D2000%26fm%3Dwebp%26q%3D90&w=1080&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "taper_fade",
+        "deskripsi": "Model rambut ini memadukan gaya Taper dan Fade. Taper sendiri berasal dari istilah Tape, yang berarti lancip.Sementara itu, Fade adalah gaya rambut Gradien umum yang dimulai dari bagian atas dan secara bertahap menipis hingga ke ujung garis rambut. Setiap gaya rambut Fade modelnya tajam atau Taper.",
+        "resource_hair_recomended": "https://captainbarbershop.co.id/detail/barbershop-terbaik-di-bandung-mau-potongan-rambut-taper-fade-bisa-disini",
+        "foto": [
+          "https://captainbarbershop.co.id/uploads/blog/192A49895C6C250A72B749ACDD67FB85.jpg",
+          "https://cdn.idntimes.com/content-images/community/2021/11/3-rambut-taper-fade-bald-1024x683-2df74cab14a794816f8530862347a9af-059403ec7f88f29a21f0be85970143f6.jpg",
+          "https://cdn.idntimes.com/content-images/community/2019/01/slick-back-haircut-style-for-slick-back-haircut-3-88aad9b0a4b62481aec88ff2bcc76d3d.jpg",
+          "https://cdn.idntimes.com/content-images/community/2018/01/tapered-hair-with-long-textured-brush-up-e84b57b0770a345ac3ed71e7852d6cd0.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "shape_face": "round",
+    "shape_face_description": "Bentuk wajah Round (bulat) memiliki karakteristik tulang pipi paling lebar pada wajah terutama jika dibandingkan tulang dagu dan rahang.",
+    "resource_shape_face": "https://www.purplle.com/magazine/article/top-7-round-face-hairstyles-for-men-in-2022",
+    "sign_name": "Dimas",
+    "status": "Done",
+    "gender": "cowo",
+    "recommended_hair": [
+      {
+        "hair_recomend": "bowl_cut",
+        "deskripsi": "Potongan mangkuk adalah sederhana di mana rambut depan dipotong dengan poni lurus dan sisa rambut dibiarkan lebih panjang, dengan panjang yang sama di sekelilingnya, atau bagian samping dan belakang dipotong sama.",
+        "resource_hair_recomended": "https://en.wikipedia.org/wiki/Bowl_cut#:~:text=A bowl cut is a,to the same short length.",
+        "foto": [
+          "https://menshaircuts.com/wp-content/uploads/2024/05/bowl-cut-men-classy-683x1024.jpg",
+          "https://menshaircuts.com/wp-content/uploads/2022/08/bowl-cut-men-disconnected-undercut-short-clean-683x1024.jpg",
+          "https://menshaircuts.com/wp-content/uploads/2021/06/bowl-cut-men-short-undercut-layered-683x1024.jpg",
+          "https://menshaircuts.com/wp-content/uploads/2024/05/bowl-cut-men-curly-683x1024.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "cepmek",
+        "deskripsi": "cepmek (cepak mekar) merujuk gaya rambut belah samping dengan poni panjang yang menutupi wajah.",
+        "resource_hair_recomended": "https://www.allthingshair.com/id-id/rambut/gaya-rambut-pria/model-rambut-pria-terbaru",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F5194c9aa380cbd426695511d35932493d5ea8323-723x1024.jpg%3Fw%3D723%26h%3D1024%26fm%3Dwebp%26q%3D90&w=1080&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F287d8533c67c6cce21c2ef606f45b8060872716b-1067x1600.jpg%3Fw%3D1067%26h%3D1600%26fm%3Dwebp%26q%3D90&w=1080&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F4dccf45027b9df65394694f455dd4e31b607d87e-683x1024.jpg%3Fw%3D683%26h%3D1024%26fm%3Dwebp%26q%3D90&w=1080&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F92757783fc00c384ae187bb8ff7dbaf540c2a6cf-736x1040.jpg%3Fw%3D736%26h%3D1040%26fm%3Dwebp%26q%3D90&w=1080&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "comb_over",
+        "deskripsi": "Comb over merupakan gaya rambut disisir ke satu sisi kepala untuk menghasilkan potongan yang terlihat necis dan maskulin. Gaya satu ini juga bisa disesuaikan dengan volume dan panjang rambut, sehingga secara keseluruhan tampilan pria terlihat sangat terkonsep.",
+        "resource_hair_recomended": "https://review.bukalapak.com/",
+        "foto": [
+          "https://s3.bukalapak.com/bukalapak-kontenz-production/content_attachments/71498/original/Rambut_Pendek_Pria_1.jpg",
+          "https://s4.bukalapak.com/bukalapak-kontenz-production/content_attachments/71499/original/Rambut_Pendek_Pria_2.jpg",
+          "https://s0.bukalapak.com/bukalapak-kontenz-production/content_attachments/71500/original/Rambut_Pendek_Pria_3.jpg",
+          "https://s2.bukalapak.com/bukalapak-kontenz-production/content_attachments/71502/original/Rambut_Pendek_Pria_5.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "comma_hair",
+        "deskripsi": "Comma hair style, disebut demikian karena model bagian depan rambut membentuk lengkung ke dalam yang mirip seperti tanda koma. Alasan yang bikin gaya rambut ini ngetren banget karena bisa menciptakan kesan wajah terlihat lebih kecil",
+        "resource_hair_recomended": "https://www.blibli.com/friends/blog/gaya-rambut-comma-hair-07/",
+        "foto": [
+          "https://www.blibli.com/friends-backend/wp-content/uploads/2023/12/BBF-Cover-7-2-2-1024x576.jpg",
+          "https://www.blibli.com/friends-backend/wp-content/uploads/2023/12/BBF-Cover-7-1-2-1024x576.jpg",
+          "https://www.blibli.com/friends-backend/wp-content/uploads/2023/12/BBF-Cover-7-3-1-1024x576.jpg",
+          "https://www.blibli.com/friends-backend/wp-content/uploads/2023/12/B1200242-4-Texturized-Comma-Hair-1024x538.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "paquito_haircut",
+        "deskripsi": "Paquito haircut memiliki potongan disconnected di pelipis, yang seolah memisahkan rambut bagian atas dan bawah. Penipisannya lebih ke arah taper (pendeknya seragam alias masih terlihat), dibanding fade (rambut yang ditipiskan dan perlahan terlihat menghilang). Ada aksen hairline atau garis rambut.",
+        "resource_hair_recomended": "https://www.allthingshair.com/id-id/rambut/gaya-rambut-pria/model-rambut-paquito",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F0b918db2eee95c2f7514d778269f89bf3cbd5e35-700x875.jpg%3Fw%3D700%26h%3D875%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F745df3909f90b1b0fa72fdadc6741e0477db26f5-800x871.jpg%3Fw%3D800%26h%3D871%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F787bbf59be26fbd0a7abdd975c107215356bfae6-819x1024.jpg%3Fw%3D819%26h%3D1024%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fa8416d8736f02ddd7bdfb7d448de9bc264aee4df-800x1000.jpg%3Fw%3D800%26h%3D1000%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "undercut",
+        "deskripsi": "Model rambut ini menipiskan bagian samping, bawah, dan belakang dengan menyisakan bagian atas.",
+        "resource_hair_recomended": "https://www.gramedia.com/best-seller/undercut-pria/#google_vignette",
+        "foto": [
+          "https://cdnwpseller.gramedia.net/wp-content/uploads/2022/06/15085744/gaya_model_rambut_undercut_2021_terbaru_faux_hawk_undercut-300x300.jpg",
+          "https://cdnwpseller.gramedia.net/wp-content/uploads/2022/06/15085945/gaya_model_rambut_undercut_2021_terbaru_discoonected_undercut.jpg",
+          "https://cdnwpseller.gramedia.net/wp-content/uploads/2022/06/15085703/gaya_model_rambut_undercut_2021_terbaru_side_part_undercut-240x300.jpg",
+          "https://cdnwpseller.gramedia.net/wp-content/uploads/2022/06/15085721/gaya_model_rambut_undercut_2021_terbaru_man_bun_undercut-292x300.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "shape_face": "square",
+    "shape_face_description": "Wajah persegi memiliki ciri rahang yang kuat dan tegas dengan dahi, tulang pipi, dan garis rahang yang hampir sama lebarnya . Selain itu, sudut rahangnya terlihat tajam. Orang dengan wajah persegi memiliki bentuk dagu yang jelas dan sudut-sudut wajah yang terlihat lebih tajam",
+    "resource_shape_face": "https://www.zalora.co.id/blog/kecantikan/beauty-tutorial/cara-mengetahui-bentuk-wajah-apa-bentuk-wajahmu/#:~:text=Wajah%20persegi%20memiliki%20ciri%20rahang,wajah%20yang%20terlihat%20lebih%20tajam.",
+    "sign_name": "Agit",
+    "status": "Done",
+    "gender": "cowo",
+    "recommended_hair": [
+      {
+        "hair_recomend": "buzz_cut",
+        "deskripsi": "Potongan buzz cut adalah potongan rambut cepak yang dihasilkan dengan menggunakan clippers. Ciri khasnya terletak pada panjang rambut yang panjangnya tak lebih dari 1-2 cm.",
+        "resource_hair_recomended": "https://www.allthingshair.com/id-id/rambut/gaya-rambut-pria/buzz-cut",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F780d6528be70709343984fa36670461b2b411445-1080x1350.jpg%3Fw%3D1080%26h%3D1350%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F8b91856d9366abf8bccd8fee4b9c9c874c191d33-768x1024.jpg%3Fw%3D768%26h%3D1024%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F0e8dc2eed4ca14cda1dc418f2306c8c9087edf61-1000x1250.jpg%3Fw%3D1000%26h%3D1250%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F1960fc0f6cae13593565f96289d9ab783ca723a6-750x1204.jpg%3Fw%3D750%26h%3D1204%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "fringe_haircut",
+        "deskripsi": "Fringe haircut merupakan salah satu model rambut pria modern yang cukup populer. Ada beragam pilihan fringe haircut pria yang bisa bikin penampilan makin keren, mulai dari French crop, choppy crop hingga bowl cut.Tentunya, model rambut kekinian ini cocok untuk semua jenis rambut pria apa saja, mulai dari yang lurus, keriting, tebal atau pun tipis.",
+        "resource_hair_recomended": "https://www.allthingshair.com/id-id/rambut/gaya-rambut-pria/fringe-haircut-pria",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F501d816d99e03bb81f9fa797f10a6a2560ba333b-1440x1440.jpg%3Fw%3D1440%26h%3D1440%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F389515c9a886f99beea5ea9cc5af49352bd03459-1080x1340.jpg%3Fw%3D1080%26h%3D1340%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F200d2a85bed031642d3a0541e7a41775826e0c1e-857x1200.jpg%3Fw%3D857%26h%3D1200%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F0410c6c330b8f54757dd663593ed20317886d98b-1999x1999.jpg%3Fw%3D1999%26h%3D1999%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "quiff",
+        "deskripsi": "potongan rambut quiff adalah gaya pilihan untuk pria dari semua jenis dan tekstur rambut karena keserbagunaannya. Dicirikan dengan panjang bagian atas yang lebih panjang serta bagian belakang dan samping yang berpadu mulus, quiff menawarkan jumlah volume yang tampak sangat alami untuk berbagai jenis gaya.",
+        "resource_hair_recomended": "https://www.byrdie.com/quiff-hairstyles-5207279",
+        "foto": [
+          "https://www.byrdie.com/thmb/b6opZ5ErkHAWxohWhUmEohT6Y24=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-634839468-87007b47c403424f8b36fdcefae5c139.jpg",
+          "https://www.byrdie.com/thmb/xA7BAbcxPind3E7GDgxE7Lulp84=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1146590992-4ecc97e5e129412ab06b983621862e19.jpg",
+          "https://www.byrdie.com/thmb/Ee15jchNp9g0zvnES9zBD7uo3-k=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1205239898-fcb5f6ea08764074a49aa7fe70f23b4c.jpg",
+          "https://www.byrdie.com/thmb/Q8UeKs1MtPtBVtxspJ9EuMJcgcs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1052013986-120ffde016924d2bb36be8fa178175ff.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "taper_cut",
+        "deskripsi": "Potongan rambut lancip mendapatkan namanya dari hasil akhir yang dibuat di leher klien. Umumnya, Anda akan mendapatkan grade 4 hingga potongan gunting dan pangkal leher akan meruncing dari kulit ke grade 4 dengan sangat rapat di pangkal leher. Ini memberikan hasil akhir yang lebih rapi dan akan tumbuh lebih baik daripada garis leher persegi atau bulat.",
+        "resource_hair_recomended": "https://www.latest-hairstyles.com/mens/high-taper-fade-haircuts.html?lhredirect=1",
+        "foto": [
+          "https://content.latest-hairstyles.com/wp-content/uploads/classic-and-simple-taper-haircut.jpg",
+          "https://content.latest-hairstyles.com/wp-content/uploads/textured-top-on-a-taper-faded-haircut.jpg",
+          "https://content.latest-hairstyles.com/wp-content/uploads/short-messy-texture-on-top-with-taper-fade.jpg",
+          "https://content.latest-hairstyles.com/wp-content/uploads/awesome-taper-hairstyle-for-thick-hair.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "the_flow_hairstyle",
+        "deskripsi": "Potongan rambut flow semakin populer di kalangan pria yang mencari gaya rambut trendi yang memadukan gaya dan kesederhanaan. Ciri khas dari potongan rambut flow adalah rambut bagian atas yang lebih panjang, yang dibiarkan tergerai secara alami, sering kali mencapai telinga, kerah, atau bahu.",
+        "resource_hair_recomended": "https://www.thefashionisto.com/flow-haircut-men/",
+        "foto": [
+          "https://www.thefashionisto.com/wp-content/uploads/2024/04/Bro-Flow-Haircut-Bradley-Cooper.jpg",
+          "https://www.thefashionisto.com/wp-content/uploads/2024/04/Relaxed-Flow-Haircut.jpg",
+          "https://www.thefashionisto.com/wp-content/uploads/2024/04/Curly-Flow-Kit-Harington.jpg",
+          "https://www.thefashionisto.com/wp-content/uploads/2024/04/Long-Flow-Haircut.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "shape_face": "heart",
+    "shape_face_description": "Heart face shape memiliki karakteristik seperti segitiga terbalik. Jika diperhatikan heart face shape memiliki rahang yang sempit dan dagu yang lancip dengan dahi lebih lebar dari lebar pipi.",
+    "resource_shape_face": "https://www.purplle.com/magazine/article/best-hairstyle-for-heart-shaped-face-male",
+    "Sign_Name": "Dimas",
+    "Status": "Done",
+    "gender": "cewe",
+    "recommended_hair": [
+      {
+        "hair_recomend": "bob_with_layer",
+        "deskripsi": "Potongan ini memiliki karakteristik berombak atau pinggiran yang keren, asimetri yang menyenangkan, dan tekstur yang indah. Demi-bobs dengan peluang panjang yang lebih baik dapat dikenakan baik dalam gaya longgar maupun updo yang apik. Model bob panjang paling trendi saat ini sering kali menampilkan highlight atau ombre yang menakjubkan.",
+        "resource_hair_recomended": "https://therighthairstyles.com/20-voguish-layered-bob-hairstyles-to-adopt-for-your-fresh-stylish-looks/",
+        "foto": [
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2014/03/19-bronde-layered-bob.jpg?w=500&ssl=1",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/1500x/layered-bob/2-blonde-choppy-bob-with-highlights.jpg?w=488&ssl=1",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/1500x/layered-bob/1-tousled-layered-blonde-balayage-bob.jpg?w=489&ssl=1",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/1500x/layered-bob/4-below-the-chin-combover-bob.jpg?w=458&ssl=1"
+        ]
+      },
+      {
+        "hair_recomend": "curly_bob",
+        "deskripsi": "Curly bob merupakan gaya rambut ringkas dengan panjang mulai dari telinga hingga dagu. Panjang yang lebih pendek dapat membuat ikal alami tampak lebih hidup dan ringan. Model curly bob saat ini sedang digemari, dan jika Anda memilih penata rambut yang berpengalaman dengan rambut keriting, Anda akan senang dengan hasilnya.",
+        "resource_hair_recomended": "https://nontycarolhair.ie/product/curly-bobs/#:~:text=Curly bobs are succinct hairstyles,be thrilled with the outcome.",
+        "foto": [
+          "https://www.instyle.com/thmb/vE4YuAx_JFex0o3PcoGoXDJglsA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/curlybobs-66337be3e52d4654968728596204be52.png",
+          "https://www.instyle.com/thmb/e_luvKLv0SE3lIrOnhkfWbu3c58=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-2148752957-92f457c8fc624676ae7184d341274af3.jpg",
+          "https://www.instyle.com/thmb/xQcGooBQef2k619jTlZEJ37YdxA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-475649108-775ec5f3d3b8478fbe1f6f91828acbef.jpg",
+          "https://www.instyle.com/thmb/KEhdMeX4JFlVwJ1Q0ay6x0kvR2Y=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1271207317-b70cafb5570c40fdbb3eeac987f22459.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "feathery_fringe",
+        "deskripsi": "Memiliki karakteriostik rambut yang berlapis-lapis, dengan belahan samping atau tengah. Rambutnya akan disisir ke belakang di bagian samping, memberikan tampilan yang mirip dengan bulu burung.",
+        "resource_hair_recomended": "https://en.wikipedia.org/wiki/Feathered_hair#:~:text=Feathered hair is a hairstyling,the feathers of a bird.",
+        "foto": [
+          "https://limelitesalonandspa.com/wp-content/uploads/2022/12/image-75.png",
+          "https://limelitesalonandspa.com/wp-content/uploads/2022/12/image-76.png",
+          "https://limelitesalonandspa.com/wp-content/uploads/2022/12/image-80.png",
+          "https://limelitesalonandspa.com/wp-content/uploads/2022/12/image-86.png"
+        ]
+      },
+      {
+        "hair_recomend": "middle_parted_bob",
+        "deskripsi": "Middle parted bob merupakan potongan pendek sebahu dengan aksen layer tipis di ujung rambut.",
+        "resource_hair_recomended": "https://www.lemon8-app.com/journalwme/7262310863254864385?region=id",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F3d83cdf6accab25a60c11a3b27a7461836355757-2000x3000.jpg%3Fw%3D2000%26h%3D3000%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://hips.hearstapps.com/hmg-prod/images/ellefanninginstagram-6602808bcc0cf.png?crop=0.9382488479262673xw:1xh;center,top&resize=980:*",
+          "https://hips.hearstapps.com/hmg-prod/images/gettyimages-2074993138-65eeae7ccff4e.jpg?crop=1xw:0.8333333333333334xh;center,top&resize=980:*",
+          "https://hips.hearstapps.com/hmg-prod/images/gettyimages-2030658297-65dc5467424a6.jpg?crop=0.323xw:0.270xh;0.471xw,0.166xh&resize=980:*"
+        ]
+      },
+      {
+        "hair_recomend": "pixie_cut",
+        "deskripsi": "Pixie cut sering kali dipadukan dengan poni samping yang panjang atau poni samping yang lebih pendek. potongan ini dapat dikombinasikan dengan choppy, spiky layers dan undercuts. Kontras panjangnya, seperti rambut panjang di bagian atas dan sangat pendek meruncing di bagian samping dan belakang.",
+        "resource_hair_recomended": "https://therighthairstyles.com/choppy-pixie-cuts/",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F0a9887db19ae38604e16425b13b5b6bc3f5df7f7-1264x1580.jpg%3Fw%3D1264%26h%3D1580%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/gallery/13721/1/19-alt-Jaggy-Spiky-Pixie-Shag-name-andrewdoeshair.jpg?w=500&ssl=1",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/gallery/13721/1/3-alt-Choppy-Tapered-Pixie-with-Side-Bangs-name-finalehair.jpg?w=500&ssl=1",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/gallery/13721/1/17-alt-Asymmetric-Choppy-Undercut-Pixie-name-juniorpassarinho.jpg?w=500&ssl=1"
+        ]
+      },
+      {
+        "hair_recomend": "retro_pixie",
+        "deskripsi": "Retro pixie atau mullet adalah gaya rambut yang memotong rambut lebih pendek di bagian depan, atas, dan samping, tetapi lebih panjang di bagian belakang.",
+        "resource_hair_recomended": "https://en.wikipedia.org/wiki/Mullet_(haircut)",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F0e2dc7468ca94dad1a2ee2a95bf68fdf0df78b04-1200x1800.jpg%3Fw%3D1200%26h%3D1800%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.instyle.com/thmb/OD8QDzUX0MdzQx7ZzP82AvMkK7I=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Meryl-Streep-Mullet-Haircut-Ideas-InStyle1-1e46529097f44b1abcf76c68642c8c10.jpg",
+          "https://www.instyle.com/thmb/IdsCVyBABIP6Fj6XHs00VX6PeGo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Sophie-Thatcher-Mullet-Haircut-Ideas-InStyle-ceed222bd28342d8b53785f1d6ef80a1.jpg",
+          "https://www.instyle.com/thmb/rh-9GQz7AwVsKAPWsZ9B_UYb-FI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Zendaya-Mullet-Haircut-Ideas-InStyle-69e29301ddd24ed1a615d5ba17f1c971.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "side_parted_lob",
+        "deskripsi": "Lob atau long bob merupakan salah satu bentuk potongan rambut dan varian dari potongan bob . Panjangnya antara rambut panjang dan potongan bob . Lob dipotong tepat di atas bahu, setinggi bahu, atau tepat di bawahnya. Side parted lob berarti potongan lob yang distyling ke arah samping",
+        "resource_hair_recomended": "https://en.wikipedia.org/wiki/Lob_(haircut)#:~:text=A lob or long bob,their hair into the bob.",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F103e871b151f91b6f5e8feddaa7d33f934dfe78b-667x1000.jpg%3Fw%3D667%26h%3D1000%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://st4allthings4p4ci.blob.core.windows.net/allthingshair/allthingshair/wp-content/uploads/sites/8/2022/04/03112400/Long-bob-haircut-straight-and-one-length-alexandra-lammerink-unsplash-1.jpg",
+          "https://st4allthings4p4ci.blob.core.windows.net/allthingshair/allthingshair/wp-content/uploads/sites/8/2022/04/27152742/Long-bob-haircut-messy-lob-with-side-part-and-hair-studs.jpg",
+          "https://en.wikipedia.org/wiki/File:Emma_Stone_2014.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "shape_face": "oblong",
+    "shape_face_description": "Wajahnya lebih panjang dari lebarnya. Dagu dan tulang pipinya membulat dan relatif sempit. Dahi, pipi, dan garis rahang memiliki lebar yang hampir sama .",
+    "resource_shape_face": "https://www.prettyyourworld.com/oblong-face-shape.html",
+    "sign_name": "Agit",
+    "status": "Done",
+    "gender": "cewe",
+    "recommended_hair": [
+      {
+        "hair_recomend": "shaggy_bob",
+        "deskripsi": "",
+        "resource_hair_recomended": "https://www.latest-hairstyles.com/bobs/shaggy.html#2",
+        "foto": [
+          "https://content.latest-hairstyles.com/wp-content/uploads/voluminous-long-shaggy-bob-haircut.jpg",
+          "https://content.latest-hairstyles.com/wp-content/uploads/medium-length-shag-with-soft-waves.jpg",
+          "https://content.latest-hairstyles.com/wp-content/uploads/short-layered-bob-platinum-shag.jpg",
+          "https://content.latest-hairstyles.com/wp-content/uploads/shaggy-wavy-bob-with-blunt-bangs.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "shape_face": "round",
+    "shape_face_description": "Wajah bulat memiliki ciri khas berupa lebar dan panjang wajah yang hampir sama . Serta garis rahang dan pipi yang cenderung melengkung lembut atau tidak tegas. Pipi penuh dan dagu yang tidak terlalu menonjol membuat wajah ini terlihat simetris.",
+    "resource_shape_face": "https://www.zalora.co.id/blog/kecantikan/beauty-tutorial/cara-mengetahui-bentuk-wajah-apa-bentuk-wajahmu/#:~:text=Wajah%20Bulat,membuat%20wajah%20ini%20terlihat%20simetris.",
+    "sign_name": "Agit",
+    "status": "Done",
+    "gender": "cewe",
+    "recommended_hair": [
+      {
+        "hair_recomend": "hime_cut",
+        "deskripsi": "hime cut adalah hairstyle ala Jepang dengan ciri khas layer bagian depan yang dipotong lebih pendek dari bagian belakangnya. Layer depan dipotong rata sebatas dagu untuk menciptakan efek disconnected yang sempurna.",
+        "resource_hair_recomended": "https://www.allthingshair.com/id-id/rambut/gaya-rambut/gaya-rambut-hime-cut",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F9dbc08b396ee469a3eb8607219c9aefa2da8a19e-1200x1920.jpg%3Fw%3D1200%26h%3D1920%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F2e92869ce946e2d651337156d5f0881a8ed91910-499x669.jpg%3Fw%3D499%26h%3D669%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F5fea851a8bfc829641f0248bf0de24afe5ed561e-736x1104.jpg%3Fw%3D736%26h%3D1104%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fdd5d8c8dd2f699a7c776fdd596f1e297921c3cfe-853x480.jpg%3Fw%3D853%26h%3D480%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "long_layer_haircut",
+        "deskripsi": "Pada satu titik atau yang lain, kita semua pernah menghadapi dilema salon klasik ketika Anda menginginkan potongan rambut yang terasa segar dan baru, namun Anda menyukai panjangnya dan tidak tahan memikirkan apa pun selain sekadar trim. Meskipun gaya satu panjang tidak harus kurang panache, lapisan adalah pilihan mudah bagi siapa saja yang mendambakan perubahan yang tidak perlu mengorbankan banyak panjang.",
+        "resource_hair_recomended": "https://www.southernliving.com/fashion-beauty/hairstyles/hair-long-layers",
+        "foto": [
+          "https://www.southernliving.com/thmb/4Zg8tyPwoOqrfiWoJ3ABIvCbkPo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/layers-aeb3f08338bc4f6ebbd3f9f47621620f.jpg",
+          "https://www.southernliving.com/thmb/O2ZsmPW605LN55VozrWR4yfCJTk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Screenshot2024-01-26at2.33.04PM-5d0e9613094d4e01a27134d82c4950e4.png",
+          "https://www.southernliving.com/thmb/6ru3vmdkmTaGKQMwy7eRXu2nvUY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/long-straight-399d09aad6ec412aa855f423006ac44e.jpg",
+          "https://www.southernliving.com/thmb/5MiWpkqgbHXjiIDeBf6soQW6Od8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/redhead-8430ada7770645799fab5d96ea277c0c.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "medium_wolf_cut",
+        "deskripsi": "Gaya rambut wolf cut adalah gaya potong rambut yang merupakan versi modern dari mullet, dengan bentuk wispy layer, dan potongan trap yang tinggi, sehingga ketika kamu menatanya, rambutmu menyerupai bulu serigala.",
+        "resource_hair_recomended": "https://www.allthingshair.com/id-id/rambut/gaya-rambut/gaya-rambut-wolf-cut",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fb8ef4c08954fe42fbaea01c3b46d02acd2753e45-1440x1524.jpg%3Fw%3D1440%26h%3D1524%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fbc16ed49f11f9fe07700295ad8201d04b79bfd94-1440x1800.jpg%3Fw%3D1440%26h%3D1800%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F58a2cbdcbe27ce19c198ef6b0db058b959a33cc4-1080x1080.jpg%3Fw%3D1080%26h%3D1080%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F8656f9a7b608613888a0d3e4d2dc204a975dd3b1-640x640.jpg%3Fw%3D640%26h%3D640%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "shape_face": "square",
+    "shape_face_description": "Wajah persegi memiliki ciri rahang yang kuat dan tegas dengan dahi, tulang pipi, dan garis rahang yang hampir sama lebarnya . Selain itu, sudut rahangnya terlihat tajam. Orang dengan wajah persegi memiliki bentuk dagu yang jelas dan sudut-sudut wajah yang terlihat lebih tajam",
+    "resource_shape_face": "https://www.zalora.co.id/blog/kecantikan/beauty-tutorial/cara-mengetahui-bentuk-wajah-apa-bentuk-wajahmu/#:~:text=Wajah%20persegi%20memiliki%20ciri%20rahang,wajah%20yang%20terlihat%20lebih%20tajam.",
+    "sign_name": "Agit",
+    "status": "Done",
+    "gender": "cewe",
+    "recommended_hair": [
+      {
+        "hair_recomend": "french_bob",
+        "deskripsi": "Potongan rambut bob Prancis yang luar biasa, yang dapat ditelusuri kembali ke tahun dua puluhan, memiliki panjang pendek yang menawan dan potongan tumpul yang biasanya berada tepat di bawah garis rahang untuk membingkai wajah. Tampilannya memancarkan kecanggihan dan kemudahan, sehingga cocok untuk selebriti dan individu bergaya.",
+        "resource_hair_recomended": "https://instyle.com/french-bob-haircut-7970531",
+        "foto": [
+          "https://www.instyle.com/thmb/P5EY2DSuYp4Tr7BrJWzIyDaMerc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/091223-french-bob-haircut-embed3-634ab7c465684761a6114ccb9c4a27b9.jpg",
+          "https://www.instyle.com/thmb/DRUapAIzYk0RZ_WNG05eFN0Dj18=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/091223-french-bob-haircut-embed7-2c6856cbe4f84d01ba2770ad2d4e5d91.jpg",
+          "https://www.instyle.com/thmb/SK9gkQNacNlvs72kxk997bDVojU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/091223-french-bob-haircut-embed2-36da4e24ee3d477c94029b60843fa86b.jpg",
+          "https://www.instyle.com/thmb/VtkbU2m70rOaY53Ift9FoRDG0yE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/091223-french-bob-haircut-embed6-d75f0e66af4440c9b3dea308eebbebb6.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "Curtain Bangs",
+        "deskripsi": "Jika tujuan Anda adalah memperhalus sudut keras Anda, poni terbaik untuk Anda adalah poni panjang dengan poni samping yang menyentuh alis. Poninya harus tepat di bawah alis tetapi lebih panjang di bagian samping, seperti poni Tessa Thompson ini. Kuncinya adalah memastikan poni dibuat meruncing lebih panjang di bagian samping dibandingkan di atas alis. Rambut di atas alis harus mengenai alis atau tepat di bawahnya.",
+        "resource_hair_recomended": "https://instyle.com/french-bob-haircut-7970531",
+        "foto": [
+          "https://www.byrdie.com/thmb/3CQ7cyJ98HdBB02nCFB248S427Y=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1436909662-17207b62ea3344d692f06d8a3fbf02ad.jpg",
+          "https://www.headmasters.com/wp-content/uploads/2021/05/88282f1ff221a1d74630a9da16d13f79-778x1024.jpg",
+          "https://speckleaccessories.com/cdn/shop/articles/c4c4af0a427ad383684a746d0d9bd16f.png?v=1637043107",
+          "https://i.pinimg.com/736x/77/6e/8a/776e8a9ec94a1cbfa3faa07c9e189a3a.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "Trendy Shaggy Messy Lob",
+        "deskripsi": "Tahun 1970-an adalah masa mode yang menarik, dan satu hal yang mereka lakukan dengan benar selama dekade tersebut adalah gaya rambut shaggy. Model bob panjang berlapis memberikan dimensi dan bentuk alami pada rambut Anda, sehingga Anda hanya memiliki sedikit gaya untuk dilakukan di pagi hari.",
+        "resource_hair_recomended": "https://instyle.com/french-bob-haircut-7970531",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fb38b34a93e6e84c9bcd29a5e701ac0e0da85fe56-1200x1500.jpg%3Fw%3D1200%26h%3D1500%26fm%3Dwebp%26q%3D90&w=3840&q=75",
+          "https://i.pinimg.com/736x/92/e0/29/92e029112fea2397ac6ed5f4cc2130a8.jpg",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2014/05/10-shaggy-dark-blonde-bob-for-thick-hair.jpg?resize=500%2C574&ssl=1",
+          "https://static.wixstatic.com/media/045ee3_66465aa54f384e199eb7c78e092a12e6~mv2.png/v1/fill/w_750,h_1091,al_c,q_90,enc_auto/045ee3_66465aa54f384e199eb7c78e092a12e6~mv2.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "shape_face": "Oval",
+    "shape_face_description": "Bentuk wajah oval adalah kombinasi persegi dan bulat . Biasanya, lebar dahi lebih kecil dari lebar tulang pipi, dan wajah lebih panjang dari lebarnya. Shafer menambahkan, garis rahang dan dagu lebih bulat merupakan karakteristik dari bentuk wajah oval.",
+    "resource_shape_face": "https://lifestyle.kompas.com/read/2022/09/01/070128720/tips-sederhana-untuk-mengenali-bentuk-wajah?page=all#:~:text=Oval,karakteristik%20dari%20bentuk%20wajah%20oval.",
+    "sign_name": "Dimas",
+    "status": "Done",
+    "gender": "cewe",
+    "recommended_hair": [
+      {
+        "hair_recomend": "angled_bob",
+        "deskripsi": "Angled bob ditandai dengan sudut tajam saat memotong rambut. Biasanya lebih pendek di bagian belakang dan lebih panjang di bagian depan untuk membingkai wajah.",
+        "resource_hair_recomended": "https://www.popsugar.com/beauty/angled-bob-haircut-trend-47184488",
+        "foto": [
+          "https://www.southernliving.com/thmb/oTpKuhX1-LusU0zaD7bWx7UHbYA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Screenshot2024-01-19at4.25.47PM-4427ba87f44643fe93d0ace5f24b3f31.png",
+          "https://www.southernliving.com/thmb/NjLd3frXefXNObRFlYMl7Y0dvqs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Screenshot2024-01-19at4.27.12PM-12fde929d1df46c68904012ad48707bf.png",
+          "https://www.southernliving.com/thmb/HTCqMiq58mgETkX_dUmdSR2wkzs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Screenshot2024-01-19at4.24.28PM-664771ab592141909f6180b31727bc03.png",
+          "https://www.southernliving.com/thmb/sJ8j9U2oNY9LfktZEE5n4JCJ9Qk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/textured-layers-0dc0fbacc626488c8da36ef004fdab64.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "blunt_cut",
+        "deskripsi": "Potongan blunt cut adalah potongan tanpa lapisan. Rapi untuk wanita yang memiliki rambut lurus dan halus alami, atau lebih bertekstur untuk jenis rambut dengan tubuh lebih besar,",
+        "resource_hair_recomended": "https://www.goodhousekeeping.com/beauty/hair/g28774727/blunt-haircuts/",
+        "foto": [
+          "https://hips.hearstapps.com/hmg-prod/images/olivia-culpo-attends-vital-proteins-collagen-water-launch-news-photo-1157061769-1566409389.jpg?crop=0.508xw:0.507xh;0.224xw,0.0254xh&resize=980:*",
+          "https://hips.hearstapps.com/hmg-prod/images/carey-mulligan-attends-the-2019-met-gala-celebrating-camp-news-photo-1141865960-1566409467.jpg?crop=1xw:1xh;center,top&resize=980:*",
+          "https://hips.hearstapps.com/hmg-prod/images/lucy-liu-attends-the-la-premiere-of-cbs-all-access-why-news-photo-1166740364-1566409430.jpg?crop=0.697xw:0.713xh;0.156xw,0.0130xh&resize=980:*",
+          "https://hips.hearstapps.com/hmg-prod/images/mila-kunis-attends-the-premiere-of-wonder-park-at-the-news-photo-1129707743-1566409505.jpg?crop=0.908xw:1.00xh;0.0329xw,0&resize=980:*"
+        ]
+      },
+      {
+        "hair_recomend": "bob_oval",
+        "deskripsi": "Model ini menggabungkan potongan rambut bob dengan lapisan layer yang memberikan dimensi dan volume tambahan pada rambut.",
+        "resource_hair_recomended": "https://www.fimela.com/beauty/read/5542917/6-variasi-gaya-rambut-segi-layer-oval-yang-sedang-ngetren-dan-wajib-dicoba?page=3",
+        "foto": [
+          "https://www.fimela.com/beauty/read/5542917/6-variasi-gaya-rambut-segi-layer-oval-yang-sedang-ngetren-dan-wajib-dicoba?page=3#",
+          "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/018171764b5330c86c9f25d253030402.jpg",
+          "https://i.pinimg.com/736x/3d/48/33/3d4833a8436a5caee256fcb6637e00bc.jpg",
+          "https://pin.it/773ZtcW"
+        ]
+      },
+      {
+        "hair_recomend": "boyfriend_bob",
+        "deskripsi": "Potongan rambut boyfriend bob menyerupai bob tradisional tetapi memiliki tampilan yang lebih persegi.",
+        "resource_hair_recomended": "https://www.womanandhome.com/beauty/hair/boyfriend-bob/#:~:text=The boyfriend bob haircut resembles,style's shape as a block.",
+        "foto": [
+          "https://cdn.mos.cms.futurecdn.net/stJKqh8iskQME9MPMgretT-768-80.jpg.webp",
+          "https://cdn.mos.cms.futurecdn.net/WenCHU5kuypdxL22Xk5rfB-768-80.jpg.webp",
+          "https://cdn.mos.cms.futurecdn.net/c2xirNg8TVTS7sFcYZovJo-768-80.jpg.webp",
+          "https://cdn.mos.cms.futurecdn.net/9Rxde7SQrnNfQMxCoomc7c-768-80.jpg.webp"
+        ]
+      },
+      {
+        "hair_recomend": "butterfly_haircut",
+        "deskripsi": "Gaya rambut butterfly memiliki ciri khas berupa potongan layer yang menyerupai sayap kupu-kupu. Potongan ini dapat memberikan tampilan yang fresh dan stylish, serta mudah untuk dirawat.",
+        "resource_hair_recomended": "https://www.zalora.co.id/blog/kecantikan/5-inspirasi-butterfly-haircut-model-rambut-yang-lagi-hits/",
+        "foto": [
+          "https://lh7-us.googleusercontent.com/w2ZXUdZ3EolKt6uHqmAA90k6a_JtCIEtYHijcOqBWa8_vnUcolbz0a93Wqo0npBie1yucM8GeTbyB004_RtYruMnysU6gtpWyFvfYDPb_qzsongLXeffjNV9izoXqC9sh-J1h0KOL8p7GK7kA_98rko",
+          "https://lh7-us.googleusercontent.com/Ya4sEyZwXdr9rCy_1-iJ2Np-CpFm9TTeBUJraAlbbtVy5_PmwlM3LkCvYgSnqp4DCd-E0s319VvaovKHLibt__GOknUgWyIjXJUwCOVyuqemMOtT_IBgbS16Oey_BvKkwZpfzUeW--rXMJQRpgY40xc",
+          "https://lh7-us.googleusercontent.com/1OE3DJyri_PJP6gAxN9zDsKGcM-myGQ6cNsmh-hPiWZw4gDgRnLBqyp9FYyVatsNxDQkT2iIuw2nLC4toE2GZ-LgiKGv2yYWkLqYD7EpCBxrDi59TotTje_tb8L2_TujkS9dqoSrQtn4TvZDMEAUdZw",
+          "https://lh7-us.googleusercontent.com/dR5YHxJlEzOedXGrhg-1CyNqfX-VNBH1KxOo1XODsgsKAZHJu-gKomsuodAtpXsa5fd1kdHhepg9fYSiE0L7TgIMVtNHH11uY25JdUiIr_X6dKGJJyaXJQSkqjqjcHOP0XYsUI0kcLkjzSMq9RE496I"
+        ]
+      },
+      {
+        "hair_recomend": "choppy_bob",
+        "deskripsi": "Model rambut bob yang sengaja dibentuk dengan potongan-potongan tidak rata untuk menghasilkan tampilan yang raw, atau tidak beraturan. Sama seperti model rambut lainnya, choppy bob bisa dipadukan dengan poni yang panjang, aksen layer, dan tatanannya bisa dipilih sesuai selera.",
+        "resource_hair_recomended": "https://www.allthingshair.com/id-id/rambut/gaya-rambut/choppy-bob",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F8e31b613ab99c47b0a39bcf48f39c99a1c3d08c3-1725x1333.jpg%3Fw%3D1725%26h%3D1333%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F4d51d4bb643d3160948eff476a8d6c92791705ce-2000x2477.jpg%3Fw%3D2000%26h%3D2477%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F482840259697c15b4c2cad181a0c71a903b1a91b-900x600.jpg%3Fw%3D900%26h%3D600%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Ffd25d3738ca4e51e5fbfc950703e9d3f8ca21e04-1331x2000.jpg%3Fw%3D1331%26h%3D2000%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      },
+      {
+        "hair_recomend": "classic_bob",
+        "deskripsi": "Klasik bob adalah potongan rambut dengan panjang sejajar dengan rahang atau di bawah dagu.",
+        "resource_hair_recomended": "https://www.orami.co.id/magazine/model-rambut-pendek-bob?page=all",
+        "foto": [
+          "https://o-cdn-cas.sirclocdn.com/parenting/images/bob-klasik.width-800.format-webp.webp",
+          "https://media.glamour.com/photos/65fd9a88f3df1f3ecab9e29e/master/w_1920%2Cc_limit/392931543_18394253317003100_160793853160550969_n.jpeg",
+          "https://media.glamour.com/photos/65fd9969dac1e8617196332b/master/w_1920%2Cc_limit/399766373_1010089056959849_7642020305884266695_n.jpeg",
+          "https://www.byrdie.com/thmb/tsG0sFgc7ZepRqPqmQbwwVufC50=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-493817406-e0d3cac289b74121b736935eca7f2f0b.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "medium_layer",
+        "deskripsi": "Potongan rambut berlapis adalah pilihan yang sangat baik karena cocok untuk semua wanita dan memiliki spektrum pelaksanaan yang luas. Gadis dengan surai tebal yang mewah mendapatkan kesan ringan dan ringan dengan potongan rambut berlapis.",
+        "resource_hair_recomended": "https://therighthairstyles.com/20-brightest-medium-layered-haircuts-to-light-you-up/",
+        "foto": [
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2013/12/1-ash-brown-balayage-lob-with-layers.jpg?w=500&ssl=1",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/1500x/medium-layered-haircuts/1-medium-long-inverted-bob.jpg?w=492&ssl=1",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/1500x/medium-layered-haircuts/1-medium-layered-hairstyle-for-thick-hair.jpg?w=474&ssl=1",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/1500x/medium-layered-haircuts/2-medium-two-level-haircut-for-thick-hair.jpg?w=484&ssl=1"
+        ]
+      },
+      {
+        "hair_recomend": "micro_bangs_with_see_through_bangs",
+        "deskripsi": "Jika Anda ingin memperhalus gaya lancang atau memberikan kesan segar dan trendi pada tampilan klasik Anda, poni tembus pandang adalah kunci untuk mencapainya! Terinspirasi oleh gadis-gadis Korea yang penuh gaya, potongan rambut dengan poni tipis dapat mempercantik penampilan apa pun dan mempercantik panjang dan tekstur rambut apa pun.",
+        "resource_hair_recomended": "https://therighthairstyles.com/see-through-bangs/",
+        "foto": [
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2023/01/1-tousled-shoulder-length-hair-with-thin-see-through-bangs.jpg?resize=500%2C582&ssl=1",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2023/01/2-medium-length-blonde-hair-with-wispy-arched-bangs.jpg?resize=500%2C596&ssl=1",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2023/01/5-layered-cut-with-bangs-70s-blowout-look.jpg?resize=500%2C584&ssl=1",
+          "https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2023/01/9-modern-blonde-shag-with-root-smudge-and-thin-curtain-bangs.jpg?resize=500%2C614&ssl=1"
+        ]
+      },
+      {
+        "hair_recomend": "shaggy",
+        "deskripsi": "potongan rambut shag sangat rock 'n' roll kasual, mussy, dan sangat mudah. Biasanya menampilkan ujung berombak,lapisan di sekitar mahkota, dan banyak tekstur, shags cocok untuk hampir semua tekstur dan panjang rambut.",
+        "resource_hair_recomended": "https://www.byrdie.com/a-photo-gallery-of-fabulous-shag-haircuts-346352",
+        "foto": [
+          "https://www.byrdie.com/thmb/IgKVa-1HKBnko0MuAij2Eyau2fY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/320210215_3470699083255554_2544273935748404680_n2-c6078fe79aa64fc5a330fac8241b05ff.jpg",
+          "https://www.byrdie.com/thmb/KZIfQk6-QRFXvDFvQtieBei-Nf4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-488443770-2549a50cf2004dd4bd9c0d92ffe9e80c.jpg",
+          "https://www.byrdie.com/thmb/Wt4p97Rzp_dKiljwBMGBYX29zH8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-876737372-25074ab6197a447bafa12cbcdee26855.jpg",
+          "https://www.byrdie.com/thmb/vbP94-EkrQr5mcG7jQj9dBfTOk0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-12047726572-19108fa7729c4a4e8b87b2cd028fe5f0.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "wavy_bob",
+        "deskripsi": "Bob bergelombang adalah gaya yang paling tidak sopan. Pendek, berkilau, dan penuh tekstur, rambut bob yang dikeringkan dengan udara (atau bahkan yang dilengkapi dengan alat pengeriting rambut) adalah cara yang mudah untuk mendinginkannya.",
+        "resource_hair_recomended": "https://www.instyle.com/wavy-bob-hair-8645748",
+        "foto": [
+          "https://www.instyle.com/thmb/vHJOu5NHKGGVe5EyItmVwRTWeq0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-2151788967-d43669355da545e0a402b7f8f9e88449.jpg",
+          "https://www.instyle.com/thmb/JUqCLQb_K_vfgNMpv_T5inPPaKE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-2085824364-0ab2de7935c74767b1dcb3e79e6155af.jpg",
+          "https://www.instyle.com/thmb/tqzQkscOJ87UXxnxvUxQZzqIn_o=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1184285934-20c28c79e6c944c5a5ad831989ef9c4f.jpg",
+          "https://www.instyle.com/thmb/WY8iPTV0n91iPLygG3D7MN5J8ro=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1469835031-9fc16884022b416abaa896e233922745.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "wavy_hair_with_curtain_bangs",
+        "deskripsi": "poni tirai untuk rambut bergelombang menciptakan gaya rambut bagian tengah dengan potongan-potongan yang membingkai wajah.",
+        "resource_hair_recomended": "https://www.latest-hairstyles.com/bangs/curtain-bangs-with-wavy-hair.html#1",
+        "foto": [
+          "https://content.latest-hairstyles.com/wp-content/uploads/cute-curtain-bangs-with-collarbone-length-waves.jpg",
+          "https://content.latest-hairstyles.com/wp-content/uploads/soft-curtain-fringe-for-mid-length-wavy-hair.jpg",
+          "https://content.latest-hairstyles.com/wp-content/uploads/two-toned-tousled-shag-with-a-curtain-fringe.jpg",
+          "https://content.latest-hairstyles.com/wp-content/uploads/thick-curtain-bangs-for-thick-mid-length-wavy-hair.jpg"
+        ]
+      },
+      {
+        "hair_recomend": "wolf_cut",
+        "deskripsi": "Gaya rambut wolf cut pada awalnya terinspirasi dari potongan rambut pria. Karenanya, potongan wolf cut yang paling orisinil adalah potongan rambut pendek.",
+        "resource_hair_recomended": "https://www.allthingshair.com/id-id/rambut/gaya-rambut/gaya-rambut-wolf-cut",
+        "foto": [
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2F3b725cf4713812e79e98ce236415ac760d1bf38e-1333x1442.jpg%3Fw%3D1333%26h%3D1442%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fb8ef4c08954fe42fbaea01c3b46d02acd2753e45-1440x1524.jpg%3Fw%3D1440%26h%3D1524%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fbc16ed49f11f9fe07700295ad8201d04b79bfd94-1440x1800.jpg%3Fw%3D1440%26h%3D1800%26fm%3Dwebp%26q%3D90&w=1920&q=75",
+          "https://www.allthingshair.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzqgvoczt%2Fproduction%2Fb9dfddc7b88ffebdac2d7776ac15855ed7b7377f-640x640.jpg%3Fw%3D640%26h%3D640%26fm%3Dwebp%26q%3D90&w=1920&q=75"
+        ]
+      }
+    ]
+  }
+]

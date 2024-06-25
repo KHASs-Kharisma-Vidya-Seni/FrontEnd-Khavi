@@ -9,24 +9,6 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       // Jika currentUser masih kosong atau null, biarkan useSWR melakukan revalidasi
-  //       if (!currentUser || currentUser === null) {
-  //         await new Promise(resolve => {
-  //           setTimeout(resolve, 1000); // Contoh: Menunggu 1 detik sebelum menentukan status loading
-  //         });
-  //       }
-  //       setLoading(false); // Setelah menunggu, berhenti menampilkan loading state
-  //     } catch (error) {
-  //       console.error("Error fetching current user:", error);
-  //       navigate("/login", { replace: true }); // Jika terjadi error, arahkan ke halaman login
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, [currentUser, navigate]);
 
   useEffect(() => {
     if (!currentUser || currentUser === null) {

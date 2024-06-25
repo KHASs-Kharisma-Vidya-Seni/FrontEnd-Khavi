@@ -1,6 +1,6 @@
 import { SidebarForum } from "@/components/modules/Forum/side-bar-forum";
 import { LeftSideForum } from "@/components/modules/Forum/left-forum-forum";
-import { RightSideForum } from "@/components/modules/Forum/right-side-forum";
+// import { RightSideForum } from "@/components/modules/Forum/right-side-forum";
 
 import { cn } from "@/lib/utils";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
@@ -10,20 +10,22 @@ import axios from "axios";
 import useSWR, { mutate } from "swr";
 import { BASE_URL_API } from "@/utility/base-url";
 import type { Forum } from "@/components/types/forum-types";
+import ForumData from "../components/modules/Forum/forum-data";
+import CreateForum from "@/components/modules/Forum/create-forum";
+import { HashLink } from "react-router-hash-link";
 
-  interface ForumData {
-    forums: Forum[];
-  }
+interface ForumData {
+  forums: Forum[];
+}
 
 const fetcher = async (url: string) => {
-  return axios.get(url, { withCredentials: true }).then((res) => res.data);
+  return axios.get(url, { withCredentials: true }).then(res => res.data);
 };
 
 export default function Forum() {
   const isScrolled = useScrollPosition();
 
   const { data, error } = useSWR<ForumData>(`${BASE_URL_API}/forum?withUser=true`, fetcher);
-
 
   mutate(`${BASE_URL_API}/forum?withUser=true`);
 
@@ -41,7 +43,7 @@ export default function Forum() {
 
   return (
     <AnimationPage>
-      <div className="flex flex-col justify-center gap-2 bg-shark-900 p-0 xl:container lg:bg-white lg:bg-[url('/images/bgArtikel.png')] lg:pb-[30px] lg:pt-8">
+      <div className="relative flex flex-col justify-center gap-2 bg-shark-900 p-0 xl:container lg:bg-white lg:bg-[url('/images/bgArtikel.png')] lg:pb-[30px] lg:pt-8">
         <div
           className={cn(
             "fixed left-0 flex h-screen w-12 justify-center border-r-[0.1875rem] border-t-[0.1875rem] border-shark-800 bg-shark-900 xl:hidden",
@@ -56,9 +58,15 @@ export default function Forum() {
           <div className="hidden xl:block">
             <LeftSideForum />
           </div>
-          <div className="">
-            <RightSideForum posts={data.forums} />
+          <div className="flex flex-col items-center justify-center">
+            <CreateForum />
+            <ForumData />
           </div>
+        </div>
+        <div className="fixed bottom-10 right-10 h-fit w-fit rounded-full bg-shark-700 p-2">
+          <HashLink to="/forum#create-forum">
+            <img width="30" height="30" src="/icon/forum-new.png" alt="create-new--v2" />
+          </HashLink>
         </div>
       </div>
     </AnimationPage>

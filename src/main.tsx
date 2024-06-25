@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-// import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Login from "./pages/Login.tsx";
@@ -25,8 +24,7 @@ import VerifyEmailStatus from "./pages/VerifyEmail.tsx";
 import ProtectedRoute from "./layout/RouteGuards.tsx";
 import EditForum from "./pages/EditForum.tsx";
 import DetailArticle from "./pages/ArticleDetail.tsx";
-import CreateForum from "./components/modules/Forum/create-forum.tsx";
-// import RouteExistUser from "./layout/RouteExistUser.tsx";
+import ProtectedExistUser from "./layout/RouteExistUser.tsx";
 
 export const App = () => {
   return (
@@ -63,8 +61,7 @@ export const App = () => {
           </Route>
           <Route path="/artikel" element={<Article />} />
           <Route path="/artikel/:slug" element={<DetailArticle />} />
-          <Route path="/forum" element={<Forum />} />
-          <Route path="/forum/:id/edit" element={<EditForum />} />
+
           <Route
             path="/face-scanner"
             element={
@@ -73,84 +70,40 @@ export const App = () => {
               </ProtectedRoute>
             }
           />
-          <Route path="*" element={<NotFound />} />
+          <Route
+            path="/forum"
+            element={
+              <ProtectedRoute>
+                <Forum />
+              </ProtectedRoute>
+            }
+          />
         </Route>
+        <Route path="/forum/:id/edit" element={<EditForum />} />
         <Route path="/verify-email/:id" element={<VerifyEmailStatus />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/a" element={<CreateForum />} />
+        <Route
+          path="/register"
+          element={
+            <ProtectedExistUser>
+              <Register />
+            </ProtectedExistUser>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <ProtectedExistUser>
+              <Login />
+            </ProtectedExistUser>
+          }
+        />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
 };
 
 // Check the documentation for more information: https://reactrouter.com/en/main/start/overview
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Root />,
-//     errorElement: <Error />,
-//     children: [
-//       {
-//         index: true,
-//         element: <Home />,
-//       },
-//       {
-//         path: "/tentang",
-//         element: <About />,
-//       },
-//       {
-//         path: "/profile",
-//         element: (
-//           <ProtectedRoute>
-//             <ProfileRoot />
-//           </ProtectedRoute>
-//         ),
-//         children: [
-//           {
-//             index: true,
-//             element: <ProfileUserInfo />,
-//           },
-//           {
-//             path: "/profile/bookmark",
-//             element: <ProfileBookmark />,
-//           },
-//           {
-//             path: "/profile/settings",
-//             element: <ProfileSetting />,
-//           },
-//         ],
-//       },
-//       // { path: '/profile/user-info', element: <ProfileUserInfo /> }
-//       { path: "/artikel", element: <Article /> },
-//       { path: "/artikel/:slug", element: <DetailArticle /> },
-//       { path: "/forum", element: <Forum /> },
-//       { path: "/forum/:id/edit", element: <EditForum /> },
-//       { path: "/face-scanner", element: <FaceScanner /> },
-//       { path: "*", element: <NotFound /> },
-//     ],
-//   },
-//   {
-//     path: "/verify-email/:id",
-//     element: <VerifyEmailStatus />,
-//   },
-//   {
-//     path: "/register",
-//     element: (
-//       <RouteExistUser>
-//         <Register />
-//       </RouteExistUser>
-//     ),
-//   },
-//   {
-//     path: "/login",
-//     element: (
-//       <RouteExistUser>
-//         <Login />
-//       </RouteExistUser>
-//     ),
-//   },
-// ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

@@ -108,7 +108,7 @@ export default function SignIn() {
           <section className="py-4">
             <div>
               <Button disabled={isSubmitting} type="submit" variant="auth">
-                {isSubmitting ? "Loading..." : "Sign Up"}
+                {isSubmitting ? "Loading..." : "Sign In"}
               </Button>
               <Link to="/profile">
                 <Button variant="auth-google">
