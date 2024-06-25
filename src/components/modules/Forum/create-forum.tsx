@@ -44,9 +44,10 @@ export default function CreateForum() {
   const onSubmit: SubmitHandler<FormValues> = async data => {
     try {
       const formData = new FormData();
-      if (data.image) {
-        formData.append("image", data.image[0]);
-      }
+      if (data.image?.[0]) {
+  formData.append("image", data.image[0]);
+}
+
       formData.append("content", data.content);
 
       // Kirim data ke backend menggunakan Axios
