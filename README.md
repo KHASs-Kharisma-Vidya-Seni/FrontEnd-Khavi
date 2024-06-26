@@ -1,3 +1,4 @@
+
 # Khavi: Aplikasi Rekomendasi Gaya Rambut Berdasarkan Bentuk Wajah
 
 ![Khavi Logo](https://khass.netlify.app/images/khavi-logo.png)
@@ -46,4 +47,19 @@ Untuk tahap awal pengembangan, Khavi telah memiliki fitur-fitur esensial berikut
 3. **Artikel Terbaru**
    - Aplikasi menyajikan artikel-artikel terbaru yang selalu diperbarui untuk memberikan informasi terkini tentang gaya dan perawatan rambut.
 
-Khavi dirancang untuk menjadi solusi lengkap bagi semua kebutuhan gaya rambut Anda, menawarkan rekomendasi personal, komunitas interaktif, dan informasi terkini. Bergabunglah dengan Khavi dan temukan gaya rambut terbaik untuk Anda!
+### Tech Stack
+
+Khavi dibangun menggunakan teknologi-teknologi berikut:
+
+- [React](https://reactjs.org/): Library JavaScript untuk membangun antarmuka pengguna.
+- [Tailwind CSS](https://tailwindcss.com/): Framework CSS untuk mendesain antarmuka yang responsif.
+- [React Router](https://reactrouter.com/): Library untuk routing di aplikasi React.
+- [React Quill](https://www.npmjs.com/package/react-quill): Komponen WYSIWYG editor untuk React.
+- [Supabase Storage](https://supabase.io/docs/guides/storage): Penyimpanan untuk foto pengguna.
+- [Neon](https://neon.tech/): Database modern untuk aplikasi.
+- [Netlify](https://www.netlify.com/): Platform untuk deployment client.
+- [Google Cloud App Engine](https://cloud.google.com/appengine): Platform untuk deployment backend.
+
+---
+
+✨ **Bergabunglah dengan Khavi dan temukan gaya rambut terbaik untuk Anda!** ✨
