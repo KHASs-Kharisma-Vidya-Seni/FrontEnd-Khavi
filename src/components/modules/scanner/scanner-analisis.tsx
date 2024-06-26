@@ -95,7 +95,7 @@ export default function Scanner() {
     <>
       <Toaster richColors />
       <div className="flex flex-col justify-center gap-10 gap-x-20 lg:flex-row lg:gap-y-0">
-        <div className="w-3/6">
+        <div className="w-full xl:w-3/6">
           <div
             onDrop={handleDrop}
             onDragOver={handleDragOver}
@@ -157,7 +157,7 @@ export default function Scanner() {
 
           {errorMessage && <p style={{ color: "red", marginBottom: "20px" }}>{errorMessage}</p>}
         </div>
-        <div id="analysis" className="flex w-3/6 flex-col gap-y-8">
+        <div id="analysis" className="flex w-full flex-col gap-y-8 xl:w-3/6">
           <div>
             <h1 className="text-2xl font-bold sm:text-5xl">Hasil Analisa</h1>
             <div className="">
@@ -254,13 +254,13 @@ const HairStyleList = ({ resultHair, resultGender }: { resultHair: string; resul
         <>
           {hair.gender === mapGender(resultGender) &&
             hair.recommended_hair.map(item => (
-              <div className="flex flex-col">
-                <h2 className="pt-10 text-lg font-bold text-shark-800 sm:text-4xl">
+              <div className="flex flex-col items-center">
+                <h2 className="self-baseline pt-10 text-3xl font-bold text-shark-800 sm:text-4xl">
                   {capitalizeWords(item.hair_recomend)}
                 </h2>
-                <p className="w-5/6 text-xl leading-relaxed text-shark-500">{item.deskripsi}</p>
-                <div className="flex space-x-2 py-2">
-                  {item?.foto.map(foto => <img src={foto} alt="" width={250} className="object-cover " />)}
+                <p className="w-full lg:w-5/6 self-baseline text-xl  leading-relaxed text-shark-500">{item.deskripsi}</p>
+                <div className="flex flex-col space-x-2 py-2 lg:flex-row">
+                  {item?.foto.map(foto => <img src={foto} alt="" className="w-full object-cover lg:w-[250px] " />)}
                 </div>
               </div>
             ))}

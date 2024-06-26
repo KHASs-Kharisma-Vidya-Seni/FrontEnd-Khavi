@@ -57,7 +57,7 @@ export default function Forum() {
           )}
         >
           <div className="">
-            <SidebarForum />
+            <SidebarForum onFilterChange={handleFilterChange}/>
           </div>
         </div>
         <div className="">

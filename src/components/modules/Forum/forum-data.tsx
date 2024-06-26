@@ -74,7 +74,6 @@ const ForumDataCard: React.FC<ForumDataProps> = ({ filter }) => {
   const { register, handleSubmit, reset } = useForm<FormData>();
   const { currentUser } = useAuth();
 
-
   const { data, error } = useSWR<Forum>(`${BASE_URL_API}/forum?withUser=true`, fetcher);
 
   const forums = data?.forums || [];
@@ -166,7 +165,7 @@ const ForumDataCard: React.FC<ForumDataProps> = ({ filter }) => {
   return (
     <section className="item-center flex w-full flex-col justify-center border-t-[0.1875rem] py-5 pl-16 pr-6 lg:w-[47.5rem] lg:rounded-[0.625rem] lg:border-none lg:pl-0 lg:pr-0">
       {sortedForums.length === 0 && <h1>Nothing Here!!</h1>}
-      <div className="grid grid-cols-1 gap-x-2 gap-y-4 md:grid-cols-2 lg:grid-cols-1">
+      <div className="grid grid-cols-1 gap-x-2 gap-y-4 md:grid-cols-2 md:gap-x-4 lg:grid-cols-1 lg:gap-x-6 lg:gap-y-6">
         {sortedForums.map((forum, index) => (
           <ForumCard
             key={index}
@@ -230,7 +229,7 @@ const ForumCard: React.FC<ForumCardProps> = ({
         <div className="flex items-center justify-between pb-5">
           <div className="flex items-center gap-3">
             <Avatar className="h-10 w-10">
-              <AvatarImage src={forum.author.photo_url} alt={forum.author.username} />
+              <AvatarImage className="object-cover" src={forum.author.photo_url} alt={forum.author.username} />
             </Avatar>
             <div>
               <h3 className="text-xl font-bold text-white">{forum.author.username}</h3>
@@ -254,29 +253,44 @@ const ForumCard: React.FC<ForumCardProps> = ({
           )}
         </div>
         <img
-          className=" h-full w-full rounded-t-xl object-contain md:h-[400px]"
+          className=" h-full w-full rounded-t-xl object-cover lg:h-[400px]"
           style={{
             objectPosition: "top center",
           }}
           src={forum.image}
           alt={forum.id_forum}
         />
-        <div
-          className={cn(
-            "prose prose-h1:my-5 prose-h1:text-white prose-p:m-1 prose-p:text-white",
-            showMore ? " " : "prose-p:truncate"
-          )}
-          dangerouslySetInnerHTML={{ __html: sanitizedContent }}
-        />
 
-        <div className="flex justify-end space-x-5">
-          <button onClick={toggleShowMore} className="text-blue-500 hover:underline focus:outline-none">
-            {showMore ? "Sembunyikan" : "Lihat Selengkapnya"}
-          </button>
-          <button onClick={toggleCommentForm} className="text-blue-500 hover:underline focus:outline-none">
+        <section className="flex flex-col">
+          <div
+            className={cn(
+              "prose prose-h1:my-5 prose-h1:text-2xl lg:prose-h1:text-4xl prose-h1:text-white prose-p:m-1 prose-p:text-white",
+              showMore ? " " : "prose-p:truncate"
+            )}
+            dangerouslySetInnerHTML={{ __html: sanitizedContent }}
+          />
+
+          <div className="flex justify-end">
+            <button
+              onClick={toggleShowMore}
+              className="text-sm text-blue-500 hover:underline focus:outline-none lg:text-lg"
+            >
+              {showMore ? "Sembunyikan" : "Selengkapnya"}
+            </button>
+          </div>
+        </section>
+
+        <div className="flex justify-end space-x-5 py-6">
+          <button
+            onClick={toggleCommentForm}
+            className="text-sm text-blue-500 hover:underline focus:outline-none lg:text-lg"
+          >
             {showCommentForm ? "Hide Comment" : "Add Comment"}
           </button>
-          <button onClick={toggleComment} className="mr-2 text-gray-500 hover:text-blue-500 focus:outline-none">
+          <button
+            onClick={toggleComment}
+            className="mr-2 text-sm text-gray-500 hover:text-blue-500 focus:outline-none lg:text-lg"
+          >
             {showComment ? "Hide Comments" : "View Comments"}
           </button>
         </div>

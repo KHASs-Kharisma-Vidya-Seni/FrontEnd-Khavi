@@ -9,7 +9,6 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
 
-
   useEffect(() => {
     if (!currentUser || currentUser === null) {
       navigate("/login", { replace: true });
