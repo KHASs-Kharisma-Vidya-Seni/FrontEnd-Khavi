@@ -29,7 +29,7 @@ const Menu = () => {
       <h1 className="text-3xl">Feature</h1>
       <ul className="mt-2 space-y-2">
         <li>
-          <Link to="/home">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/forum">Forum</Link>
