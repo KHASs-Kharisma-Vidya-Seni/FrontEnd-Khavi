@@ -113,12 +113,12 @@ function NavLinks({ navLinks }: ViewProps) {
 function AuthButtons() {
   return (
     <div className="flex flex-col gap-2 lg:flex-row">
-      <Button variant="login">
-        <Link to="/login">Masuk</Link>
-      </Button>
-      <Button variant="outline-white">
-        <Link to="/register">Daftar</Link>
-      </Button>
+      <Link to="/login">
+        <Button variant="login">Masuk</Button>
+      </Link>
+      <Link to="/register">
+        <Button variant="outline-white">Daftar</Button>
+      </Link>
     </div>
   );
 }
