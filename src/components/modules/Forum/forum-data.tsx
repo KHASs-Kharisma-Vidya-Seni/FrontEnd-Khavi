@@ -40,6 +40,7 @@ interface User {
   photo_url: string;
   uid: string;
   username: string;
+  location: string;
 }
 
 interface Comment {
@@ -59,24 +60,31 @@ const fetcher = async (url: string) => {
   return axios.get(url, { withCredentials: true }).then(res => res.data);
 };
 
-const ForumDUA: React.FC = () => {
+interface ForumDataProps {
+  filter: string;
+}
+
+const ForumDataCard: React.FC<ForumDataProps> = ({ filter }) => {
   const [showComment, setShowComment] = useState<boolean[]>([]);
   const [showCommentForm, setShowCommentForm] = useState<boolean[]>([]);
   const [isSubmitting, setIsSubmitting] = useState<{ [key: string]: boolean }>({});
+
+  const nodeRef = useRef(null);
+
   const { register, handleSubmit, reset } = useForm<FormData>();
   const { currentUser } = useAuth();
-  const nodeRef = useRef(null);
+
+
   const { data, error } = useSWR<Forum>(`${BASE_URL_API}/forum?withUser=true`, fetcher);
 
-  // mutate(`${BASE_URL_API}/forum?withUser=true`);
-
   const forums = data?.forums || [];
+
   const sortedForums = forums.sort((a, b) => {
-    if (a.update_at > b.update_at) return -1;
-    if (a.update_at < b.update_at) return 1;
-    if (a.created_at > b.created_at) return -1;
-    if (a.created_at < b.created_at) return 1;
-    return 0;
+    if (filter === "newest") {
+      return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+    } else {
+      return new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
+    }
   });
 
   if (!currentUser) {
@@ -226,7 +234,9 @@ const ForumCard: React.FC<ForumCardProps> = ({
             </Avatar>
             <div>
               <h3 className="text-xl font-bold text-white">{forum.author.username}</h3>
-              <p className="text-sm text-gray-500 dark:text-neutral-500">{calculateTimeAgo(forum.created_at)}</p>
+              <div className="flex items-center space-x-2 text-gray-500 ">
+                <p>{forum.author.location}</p>,<p className="text-sm ">{calculateTimeAgo(forum.created_at)}</p>
+              </div>
             </div>
           </div>
           {currentUser.uid === forum.author.uid && (
@@ -333,7 +343,9 @@ const CommentList = forwardRef<HTMLDivElement, CommentListProps>(({ comments }, 
               </Avatar>
               <div>
                 <h3 className="text-xl font-bold text-white">{comment.user.username}</h3>
-                <p className=" text-gray-500 ">{moment(comment.created_at).fromNow()}</p>
+                <p className=" text-gray-500 ">
+                  {comment.user.location}, {moment(comment.created_at).fromNow()}
+                </p>
               </div>
             </div>
           </div>
@@ -350,4 +362,4 @@ const LoadingSpinner: React.FC = () => (
   </div>
 );
 
-export default ForumDUA;
+export default ForumDataCard;

@@ -18,6 +18,7 @@ const userformSchema = z.object({
   email: z.string().email("Invalid email address").optional(),
   password: z.string().min(6, "Password must be at least 6 characters").optional(),
   image: z.any().optional(),
+  location: z.string().optional(),
 });
 
 type FormSchemaValue = z.infer<typeof userformSchema>;
@@ -31,6 +32,7 @@ export const UpdateProfile = () => {
     defaultValues: {
       username: currentUser?.username || "",
       image: null,
+      location: currentUser?.location || "",
     },
   });
 
@@ -39,10 +41,39 @@ export const UpdateProfile = () => {
     setValue,
   } = form;
 
+  // const onSubmit: SubmitHandler<FormSchemaValue> = async data => {
+  //   try {
+  //     const formData = new FormData();
+  //     formData.append("username", data.username);
+
+  //     if (data.image instanceof File) {
+  //       formData.append("image", data.image);
+  //     }
+
+  //     const response = await makeRequest.patch(`/users/${currentUser?.uid}`, formData, {
+  //       headers: {
+  //         "Content-Type": "multipart/form-data",
+  //       },
+  //     });
+
+  //     console.log("Response:", response.data);
+
+  //     mutate(`${BASE_URL_API}/current-user`);
+
+  //     toast.success("Profile updated successfully!");
+  //   } catch (error) {
+  //     console.error("Error updating user:", currentUser?.uid);
+  //     console.error("Error updating user:", error);
+
+  //     toast.error("Failed to update profile. Please try again.");
+  //   }
+  // };
+
   const onSubmit: SubmitHandler<FormSchemaValue> = async data => {
     try {
       const formData = new FormData();
       formData.append("username", data.username);
+      formData.append("location", data.location || "");
 
       if (data.image instanceof File) {
         formData.append("image", data.image);
@@ -98,12 +129,12 @@ export const UpdateProfile = () => {
 
               <div>
                 <h1 className="text-2xl font-bold">{currentUser?.username}</h1>
-                <p className="text-gray-400">Pekalongan, Indonesia</p>
+                <p className="text-gray-400">{currentUser?.location}, Indonesia</p>
               </div>
             </div>
             <div className="py-4">
               <div>
-                <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <section className="grid grid-cols-1 gap-10 md:grid-cols-2">
                   <FormField
                     control={form.control}
                     name="username"
@@ -139,6 +170,20 @@ export const UpdateProfile = () => {
                       file:font-semibold file:text-white
                       hover:file:bg-gray-700"
                           />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="location"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-lg">Location</FormLabel>
+                        <FormControl>
+                          <Input placeholder="" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>

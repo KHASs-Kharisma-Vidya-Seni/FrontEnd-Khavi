@@ -11,6 +11,7 @@ export interface User {
   username: string;
   created_at: string;
   photo_url: string;
+  location: string;
 }
 
 interface LoginInputs {

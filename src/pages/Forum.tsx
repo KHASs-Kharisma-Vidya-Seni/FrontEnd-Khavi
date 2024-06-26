@@ -1,6 +1,5 @@
 import { SidebarForum } from "@/components/modules/Forum/side-bar-forum";
-import { LeftSideForum } from "@/components/modules/Forum/left-forum-forum";
-// import { RightSideForum } from "@/components/modules/Forum/right-side-forum";
+import { ForumFilterSidebar } from "@/components/modules/Forum/forum-filter-sidebar";
 
 import { cn } from "@/lib/utils";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
@@ -10,9 +9,11 @@ import axios from "axios";
 import useSWR, { mutate } from "swr";
 import { BASE_URL_API } from "@/utility/base-url";
 import type { Forum } from "@/components/types/forum-types";
-import ForumData from "../components/modules/Forum/forum-data";
+import ForumDataCard from "../components/modules/Forum/forum-data";
 import CreateForum from "@/components/modules/Forum/create-forum";
 import { HashLink } from "react-router-hash-link";
+import { useState } from "react";
+import ErrorMessage from "@/components/ErrorMessage";
 
 interface ForumData {
   forums: Forum[];
@@ -24,6 +25,11 @@ const fetcher = async (url: string) => {
 
 export default function Forum() {
   const isScrolled = useScrollPosition();
+  const [filter, setFilter] = useState<string>("newest");
+
+  const handleFilterChange = (filterOption: string) => {
+    setFilter(filterOption);
+  };
 
   const { data, error } = useSWR<ForumData>(`${BASE_URL_API}/forum?withUser=true`, fetcher);
 
@@ -38,7 +44,7 @@ export default function Forum() {
   }
 
   if (error) {
-    return <div>Gagal mengambil data forum pengguna. Silakan coba lagi nanti.</div>;
+    return <ErrorMessage message="Gagal mengambil data forum pengguna. Silakan coba lagi nanti" />;
   }
 
   return (
@@ -56,11 +62,11 @@ export default function Forum() {
         </div>
         <div className="">
           <div className="hidden xl:block">
-            <LeftSideForum />
+            <ForumFilterSidebar onFilterChange={handleFilterChange} />
           </div>
           <div className="flex flex-col items-center justify-center">
             <CreateForum />
-            <ForumData />
+            <ForumDataCard filter={filter} />
           </div>
         </div>
         <div className="fixed bottom-10 right-10 h-fit w-fit rounded-full bg-shark-700 p-2">

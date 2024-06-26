@@ -2,6 +2,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import useSWR from "swr";
 import axios from "axios";
 import LoadingArticle from "@/components/modules/Article/loading-article";
+import NotFoundArticle from "@/components/modules/Article/not-found-article";
 
 // interface Article {
 //   id: number;
@@ -35,15 +36,11 @@ const ArticleDetail: React.FC = () => {
   console.log(article);
 
   if (isLoading) {
-    return (
-      <div>
-        <LoadingArticle />
-      </div>
-    );
+    <LoadingArticle />;
   }
 
   if (fetchError) {
-    return <div>{"Article not found"}</div>;
+    return <NotFoundArticle />;
   }
 
   return (
