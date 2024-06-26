@@ -7,7 +7,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import { ArticleCard, ArticleTags, TrendingCard } from "@/components/ui/article";
-import { slugify } from "@/utils/slugify";
+import { slugify } from "@/utility/slugify";
 
 import Container from "@/components/Container";
 import LoadingArticle from "@/components/modules/Article/loading-article";
