@@ -240,14 +240,6 @@ const HairStyleList = ({ resultHair, resultGender }: { resultHair: string; resul
     return words.join(" ");
   }
 
-  console.log(resultGender);
-
-  const debug = resultRecommendedHair.map(i => {
-    console.log(i.gender);
-  });
-
-  console.log(debug);
-
   return (
     <div className="py-10">
       {resultRecommendedHair.map(hair => (

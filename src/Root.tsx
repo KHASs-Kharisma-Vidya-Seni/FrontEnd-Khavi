@@ -28,7 +28,7 @@ const Root = () => {
         </AnimatePresence>
       </main>
 
-      {!isAuthPage && !isProfile && !isForumPage &&  !isScannerPage &&<Footer />}
+      {!isAuthPage && !isProfile && !isForumPage && !isScannerPage && <Footer />}
     </div>
   );
 };

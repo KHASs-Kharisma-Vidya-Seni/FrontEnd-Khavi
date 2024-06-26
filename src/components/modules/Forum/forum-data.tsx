@@ -228,11 +228,11 @@ const ForumCard: React.FC<ForumCardProps> = ({
       <div className="p-4 md:p-5">
         <div className="flex items-center justify-between pb-5">
           <div className="flex items-center gap-3">
-            <Avatar className="h-10 w-10">
+            <Avatar className="h-12 w-12">
               <AvatarImage className="object-cover" src={forum.author.photo_url} alt={forum.author.username} />
             </Avatar>
             <div>
-              <h3 className="text-xl font-bold text-white">{forum.author.username}</h3>
+              <h3 className="text-2xl font-bold text-white">{forum.author.username}</h3>
               <div className="flex items-center space-x-2 text-gray-500 ">
                 <p>{forum.author.location}</p>,<p className="text-sm ">{calculateTimeAgo(forum.created_at)}</p>
               </div>
@@ -252,19 +252,21 @@ const ForumCard: React.FC<ForumCardProps> = ({
             </DropdownMenu>
           )}
         </div>
-        <img
-          className=" h-full w-full rounded-t-xl object-cover lg:h-[400px]"
-          style={{
-            objectPosition: "top center",
-          }}
-          src={forum.image}
-          alt={forum.id_forum}
-        />
+        <figure className="relative h-full w-full overflow-hidden rounded-t-xl lg:h-[400px] ">
+          <img
+            className="h-full w-full  bg-shark-600 object-contain"
+            style={{
+              objectPosition: "top center",
+            }}
+            src={forum.image}
+            alt={forum.id_forum}
+          />
+        </figure>
 
         <section className="flex flex-col">
           <div
             className={cn(
-              "prose prose-h1:my-5 prose-h1:text-2xl lg:prose-h1:text-4xl prose-h1:text-white prose-p:m-1 prose-p:text-white",
+              "prose prose-h1:my-5 prose-h1:text-3xl prose-h1:text-white prose-p:m-1 prose-p:text-lg prose-p:text-gray-400 prose-strong:font-bold prose-strong:text-white lg:prose-h1:text-4xl lg:prose-p:text-xl prose-figure:py-4",
               showMore ? " " : "prose-p:truncate"
             )}
             dangerouslySetInnerHTML={{ __html: sanitizedContent }}
@@ -273,7 +275,7 @@ const ForumCard: React.FC<ForumCardProps> = ({
           <div className="flex justify-end">
             <button
               onClick={toggleShowMore}
-              className="text-sm text-blue-500 hover:underline focus:outline-none lg:text-lg"
+              className="text-base text-blue-500 hover:underline focus:outline-none lg:text-lg"
             >
               {showMore ? "Sembunyikan" : "Selengkapnya"}
             </button>
@@ -283,13 +285,19 @@ const ForumCard: React.FC<ForumCardProps> = ({
         <div className="flex justify-end space-x-5 py-6">
           <button
             onClick={toggleCommentForm}
-            className="text-sm text-blue-500 hover:underline focus:outline-none lg:text-lg"
+            className={cn(
+              "text-base  text-blue-500 hover:underline focus:outline-none sm:text-lg lg:text-lg",
+              showComment ? "underline" : ""
+            )}
           >
             {showCommentForm ? "Hide Comment" : "Add Comment"}
           </button>
           <button
             onClick={toggleComment}
-            className="mr-2 text-sm text-gray-500 hover:text-blue-500 focus:outline-none lg:text-lg"
+            className={cn(
+              "mr-2 text-base text-gray-500 hover:text-blue-500 focus:outline-none sm:text-lg lg:text-lg",
+              showComment ? "underline" : ""
+            )}
           >
             {showComment ? "Hide Comments" : "View Comments"}
           </button>

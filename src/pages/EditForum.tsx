@@ -5,7 +5,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { useParams } from "react-router-dom";
 
 export default function EditForum() {
-  const { id } = useParams<{ id: string }>(); // Ensure id is of type string
+  const { id } = useParams<{ id: string }>();
   const { currentUser } = useAuth();
 
   if (!currentUser) {
@@ -21,7 +21,7 @@ export default function EditForum() {
   return (
     <>
       <Navbar />
-      <div className="grid w-full gap-2 p-10 px-60">
+      <div className="grid w-full gap-2 p-10 lg:px-60">
         <h1 className="text-3xl font-bold">Edit Forum / {currentUser.username}</h1>
         <DeleteForum forumId={id} />
         <UpdateForum forumId={id} />
