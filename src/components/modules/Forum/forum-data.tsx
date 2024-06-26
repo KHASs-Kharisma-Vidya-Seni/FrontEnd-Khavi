@@ -360,7 +360,7 @@ const CommentList = forwardRef<HTMLDivElement, CommentListProps>(({ comments }, 
           <div className="flex items-center justify-between gap-3 pb-2">
             <div className="flex items-center gap-x-3">
               <Avatar className="h-10 w-10">
-                <AvatarImage src={comment.user.photo_url} />
+                <AvatarImage src={comment.user.photo_url} className="object-cover" />
                 <AvatarFallback>{comment.user.username.charAt(0)}</AvatarFallback>
               </Avatar>
               <div>
