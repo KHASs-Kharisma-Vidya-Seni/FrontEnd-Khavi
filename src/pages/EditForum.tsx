@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
-import DeleteForum from "@/components/modules/Forum/delete-forum";
-import UpdateForum from "@/components/modules/Forum/update-forum";
+import DeleteForum from "@/components/modules/forum/delete-forum";
+import UpdateForum from "@/components/modules/forum/update-forum";
 import { useAuth } from "@/hooks/use-auth";
 import { useParams } from "react-router-dom";
 

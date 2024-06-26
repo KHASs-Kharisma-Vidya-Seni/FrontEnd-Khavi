@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import Sidebar from "@/components/modules/Profile/sidebar";
+import Sidebar from "@/components/modules/profile/sidebar";
 
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";

@@ -10,7 +10,7 @@ import { ArticleCard, ArticleTags, TrendingCard } from "@/components/ui/article"
 import { slugify } from "@/utility/slugify";
 
 import Container from "@/components/Container";
-import LoadingArticle from "@/components/modules/Article/loading-article";
+import LoadingArticle from "@/components/modules/article/loading-article";
 
 const fetcher = (url: string) => axios.get(url).then(res => res.data);
 
