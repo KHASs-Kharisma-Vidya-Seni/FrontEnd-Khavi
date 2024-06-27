@@ -69,13 +69,9 @@ export const useAuth = () => {
 
   useEffect(() => {
     if (error) {
-      if (axios.isAxiosError(error) && error.response?.status === 401) {
-        // Jika terjadi kesalahan 401 (Unauthorized), arahkan pengguna ke halaman login.
-        navigate("/login");
-      }
+     return 
     }
 
-    if (!currentUser) navigate("/login");
     mutate(null, false);
   }, [error, mutateUser, navigate, currentUser]);
 

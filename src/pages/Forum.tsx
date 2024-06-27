@@ -37,7 +37,7 @@ export default function Forum() {
 
   mutate(`${BASE_URL_API}/forum?withUser=true`);
 
-  if (!currentUser && currentUser === null) {
+  if (!currentUser || currentUser === null) {
     return <h1>Please Login</h1>;
   }
 
