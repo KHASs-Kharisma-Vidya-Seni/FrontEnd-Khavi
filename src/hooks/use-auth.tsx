@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { BASE_URL_API } from "@/utility/base-url";
 import { makeRequest } from "@/lib/axios";
-
+import { useNavigate } from "react-router-dom";
 
 export interface User {
   uid: string;
@@ -65,12 +65,17 @@ export const useAuth = () => {
     errorRetryCount: 3, // Jumlah percobaan ulang jika terjadi kesalahan
   });
 
+  const navigate = useNavigate();
+
   useEffect(() => {
-    if (error) {
-      console.error("Error fetching current user:", error);
-      mutate(null, false);
+  
+    if (!currentUser && currentUser === null) {
+      navigate("/login");
+     
     }
-  }, [error, mutateUser]);
+  }, [error, mutateUser, navigate, currentUser]);
+
+  mutate(null, false);
 
   const login = async (inputs: LoginInputs) => {
     const res = await makeRequest.post("/auth/login", inputs);

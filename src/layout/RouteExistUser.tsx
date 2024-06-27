@@ -11,8 +11,7 @@ export default function ProtectedExistUser({ children }: RouteExistProps) {
   useEffect(() => {
     // Jika currentUser ada (pengguna sudah login), arahkan mereka ke halaman lain
     if (currentUser) {
-      navigate("/profile"); // Ganti '/dashboard' dengan halaman yang sesuai
-      console.log("Sudah login");
+      return 
     }
   }, [currentUser, navigate]);
 

@@ -21,7 +21,6 @@ import Root from "./Root.tsx";
 import Forum from "./pages/Forum.tsx";
 import FaceScanner from "./pages/FaceScanner.tsx";
 import VerifyEmailStatus from "./pages/VerifyEmail.tsx";
-import ProtectedRoute from "./layout/RouteGuards.tsx";
 import EditForum from "./pages/EditForum.tsx";
 import DetailArticle from "./pages/ArticleDetail.tsx";
 import ProtectedExistUser from "./layout/RouteExistUser.tsx";
@@ -34,50 +33,15 @@ export const App = () => {
           <Route index element={<Home />} />
           <Route path="/tentang" element={<About />} />
           <Route path="/profile" element={<ProfileRoot />}>
-            <Route
-              index
-              element={
-                <ProtectedRoute>
-                  <ProfileUserInfo />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/profile/bookmark"
-              element={
-                <ProtectedRoute>
-                  <ProfileBookmark />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/profile/settings"
-              element={
-                <ProtectedRoute>
-                  <ProfileSetting />
-                </ProtectedRoute>
-              }
-            />
+            <Route index element={<ProfileUserInfo />} />
+            <Route path="/profile/bookmark" element={<ProfileBookmark />} />
+            <Route path="/profile/settings" element={<ProfileSetting />} />
           </Route>
           <Route path="/artikel" element={<Article />} />
           <Route path="/artikel/:slug" element={<DetailArticle />} />
 
-          <Route
-            path="/face-scanner"
-            element={
-              <ProtectedRoute>
-                <FaceScanner />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/forum"
-            element={
-              <ProtectedRoute>
-                <Forum />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/face-scanner" element={<FaceScanner />} />
+          <Route path="/forum" element={<Forum />} />
         </Route>
         <Route path="/forum/:id/edit" element={<EditForum />} />
         <Route path="/verify-email/:id" element={<VerifyEmailStatus />} />

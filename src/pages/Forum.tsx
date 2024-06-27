@@ -14,6 +14,7 @@ import CreateForum from "@/components/modules/Forum/create-forum";
 import { HashLink } from "react-router-hash-link";
 import { useState } from "react";
 import ErrorMessage from "@/components/ErrorMessage";
+import { useAuth } from "@/hooks/use-auth";
 
 interface ForumData {
   forums: Forum[];
@@ -25,6 +26,7 @@ const fetcher = async (url: string) => {
 
 export default function Forum() {
   const isScrolled = useScrollPosition();
+  const { currentUser } = useAuth();
   const [filter, setFilter] = useState<string>("newest");
 
   const handleFilterChange = (filterOption: string) => {
@@ -34,6 +36,10 @@ export default function Forum() {
   const { data, error } = useSWR<ForumData>(`${BASE_URL_API}/forum?withUser=true`, fetcher);
 
   mutate(`${BASE_URL_API}/forum?withUser=true`);
+
+  if (!currentUser && currentUser === null) {
+    return <h1>Please Login</h1>;
+  }
 
   if (!data) {
     return (
