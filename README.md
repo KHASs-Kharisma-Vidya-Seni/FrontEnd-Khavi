@@ -1,4 +1,5 @@
 
+
 # Khavi: Aplikasi Rekomendasi Gaya Rambut Berdasarkan Bentuk Wajah
 
 ![Khavi Logo](https://khass.netlify.app/images/khavi-logo.png)
@@ -61,5 +62,19 @@ Khavi dibangun menggunakan teknologi-teknologi berikut:
 - [Google Cloud App Engine](https://cloud.google.com/appengine): Platform untuk deployment backend.
 
 ---
+
+### Dokumentasi
+1. **Home**
+   - [![Home](https://img.youtube.com/vi/ijIItiHN4js/0.jpg)](https://www.youtube.com/watch?v=ijIItiHN4js)
+2. **About**
+   - [![About](https://img.youtube.com/vi/PPcu2bJsZic/0.jpg)](https://www.youtube.com/watch?v=PPcu2bJsZic)
+4. **Forum**
+   - [![Forum](https://img.youtube.com/vi/u4T1HDafAMc/0.jpg)](https://www.youtube.com/watch?v=u4T1HDafAMc)
+6. **Article**
+   - [![Article](https://img.youtube.com/vi/kNwqUJ13SWY/0.jpg)](https://www.youtube.com/watch?v=kNwqUJ13SWY)
+8. **Face Scanner**
+   - [![Face Scanner](https://img.youtube.com/vi/i9tCkaeEi0E/0.jpg)](https://www.youtube.com/watch?v=i9tCkaeEi0E)
+10. **Profile**
+   - [![Profile](https://img.youtube.com/vi/Bl1Gg5eWYUk/0.jpg)](https://www.youtube.com/watch?v=Bl1Gg5eWYUk)
 
 ✨ **Bergabunglah dengan Khavi dan temukan gaya rambut terbaik untuk Anda!** ✨
