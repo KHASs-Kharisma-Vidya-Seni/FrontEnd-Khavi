@@ -77,4 +77,5 @@ Khavi dibangun menggunakan teknologi-teknologi berikut:
 10. **Profile**
    - [![Profile](https://img.youtube.com/vi/Bl1Gg5eWYUk/0.jpg)](https://www.youtube.com/watch?v=Bl1Gg5eWYUk)
 
+---
 ✨ **Bergabunglah dengan Khavi dan temukan gaya rambut terbaik untuk Anda!** ✨
