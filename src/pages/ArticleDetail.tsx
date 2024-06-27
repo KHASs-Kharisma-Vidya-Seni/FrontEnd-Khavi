@@ -1,8 +1,8 @@
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import useSWR from "swr";
 import axios from "axios";
-import LoadingArticle from "@/components/modules/article/loading-article";
-import NotFoundArticle from "@/components/modules/article/not-found-article";
+import LoadingArticle from "@/components/modules/Article/loading-article";
+import NotFoundArticle from "@/components/modules/Article/not-found-article";
 
 // interface Article {
 //   id: number;

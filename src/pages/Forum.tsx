@@ -1,5 +1,5 @@
-import { SidebarForum } from "@/components/modules/forum/side-bar-forum";
-import { ForumFilterSidebar } from "@/components/modules/forum/forum-filter-sidebar";
+import { SidebarForum } from "@/components/modules/Forum/side-bar-forum";
+import { ForumFilterSidebar } from "@/components/modules/Forum/forum-filter-sidebar";
 
 import { cn } from "@/lib/utils";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
@@ -9,8 +9,8 @@ import axios from "axios";
 import useSWR, { mutate } from "swr";
 import { BASE_URL_API } from "@/utility/base-url";
 import type { Forum } from "@/components/types/forum-types";
-import ForumDataCard from "../components/modules/forum/forum-data";
-import CreateForum from "@/components/modules/forum/create-forum";
+import ForumDataCard from "../components/modules/Forum/forum-data";
+import CreateForum from "@/components/modules/Forum/create-forum";
 import { HashLink } from "react-router-hash-link";
 import { useState } from "react";
 import ErrorMessage from "@/components/ErrorMessage";

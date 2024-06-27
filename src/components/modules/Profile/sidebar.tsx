@@ -2,7 +2,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/use-auth";
 
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-import SVG from "@/components/modules/profile/sidebutton";
+import SVG from "@/components/modules/Profile/sidebutton";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
