@@ -68,14 +68,16 @@ export const useAuth = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-  
-    if (!currentUser && currentUser === null) {
-      navigate("/login");
-     
+    if (error) {
+      if (axios.isAxiosError(error) && error.response?.status === 401) {
+        // Jika terjadi kesalahan 401 (Unauthorized), arahkan pengguna ke halaman login.
+        navigate("/login");
+      }
     }
-  }, [error, mutateUser, navigate, currentUser]);
 
-  mutate(null, false);
+    if (!currentUser) navigate("/login");
+    mutate(null, false);
+  }, [error, mutateUser, navigate, currentUser]);
 
   const login = async (inputs: LoginInputs) => {
     const res = await makeRequest.post("/auth/login", inputs);

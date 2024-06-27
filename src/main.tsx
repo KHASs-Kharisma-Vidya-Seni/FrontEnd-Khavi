@@ -23,7 +23,6 @@ import FaceScanner from "./pages/FaceScanner.tsx";
 import VerifyEmailStatus from "./pages/VerifyEmail.tsx";
 import EditForum from "./pages/EditForum.tsx";
 import DetailArticle from "./pages/ArticleDetail.tsx";
-import ProtectedExistUser from "./layout/RouteExistUser.tsx";
 
 export const App = () => {
   return (
@@ -45,22 +44,8 @@ export const App = () => {
         </Route>
         <Route path="/forum/:id/edit" element={<EditForum />} />
         <Route path="/verify-email/:id" element={<VerifyEmailStatus />} />
-        <Route
-          path="/register"
-          element={
-            <ProtectedExistUser>
-              <Register />
-            </ProtectedExistUser>
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <ProtectedExistUser>
-              <Login />
-            </ProtectedExistUser>
-          }
-        />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
