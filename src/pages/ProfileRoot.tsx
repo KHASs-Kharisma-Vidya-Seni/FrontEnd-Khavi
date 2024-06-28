@@ -8,7 +8,12 @@ import { cn } from "@/lib/utils";
 
 export default function ProfileRoot() {
   const location = useLocation();
-  const { logout } = useAuth();
+  const { logout, currentUser } = useAuth();
+
+  if(!currentUser || currentUser === null) {
+    return <div className="flex h-screen w-screen items-center justify-center">Please login</div>
+  }
+
   return (
     <div>
       <div className="fixed left-0 top-1/2 block xl:hidden">
