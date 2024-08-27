@@ -2,7 +2,10 @@
 
 # Khavi: Aplikasi Rekomendasi Gaya Rambut Berdasarkan Bentuk Wajah
 
-![Khavi Logo](https://khass.netlify.app/images/khavi-logo.png)
+<div style="padding: 10px">
+   <img src="https://khass.netlify.app/images/khavi-logo.png" width="150px" alt="Khavi Logo" />
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Logo_Kampus_Merdeka_Kemendikbud.png/800px-Logo_Kampus_Merdeka_Kemendikbud.png?20240201154732" width="150px" alt="Kampus Merdeka" />
+</div>
 
 ### Tentang Khavi
 
